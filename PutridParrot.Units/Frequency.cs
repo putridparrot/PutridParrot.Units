@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Frequency conversion functions
+/// </summary>
 public static class Frequency
 {
+	/// <summary>
+	/// Gigahertz conversion functions
+	/// </summary>
 	public static class Gigahertz
 	{
 		/// <summary>
@@ -29,6 +35,9 @@ public static class Frequency
 		/// <returns>The value in Megahertz</returns>
 		public static double ToMegahertz(double value) => value * 1000.0;
 	}
+	/// <summary>
+	/// Hertz conversion functions
+	/// </summary>
 	public static class Hertz
 	{
 		/// <summary>
@@ -50,6 +59,9 @@ public static class Frequency
 		/// <returns>The value in Gigahertz</returns>
 		public static double ToGigahertz(double value) => value / 1e+9;
 	}
+	/// <summary>
+	/// Kilohertz conversion functions
+	/// </summary>
 	public static class Kilohertz
 	{
 		/// <summary>
@@ -71,6 +83,9 @@ public static class Frequency
 		/// <returns>The value in Gigahertz</returns>
 		public static double ToGigahertz(double value) => value / 1e+6;
 	}
+	/// <summary>
+	/// Megahertz conversion functions
+	/// </summary>
 	public static class Megahertz
 	{
 		/// <summary>

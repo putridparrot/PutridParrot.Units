@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Energy conversion functions
+/// </summary>
 public static class Energy
 {
+	/// <summary>
+	/// Btu conversion functions
+	/// </summary>
 	public static class Btu
 	{
 		/// <summary>
@@ -59,6 +65,9 @@ public static class Energy
 		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 778.169;
 	}
+	/// <summary>
+	/// Calories conversion functions
+	/// </summary>
 	public static class Calories
 	{
 		/// <summary>
@@ -110,9 +119,15 @@ public static class Energy
 		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 3.08596;
 	}
+	/// <summary>
+	/// ElectronVolts conversion functions
+	/// </summary>
 	public static class ElectronVolts
 	{
 	}
+	/// <summary>
+	/// Foot Pounds conversion functions
+	/// </summary>
 	public static class FootPounds
 	{
 		/// <summary>
@@ -164,6 +179,9 @@ public static class Energy
 		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value * 0.00000037662;
 	}
+	/// <summary>
+	/// Joules conversion functions
+	/// </summary>
 	public static class Joules
 	{
 		/// <summary>
@@ -215,6 +233,9 @@ public static class Energy
 		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value / 1.35582;
 	}
+	/// <summary>
+	/// Kilocalories conversion functions
+	/// </summary>
 	public static class Kilocalories
 	{
 		/// <summary>
@@ -266,6 +287,9 @@ public static class Energy
 		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 3085.96;
 	}
+	/// <summary>
+	/// Kilojoules conversion functions
+	/// </summary>
 	public static class Kilojoules
 	{
 		/// <summary>
@@ -317,6 +341,9 @@ public static class Energy
 		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 737.562;
 	}
+	/// <summary>
+	/// Kilowatt Hours conversion functions
+	/// </summary>
 	public static class KilowattHours
 	{
 		/// <summary>
@@ -368,6 +395,9 @@ public static class Energy
 		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value / 0.00000037662;
 	}
+	/// <summary>
+	/// US Therms conversion functions
+	/// </summary>
 	public static class USTherms
 	{
 		/// <summary>
@@ -419,6 +449,9 @@ public static class Energy
 		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 77816937.099186;
 	}
+	/// <summary>
+	/// Watt Hours conversion functions
+	/// </summary>
 	public static class WattHours
 	{
 		/// <summary>

@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Mass conversion functions
+/// </summary>
 public static class Mass
 {
+	/// <summary>
+	/// Grams conversion functions
+	/// </summary>
 	public static class Grams
 	{
 		/// <summary>
@@ -47,6 +53,9 @@ public static class Mass
 		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value / 6350.29318;
 	}
+	/// <summary>
+	/// Kilograms conversion functions
+	/// </summary>
 	public static class Kilograms
 	{
 		/// <summary>
@@ -86,6 +95,9 @@ public static class Mass
 		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value * 0.157473;
 	}
+	/// <summary>
+	/// Milligrams conversion functions
+	/// </summary>
 	public static class Milligrams
 	{
 		/// <summary>
@@ -125,6 +137,9 @@ public static class Mass
 		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value / 6350293.18;
 	}
+	/// <summary>
+	/// Ounces conversion functions
+	/// </summary>
 	public static class Ounces
 	{
 		/// <summary>
@@ -164,6 +179,9 @@ public static class Mass
 		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value * 0.00446429;
 	}
+	/// <summary>
+	/// Pounds conversion functions
+	/// </summary>
 	public static class Pounds
 	{
 		/// <summary>
@@ -203,6 +221,9 @@ public static class Mass
 		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value / 14.0;
 	}
+	/// <summary>
+	/// Stones conversion functions
+	/// </summary>
 	public static class Stones
 	{
 		/// <summary>
@@ -242,6 +263,9 @@ public static class Mass
 		/// <returns>The value in Pounds</returns>
 		public static double ToPounds(double value) => value * 14.0;
 	}
+	/// <summary>
+	/// Tonnes conversion functions
+	/// </summary>
 	public static class Tonnes
 	{
 		/// <summary>

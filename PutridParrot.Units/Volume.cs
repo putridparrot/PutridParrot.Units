@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Volume conversion functions
+/// </summary>
 public static class Volume
 {
+	/// <summary>
+	/// Fluid Ounces conversion functions
+	/// </summary>
 	public static class FluidOunces
 	{
 		/// <summary>
@@ -101,6 +107,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 8.3267384046639071232;
 	}
+	/// <summary>
+	/// Gallons conversion functions
+	/// </summary>
 	public static class Gallons
 	{
 		/// <summary>
@@ -194,6 +203,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.052042115029149417472;
 	}
+	/// <summary>
+	/// Kilolitres conversion functions
+	/// </summary>
 	public static class Kilolitres
 	{
 		/// <summary>
@@ -287,6 +299,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.000236588236499999989;
 	}
+	/// <summary>
+	/// Litres conversion functions
+	/// </summary>
 	public static class Litres
 	{
 		/// <summary>
@@ -380,6 +395,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.23658823649999998976;
 	}
+	/// <summary>
+	/// Millilitres conversion functions
+	/// </summary>
 	public static class Millilitres
 	{
 		/// <summary>
@@ -473,6 +491,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 236.58823649999998976;
 	}
+	/// <summary>
+	/// Pints conversion functions
+	/// </summary>
 	public static class Pints
 	{
 		/// <summary>
@@ -566,6 +587,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.41633692023319535616;
 	}
+	/// <summary>
+	/// Quarts conversion functions
+	/// </summary>
 	public static class Quarts
 	{
 		/// <summary>
@@ -659,6 +683,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.20816846011659767808;
 	}
+	/// <summary>
+	/// Tablespoons conversion functions
+	/// </summary>
 	public static class Tablespoons
 	{
 		/// <summary>
@@ -752,6 +779,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 13.322781447462250496;
 	}
+	/// <summary>
+	/// Teaspoons conversion functions
+	/// </summary>
 	public static class Teaspoons
 	{
 		/// <summary>
@@ -845,6 +875,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 39.968344342386753536;
 	}
+	/// <summary>
+	/// US Cups conversion functions
+	/// </summary>
 	public static class USCups
 	{
 		/// <summary>
@@ -938,6 +971,9 @@ public static class Volume
 		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value * 8.0;
 	}
+	/// <summary>
+	/// US Fluid Ounces conversion functions
+	/// </summary>
 	public static class USFluidOunces
 	{
 		/// <summary>
@@ -1031,6 +1067,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 8.0;
 	}
+	/// <summary>
+	/// US Gallons conversion functions
+	/// </summary>
 	public static class USGallons
 	{
 		/// <summary>
@@ -1124,6 +1163,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value * 16.0;
 	}
+	/// <summary>
+	/// US Pints conversion functions
+	/// </summary>
 	public static class USPints
 	{
 		/// <summary>
@@ -1217,6 +1259,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value * 2.0;
 	}
+	/// <summary>
+	/// US Quarts conversion functions
+	/// </summary>
 	public static class USQuarts
 	{
 		/// <summary>
@@ -1310,6 +1355,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value * 4.0;
 	}
+	/// <summary>
+	/// US Tablespoons conversion functions
+	/// </summary>
 	public static class USTablespoons
 	{
 		/// <summary>
@@ -1403,6 +1451,9 @@ public static class Volume
 		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 16.0;
 	}
+	/// <summary>
+	/// US Teaspoons conversion functions
+	/// </summary>
 	public static class USTeaspoons
 	{
 		/// <summary>

@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Angle conversion functions
+/// </summary>
 public static class Angle
 {
+	/// <summary>
+	/// Degrees conversion functions
+	/// </summary>
 	public static class Degrees
 	{
 		/// <summary>
@@ -41,6 +47,9 @@ public static class Angle
 		/// <returns>The value in Seconds Of Arc</returns>
 		public static double ToSecondsOfArc(double value) => value * 3600.0;
 	}
+	/// <summary>
+	/// Gradians conversion functions
+	/// </summary>
 	public static class Gradians
 	{
 		/// <summary>
@@ -74,6 +83,9 @@ public static class Angle
 		/// <returns>The value in Seconds Of Arc</returns>
 		public static double ToSecondsOfArc(double value) => value * 3240.0;
 	}
+	/// <summary>
+	/// Milliradians conversion functions
+	/// </summary>
 	public static class Milliradians
 	{
 		/// <summary>
@@ -107,6 +119,9 @@ public static class Angle
 		/// <returns>The value in Seconds Of Arc</returns>
 		public static double ToSecondsOfArc(double value) => value * (3600.0 * 180.0)/(1000.0 * Math.PI);
 	}
+	/// <summary>
+	/// Minute Of Arc conversion functions
+	/// </summary>
 	public static class MinuteOfArc
 	{
 		/// <summary>
@@ -140,6 +155,9 @@ public static class Angle
 		/// <returns>The value in Seconds Of Arc</returns>
 		public static double ToSecondsOfArc(double value) => value * 60.0;
 	}
+	/// <summary>
+	/// Radians conversion functions
+	/// </summary>
 	public static class Radians
 	{
 		/// <summary>
@@ -173,6 +191,9 @@ public static class Angle
 		/// <returns>The value in Seconds Of Arc</returns>
 		public static double ToSecondsOfArc(double value) => value * (3600.0 * 180.0)/Math.PI;
 	}
+	/// <summary>
+	/// Seconds Of Arc conversion functions
+	/// </summary>
 	public static class SecondsOfArc
 	{
 		/// <summary>

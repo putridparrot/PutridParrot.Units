@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Area conversion functions
+/// </summary>
 public static class Area
 {
+	/// <summary>
+	/// Acres conversion functions
+	/// </summary>
 	public static class Acres
 	{
 		/// <summary>
@@ -53,6 +59,9 @@ public static class Area
 		/// <returns>The value in Hectares</returns>
 		public static double ToHectares(double value) => value / 2.471;
 	}
+	/// <summary>
+	/// Hectares conversion functions
+	/// </summary>
 	public static class Hectares
 	{
 		/// <summary>
@@ -98,6 +107,9 @@ public static class Area
 		/// <returns>The value in Acres</returns>
 		public static double ToAcres(double value) => value * 2.471;
 	}
+	/// <summary>
+	/// Square Feet conversion functions
+	/// </summary>
 	public static class SquareFeet
 	{
 		/// <summary>
@@ -143,6 +155,9 @@ public static class Area
 		/// <returns>The value in Acres</returns>
 		public static double ToAcres(double value) => value / 43560.0;
 	}
+	/// <summary>
+	/// Square Inches conversion functions
+	/// </summary>
 	public static class SquareInches
 	{
 		/// <summary>
@@ -188,6 +203,9 @@ public static class Area
 		/// <returns>The value in Acres</returns>
 		public static double ToAcres(double value) => value / 6272640.0;
 	}
+	/// <summary>
+	/// Square Kilometres conversion functions
+	/// </summary>
 	public static class SquareKilometres
 	{
 		/// <summary>
@@ -233,6 +251,9 @@ public static class Area
 		/// <returns>The value in Acres</returns>
 		public static double ToAcres(double value) => value * 247.105;
 	}
+	/// <summary>
+	/// Square Metres conversion functions
+	/// </summary>
 	public static class SquareMetres
 	{
 		/// <summary>
@@ -278,6 +299,9 @@ public static class Area
 		/// <returns>The value in Acres</returns>
 		public static double ToAcres(double value) => value / 4046.86;
 	}
+	/// <summary>
+	/// Square Miles conversion functions
+	/// </summary>
 	public static class SquareMiles
 	{
 		/// <summary>
@@ -323,6 +347,9 @@ public static class Area
 		/// <returns>The value in Acres</returns>
 		public static double ToAcres(double value) => value * 640.0;
 	}
+	/// <summary>
+	/// Square Yards conversion functions
+	/// </summary>
 	public static class SquareYards
 	{
 		/// <summary>

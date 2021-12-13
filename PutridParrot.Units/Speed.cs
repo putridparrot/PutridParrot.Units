@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Speed conversion functions
+/// </summary>
 public static class Speed
 {
+	/// <summary>
+	/// Feet Per Second conversion functions
+	/// </summary>
 	public static class FeetPerSecond
 	{
 		/// <summary>
@@ -35,6 +41,9 @@ public static class Speed
 		/// <returns>The value in Knots</returns>
 		public static double ToKnots(double value) => value * 0.592484;
 	}
+	/// <summary>
+	/// Kilometres Per Hour conversion functions
+	/// </summary>
 	public static class KilometresPerHour
 	{
 		/// <summary>
@@ -62,6 +71,9 @@ public static class Speed
 		/// <returns>The value in Knots</returns>
 		public static double ToKnots(double value) => value * 0.539957;
 	}
+	/// <summary>
+	/// Knots conversion functions
+	/// </summary>
 	public static class Knots
 	{
 		/// <summary>
@@ -89,6 +101,9 @@ public static class Speed
 		/// <returns>The value in Metres Per Second</returns>
 		public static double ToMetresPerSecond(double value) => value * 0.514444;
 	}
+	/// <summary>
+	/// Metres Per Second conversion functions
+	/// </summary>
 	public static class MetresPerSecond
 	{
 		/// <summary>
@@ -116,6 +131,9 @@ public static class Speed
 		/// <returns>The value in Knots</returns>
 		public static double ToKnots(double value) => value * 1.94384;
 	}
+	/// <summary>
+	/// Miles Per Hour conversion functions
+	/// </summary>
 	public static class MilesPerHour
 	{
 		/// <summary>

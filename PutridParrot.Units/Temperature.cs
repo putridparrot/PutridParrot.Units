@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Temperature conversion functions
+/// </summary>
 public static class Temperature
 {
+	/// <summary>
+	/// Celsius conversion functions
+	/// </summary>
 	public static class Celsius
 	{
 		/// <summary>
@@ -29,6 +35,9 @@ public static class Temperature
 		/// <returns>The value in Rankine</returns>
 		public static double ToRankine(double value) => value * 9.0/5.0 + 491.67;
 	}
+	/// <summary>
+	/// Fahrenheit conversion functions
+	/// </summary>
 	public static class Fahrenheit
 	{
 		/// <summary>
@@ -50,6 +59,9 @@ public static class Temperature
 		/// <returns>The value in Rankine</returns>
 		public static double ToRankine(double value) => value + 459.67;
 	}
+	/// <summary>
+	/// Kelvin conversion functions
+	/// </summary>
 	public static class Kelvin
 	{
 		/// <summary>
@@ -71,6 +83,9 @@ public static class Temperature
 		/// <returns>The value in Rankine</returns>
 		public static double ToRankine(double value) => value * 1.8;
 	}
+	/// <summary>
+	/// Rankine conversion functions
+	/// </summary>
 	public static class Rankine
 	{
 		/// <summary>

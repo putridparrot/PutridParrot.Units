@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Pressure conversion functions
+/// </summary>
 public static class Pressure
 {
+	/// <summary>
+	/// Atmospheres conversion functions
+	/// </summary>
 	public static class Atmospheres
 	{
 		/// <summary>
@@ -35,6 +41,9 @@ public static class Pressure
 		/// <returns>The value in Psi</returns>
 		public static double ToPsi(double value) => value * 14.69596432068;
 	}
+	/// <summary>
+	/// Bars conversion functions
+	/// </summary>
 	public static class Bars
 	{
 		/// <summary>
@@ -62,6 +71,9 @@ public static class Pressure
 		/// <returns>The value in Psi</returns>
 		public static double ToPsi(double value) => value * 14.50378911491;
 	}
+	/// <summary>
+	/// Pascals conversion functions
+	/// </summary>
 	public static class Pascals
 	{
 		/// <summary>
@@ -89,6 +101,9 @@ public static class Pressure
 		/// <returns>The value in Psi</returns>
 		public static double ToPsi(double value) => value * 0.0001450378911491;
 	}
+	/// <summary>
+	/// Psi conversion functions
+	/// </summary>
 	public static class Psi
 	{
 		/// <summary>
@@ -116,6 +131,9 @@ public static class Pressure
 		/// <returns>The value in Torrs</returns>
 		public static double ToTorrs(double value) => value / 0.01933679515879;
 	}
+	/// <summary>
+	/// Torrs conversion functions
+	/// </summary>
 	public static class Torrs
 	{
 		/// <summary>

@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Magnetomotive Force conversion functions
+/// </summary>
 public static class MagnetomotiveForce
 {
+	/// <summary>
+	/// Ampere-turns conversion functions
+	/// </summary>
 	public static class Ampereturns
 	{
 		/// <summary>
@@ -17,6 +23,9 @@ public static class MagnetomotiveForce
 		/// <returns>The value in Gilberts</returns>
 		public static double ToGilberts(double value) => value * 1.256637061436;
 	}
+	/// <summary>
+	/// Gilberts conversion functions
+	/// </summary>
 	public static class Gilberts
 	{
 		/// <summary>

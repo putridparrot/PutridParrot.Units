@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Data Transfer Rate conversion functions
+/// </summary>
 public static class DataTransferRate
 {
+	/// <summary>
+	/// Bits Per Second conversion functions
+	/// </summary>
 	public static class BitsPerSecond
 	{
 		/// <summary>
@@ -71,6 +77,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value / 1048576.0;
 	}
+	/// <summary>
+	/// GigaBits Per Second conversion functions
+	/// </summary>
 	public static class GigaBitsPerSecond
 	{
 		/// <summary>
@@ -134,6 +143,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value * 954.0;
 	}
+	/// <summary>
+	/// GigaBytes Per Second conversion functions
+	/// </summary>
 	public static class GigaBytesPerSecond
 	{
 		/// <summary>
@@ -197,6 +209,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value * 7629.39;
 	}
+	/// <summary>
+	/// Kibibits Per Second conversion functions
+	/// </summary>
 	public static class KibibitsPerSecond
 	{
 		/// <summary>
@@ -260,6 +275,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value / 1024.0;
 	}
+	/// <summary>
+	/// KiloBits Per Second conversion functions
+	/// </summary>
 	public static class KiloBitsPerSecond
 	{
 		/// <summary>
@@ -323,6 +341,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value / 1048.58;
 	}
+	/// <summary>
+	/// KiloBytes Per Second conversion functions
+	/// </summary>
 	public static class KiloBytesPerSecond
 	{
 		/// <summary>
@@ -386,6 +407,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value * 0.00762939;
 	}
+	/// <summary>
+	/// Mebibits Per Second conversion functions
+	/// </summary>
 	public static class MebibitsPerSecond
 	{
 		/// <summary>
@@ -449,6 +473,9 @@ public static class DataTransferRate
 		/// <returns>The value in Kibibits Per Second</returns>
 		public static double ToKibibitsPerSecond(double value) => value * 1024.0;
 	}
+	/// <summary>
+	/// MegaBits Per Second conversion functions
+	/// </summary>
 	public static class MegaBitsPerSecond
 	{
 		/// <summary>
@@ -512,6 +539,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value * 0.953674;
 	}
+	/// <summary>
+	/// MegaBytes Per Second conversion functions
+	/// </summary>
 	public static class MegaBytesPerSecond
 	{
 		/// <summary>
@@ -575,6 +605,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value * 7.62939;
 	}
+	/// <summary>
+	/// TeraBits Per Second conversion functions
+	/// </summary>
 	public static class TeraBitsPerSecond
 	{
 		/// <summary>
@@ -638,6 +671,9 @@ public static class DataTransferRate
 		/// <returns>The value in Mebibits Per Second</returns>
 		public static double ToMebibitsPerSecond(double value) => value * 953674.0;
 	}
+	/// <summary>
+	/// TeraBytes Per Second conversion functions
+	/// </summary>
 	public static class TeraBytesPerSecond
 	{
 		/// <summary>

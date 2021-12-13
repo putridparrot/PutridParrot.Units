@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Luminous Energy conversion functions
+/// </summary>
 public static class LuminousEnergy
 {
+	/// <summary>
+	/// LumenHour conversion functions
+	/// </summary>
 	public static class LumenHour
 	{
 		/// <summary>
@@ -29,6 +35,9 @@ public static class LuminousEnergy
 		/// <returns>The value in LumenSecond</returns>
 		public static double ToLumenSecond(double value) => value * 3600.0;
 	}
+	/// <summary>
+	/// LumenMinute conversion functions
+	/// </summary>
 	public static class LumenMinute
 	{
 		/// <summary>
@@ -50,6 +59,9 @@ public static class LuminousEnergy
 		/// <returns>The value in LumenSecond</returns>
 		public static double ToLumenSecond(double value) => value * 60.0;
 	}
+	/// <summary>
+	/// LumenSecond conversion functions
+	/// </summary>
 	public static class LumenSecond
 	{
 		/// <summary>
@@ -71,6 +83,9 @@ public static class LuminousEnergy
 		/// <returns>The value in LumenMinute</returns>
 		public static double ToLumenMinute(double value) => value / 60.0;
 	}
+	/// <summary>
+	/// Talbot conversion functions
+	/// </summary>
 	public static class Talbot
 	{
 		/// <summary>

@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Length conversion functions
+/// </summary>
 public static class Length
 {
+	/// <summary>
+	/// Centimetres conversion functions
+	/// </summary>
 	public static class Centimetres
 	{
 		/// <summary>
@@ -59,6 +65,9 @@ public static class Length
 		/// <returns>The value in Nautical Miles</returns>
 		public static double ToNauticalMiles(double value) => value / 185200.0;
 	}
+	/// <summary>
+	/// Feet conversion functions
+	/// </summary>
 	public static class Feet
 	{
 		/// <summary>
@@ -110,6 +119,9 @@ public static class Length
 		/// <returns>The value in Nautical Miles</returns>
 		public static double ToNauticalMiles(double value) => value / 6076.12;
 	}
+	/// <summary>
+	/// Inches conversion functions
+	/// </summary>
 	public static class Inches
 	{
 		/// <summary>
@@ -161,6 +173,9 @@ public static class Length
 		/// <returns>The value in Nautical Miles</returns>
 		public static double ToNauticalMiles(double value) => value / 72913.4;
 	}
+	/// <summary>
+	/// Kilometres conversion functions
+	/// </summary>
 	public static class Kilometres
 	{
 		/// <summary>
@@ -212,6 +227,9 @@ public static class Length
 		/// <returns>The value in Nautical Miles</returns>
 		public static double ToNauticalMiles(double value) => value / 1.85200;
 	}
+	/// <summary>
+	/// Metres conversion functions
+	/// </summary>
 	public static class Metres
 	{
 		/// <summary>
@@ -263,6 +281,9 @@ public static class Length
 		/// <returns>The value in Nautical Miles</returns>
 		public static double ToNauticalMiles(double value) => value / 1852.0;
 	}
+	/// <summary>
+	/// Miles conversion functions
+	/// </summary>
 	public static class Miles
 	{
 		/// <summary>
@@ -314,6 +335,9 @@ public static class Length
 		/// <returns>The value in Nautical Miles</returns>
 		public static double ToNauticalMiles(double value) => value / 1.15078;
 	}
+	/// <summary>
+	/// Millimetres conversion functions
+	/// </summary>
 	public static class Millimetres
 	{
 		/// <summary>
@@ -365,6 +389,9 @@ public static class Length
 		/// <returns>The value in Nautical Miles</returns>
 		public static double ToNauticalMiles(double value) => value / 1852000.0;
 	}
+	/// <summary>
+	/// Nautical Miles conversion functions
+	/// </summary>
 	public static class NauticalMiles
 	{
 		/// <summary>
@@ -416,6 +443,9 @@ public static class Length
 		/// <returns>The value in Miles</returns>
 		public static double ToMiles(double value) => value * 1.15078;
 	}
+	/// <summary>
+	/// Yards conversion functions
+	/// </summary>
 	public static class Yards
 	{
 		/// <summary>

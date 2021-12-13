@@ -6,8 +6,14 @@
 
 namespace PutridParrot.Units;
 
+/// <summary>
+/// Time conversion functions
+/// </summary>
 public static class Time
 {
+	/// <summary>
+	/// Centuries conversion functions
+	/// </summary>
 	public static class Centuries
 	{
 		/// <summary>
@@ -59,6 +65,9 @@ public static class Time
 		/// <returns>The value in Decades</returns>
 		public static double ToDecades(double value) => value * 10.0;
 	}
+	/// <summary>
+	/// Days conversion functions
+	/// </summary>
 	public static class Days
 	{
 		/// <summary>
@@ -110,6 +119,9 @@ public static class Time
 		/// <returns>The value in Centuries</returns>
 		public static double ToCenturies(double value) => value / 36500.0;
 	}
+	/// <summary>
+	/// Decades conversion functions
+	/// </summary>
 	public static class Decades
 	{
 		/// <summary>
@@ -161,6 +173,9 @@ public static class Time
 		/// <returns>The value in Centuries</returns>
 		public static double ToCenturies(double value) => value / 10.0;
 	}
+	/// <summary>
+	/// Hours conversion functions
+	/// </summary>
 	public static class Hours
 	{
 		/// <summary>
@@ -212,6 +227,9 @@ public static class Time
 		/// <returns>The value in Centuries</returns>
 		public static double ToCenturies(double value) => value / 876000.0;
 	}
+	/// <summary>
+	/// Minutes conversion functions
+	/// </summary>
 	public static class Minutes
 	{
 		/// <summary>
@@ -263,6 +281,9 @@ public static class Time
 		/// <returns>The value in Centuries</returns>
 		public static double ToCenturies(double value) => value / 5.256e+7;
 	}
+	/// <summary>
+	/// Months conversion functions
+	/// </summary>
 	public static class Months
 	{
 		/// <summary>
@@ -314,6 +335,9 @@ public static class Time
 		/// <returns>The value in Centuries</returns>
 		public static double ToCenturies(double value) => value / 1200.0;
 	}
+	/// <summary>
+	/// Seconds conversion functions
+	/// </summary>
 	public static class Seconds
 	{
 		/// <summary>
@@ -365,6 +389,9 @@ public static class Time
 		/// <returns>The value in Centuries</returns>
 		public static double ToCenturies(double value) => value / 3.154e+9;
 	}
+	/// <summary>
+	/// Weeks conversion functions
+	/// </summary>
 	public static class Weeks
 	{
 		/// <summary>
@@ -416,6 +443,9 @@ public static class Time
 		/// <returns>The value in Centuries</returns>
 		public static double ToCenturies(double value) => value / 5214.0;
 	}
+	/// <summary>
+	/// Years conversion functions
+	/// </summary>
 	public static class Years
 	{
 		/// <summary>
