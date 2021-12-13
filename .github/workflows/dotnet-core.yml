@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
-      run: dotnet test PutridParrot.Units.Tests/PutridParrot.Units.Tests.fsproj --no-restore --verbosity normal
+      run: dotnet test PutridParrot.Units.Tests/PutridParrot.Units.Tests.csproj --no-restore --verbosity normal
     - name: Create Package
       run: dotnet pack --configuration Release
     - name: Create Artifacts
