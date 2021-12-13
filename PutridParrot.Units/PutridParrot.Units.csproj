@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Company>PutridParrot</Company>
+	<Authors>Mark Timmings</Authors>
+	<Description>Unit conversion functions for C#</Description>
+	<Version>1.0.0-alpha</Version>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<RepositoryUrl>https://github.com/putridparrot/PutridParrot.Units.git</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageIcon>PutridParrot.Units.png</PackageIcon>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageTags>Unit converters</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\PutridParrot.Units.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
