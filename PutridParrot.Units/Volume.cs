@@ -10,290 +10,1490 @@ public static class Volume
 {
 	public static class FluidOunces
 	{
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Millilitres
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 28.413074243749994496;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Litres
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.028413074243749994496;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000028413074243749994;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 4.8;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 1.6;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Quarts
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value / 40.0;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Pints
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value / 20.0;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to Gallons
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 160.0;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.1734737167638313984;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 0.52042115029149417472;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to US Quarts
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 33.306953618655629312;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to US Pints
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 16.653476809327814656;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to US Gallons
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 133.22781447462252544;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 1.0408423005829883904;
+		/// <summary>
+		/// Converts the supplied Fluid Ounces value to US Cups
+		/// </summary>
+		/// <param name="value">The Fluid Ounces input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 8.3267384046639071232;
 	}
 	public static class Gallons
 	{
+		/// <summary>
+		/// Converts the supplied Gallons value to Millilitres
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 4546.091879;
+		/// <summary>
+		/// Converts the supplied Gallons value to Litres
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 4.546091879;
+		/// <summary>
+		/// Converts the supplied Gallons value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.004546091879;
+		/// <summary>
+		/// Converts the supplied Gallons value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 768.0;
+		/// <summary>
+		/// Converts the supplied Gallons value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 256.0;
+		/// <summary>
+		/// Converts the supplied Gallons value to Quarts
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 4.0;
+		/// <summary>
+		/// Converts the supplied Gallons value to Pints
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 8.0;
+		/// <summary>
+		/// Converts the supplied Gallons value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 160.0;
+		/// <summary>
+		/// Converts the supplied Gallons value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.00108421072977394606;
+		/// <summary>
+		/// Converts the supplied Gallons value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 0.003252632189321838592;
+		/// <summary>
+		/// Converts the supplied Gallons value to US Quarts
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 0.20816846011659767808;
+		/// <summary>
+		/// Converts the supplied Gallons value to US Pints
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 0.10408423005829883904;
+		/// <summary>
+		/// Converts the supplied Gallons value to US Gallons
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied Gallons value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 0.006505264378643677184;
+		/// <summary>
+		/// Converts the supplied Gallons value to US Cups
+		/// </summary>
+		/// <param name="value">The Gallons input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.052042115029149417472;
 	}
 	public static class Kilolitres
 	{
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Millilitres
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 1000000.0;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Litres
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value / 0.000005919390467447916;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value / 0.000017758171402343747;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Quarts
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value / 0.00113652296975;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Pints
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value / 0.000568261484874999889;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Gallons
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 0.0045460918799;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value / 0.0000284130742437499946;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.000004928921593749999;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 0.000014786764781249998;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to US Quarts
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 0.000946352945999999959;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to US Pints
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 0.000473176472999999979;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to US Gallons
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 0.003785411784;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 0.0000295735296;
+		/// <summary>
+		/// Converts the supplied Kilolitres value to US Cups
+		/// </summary>
+		/// <param name="value">The Kilolitres input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.000236588236499999989;
 	}
 	public static class Litres
 	{
+		/// <summary>
+		/// Converts the supplied Litres value to Millilitres
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Litres value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value / 1000.0;
+		/// <summary>
+		/// Converts the supplied Litres value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value / 0.005919390467447916134;
+		/// <summary>
+		/// Converts the supplied Litres value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value / 0.017758171402343747584;
+		/// <summary>
+		/// Converts the supplied Litres value to Quarts
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value / 1.13652296975;
+		/// <summary>
+		/// Converts the supplied Litres value to Pints
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value / 0.56826148487499988992;
+		/// <summary>
+		/// Converts the supplied Litres value to Gallons
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 4.546091879;
+		/// <summary>
+		/// Converts the supplied Litres value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value / 0.028413074243749994496;
+		/// <summary>
+		/// Converts the supplied Litres value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.004928921593749999616;
+		/// <summary>
+		/// Converts the supplied Litres value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 0.014786764781249998848;
+		/// <summary>
+		/// Converts the supplied Litres value to US Quarts
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 0.94635294599999995904;
+		/// <summary>
+		/// Converts the supplied Litres value to US Pints
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 0.47317647299999997952;
+		/// <summary>
+		/// Converts the supplied Litres value to US Gallons
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 3.785411784;
+		/// <summary>
+		/// Converts the supplied Litres value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 0.029573529562499997696;
+		/// <summary>
+		/// Converts the supplied Litres value to US Cups
+		/// </summary>
+		/// <param name="value">The Litres input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.23658823649999998976;
 	}
 	public static class Millilitres
 	{
+		/// <summary>
+		/// Converts the supplied Millilitres value to Litres
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value / 1000.0;
+		/// <summary>
+		/// Converts the supplied Millilitres value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value / 1000000.0;
+		/// <summary>
+		/// Converts the supplied Millilitres value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value / 5.9193904674479161344;
+		/// <summary>
+		/// Converts the supplied Millilitres value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value / 17.758171402343747584;
+		/// <summary>
+		/// Converts the supplied Millilitres value to Quarts
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value / 1136.52296975;
+		/// <summary>
+		/// Converts the supplied Millilitres value to Pints
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value / 568.26148487499988992;
+		/// <summary>
+		/// Converts the supplied Millilitres value to Gallons
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 4546.091879;
+		/// <summary>
+		/// Converts the supplied Millilitres value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value / 28.413074243749994496;
+		/// <summary>
+		/// Converts the supplied Millilitres value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 4.928921593749999616;
+		/// <summary>
+		/// Converts the supplied Millilitres value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 14.786764781249998848;
+		/// <summary>
+		/// Converts the supplied Millilitres value to US Quarts
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 946.35294599999995904;
+		/// <summary>
+		/// Converts the supplied Millilitres value to US Pints
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 473.17647299999997952;
+		/// <summary>
+		/// Converts the supplied Millilitres value to US Gallons
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 3785.411784;
+		/// <summary>
+		/// Converts the supplied Millilitres value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 29.573529562499997696;
+		/// <summary>
+		/// Converts the supplied Millilitres value to US Cups
+		/// </summary>
+		/// <param name="value">The Millilitres input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 236.58823649999998976;
 	}
 	public static class Pints
 	{
+		/// <summary>
+		/// Converts the supplied Pints value to Millilitres
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 568.26148487499988992;
+		/// <summary>
+		/// Converts the supplied Pints value to Litres
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.56826148487499988992;
+		/// <summary>
+		/// Converts the supplied Pints value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000568261484874999889;
+		/// <summary>
+		/// Converts the supplied Pints value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 96.0;
+		/// <summary>
+		/// Converts the supplied Pints value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 32.0;
+		/// <summary>
+		/// Converts the supplied Pints value to Quarts
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value  / 2.0;
+		/// <summary>
+		/// Converts the supplied Pints value to Gallons
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 8.0;
+		/// <summary>
+		/// Converts the supplied Pints value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 20.0;
+		/// <summary>
+		/// Converts the supplied Pints value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.008673685838191568486;
+		/// <summary>
+		/// Converts the supplied Pints value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 0.026021057514574708736;
+		/// <summary>
+		/// Converts the supplied Pints value to US Quarts
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 1.6653476809327814656;
+		/// <summary>
+		/// Converts the supplied Pints value to US Pints
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied Pints value to US Gallons
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 6.6613907237311258624;
+		/// <summary>
+		/// Converts the supplied Pints value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 0.052042115029149417472;
+		/// <summary>
+		/// Converts the supplied Pints value to US Cups
+		/// </summary>
+		/// <param name="value">The Pints input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.41633692023319535616;
 	}
 	public static class Quarts
 	{
+		/// <summary>
+		/// Converts the supplied Quarts value to Millilitres
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 1136.52296975;
+		/// <summary>
+		/// Converts the supplied Quarts value to Litres
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 1.13652296975;
+		/// <summary>
+		/// Converts the supplied Quarts value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.00113652296975;
+		/// <summary>
+		/// Converts the supplied Quarts value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 192.0;
+		/// <summary>
+		/// Converts the supplied Quarts value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 64.0;
+		/// <summary>
+		/// Converts the supplied Quarts value to Pints
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 2.0;
+		/// <summary>
+		/// Converts the supplied Quarts value to Gallons
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 4.0;
+		/// <summary>
+		/// Converts the supplied Quarts value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 40.0;
+		/// <summary>
+		/// Converts the supplied Quarts value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.004336842919095784243;
+		/// <summary>
+		/// Converts the supplied Quarts value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 0.013010528757287354368;
+		/// <summary>
+		/// Converts the supplied Quarts value to US Quarts
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied Quarts value to US Pints
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 0.41633692023319535616;
+		/// <summary>
+		/// Converts the supplied Quarts value to US Gallons
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 3.3306953618655629312;
+		/// <summary>
+		/// Converts the supplied Quarts value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 0.026021057514574708736;
+		/// <summary>
+		/// Converts the supplied Quarts value to US Cups
+		/// </summary>
+		/// <param name="value">The Quarts input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 0.20816846011659767808;
 	}
 	public static class Tablespoons
 	{
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Millilitres
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 17.758171402343747584;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Litres
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.017758171402343747584;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000017758171402343747;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Teaspoons
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 3.0;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Quarts
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value / 64.0;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Pints
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value / 32.0;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Gallons
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 256.0;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value / 1.6;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.27755794682213023744;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to US Quarts
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 53.291125789849001984;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to US Pints
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 26.645562894924500992;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to US Gallons
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 213.16450315939602432;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 1.6653476809327814656;
+		/// <summary>
+		/// Converts the supplied Tablespoons value to US Cups
+		/// </summary>
+		/// <param name="value">The Tablespoons input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 13.322781447462250496;
 	}
 	public static class Teaspoons
 	{
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Millilitres
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 5.9193904674479161344;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Litres
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.005919390467447916134;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Kilolitres
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000005919390467447916;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Tablespoons
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value / 3.0;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Quarts
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value / 192.0;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Pints
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value / 96.0;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Gallons
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value / 768.0;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value / 4.8;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value / 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 2.4980215213991718912;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to US Quarts
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 159.87337736954701824;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to US Pints
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 79.936688684773507072;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to US Gallons
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 639.49350947818807296;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 4.9960430427983437824;
+		/// <summary>
+		/// Converts the supplied Teaspoons value to US Cups
+		/// </summary>
+		/// <param name="value">The Teaspoons input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 39.968344342386753536;
 	}
 	public static class USCups
 	{
+		/// <summary>
+		/// Converts the supplied US Cups value to Millilitres
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 236.58823649999998976;
+		/// <summary>
+		/// Converts the supplied US Cups value to Litres
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.23658823649999998976;
+		/// <summary>
+		/// Converts the supplied US Cups value to Kilolitres
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000236588236499999989;
+		/// <summary>
+		/// Converts the supplied US Cups value to Teaspoons
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 39.968344342386753536;
+		/// <summary>
+		/// Converts the supplied US Cups value to Tablespoons
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 13.322781447462250496;
+		/// <summary>
+		/// Converts the supplied US Cups value to Quarts
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 0.20816846011659767808;
+		/// <summary>
+		/// Converts the supplied US Cups value to Pints
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 0.41633692023319535616;
+		/// <summary>
+		/// Converts the supplied US Cups value to Gallons
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value * 0.052042115029149417472;
+		/// <summary>
+		/// Converts the supplied US Cups value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 8.3267384046639071232;
+		/// <summary>
+		/// Converts the supplied US Cups value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value * 48.0;
+		/// <summary>
+		/// Converts the supplied US Cups value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value * 16.0;
+		/// <summary>
+		/// Converts the supplied US Cups value to US Quarts
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 4.0;
+		/// <summary>
+		/// Converts the supplied US Cups value to US Pints
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 2.0;
+		/// <summary>
+		/// Converts the supplied US Cups value to US Gallons
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 16.0;
+		/// <summary>
+		/// Converts the supplied US Cups value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Cups input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value * 8.0;
 	}
 	public static class USFluidOunces
 	{
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Millilitres
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 29.573529562499997696;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Litres
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.029573529562499997696;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Kilolitres
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.0000295735296;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Teaspoons
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 4.9960430427983437824;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Tablespoons
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 1.6653476809327814656;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Quarts
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 0.026021057514574708736;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Pints
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 0.052042115029149417472;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Gallons
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value * 0.006505264378643677184;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 1.0408423005829883904;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value * 6.0;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value * 2.0;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to US Quarts
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 32.0;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to US Pints
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 16.0;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to US Gallons
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 128.0;
+		/// <summary>
+		/// Converts the supplied US Fluid Ounces value to US Cups
+		/// </summary>
+		/// <param name="value">The US Fluid Ounces input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 8.0;
 	}
 	public static class USGallons
 	{
+		/// <summary>
+		/// Converts the supplied US Gallons value to Millilitres
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 3785.411784;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Litres
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 3.785411784;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Kilolitres
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.003785411784;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Teaspoons
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 639.49350947818807296;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Tablespoons
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 213.16450315939602432;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Quarts
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 3.3306953618655629312;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Pints
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 6.6613907237311258624;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Gallons
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value * 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied US Gallons value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 133.22781447462252544;
+		/// <summary>
+		/// Converts the supplied US Gallons value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value * 768.0;
+		/// <summary>
+		/// Converts the supplied US Gallons value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value * 256.0;
+		/// <summary>
+		/// Converts the supplied US Gallons value to US Quarts
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value * 4.0;
+		/// <summary>
+		/// Converts the supplied US Gallons value to US Pints
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value * 8.0;
+		/// <summary>
+		/// Converts the supplied US Gallons value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value * 128.0;
+		/// <summary>
+		/// Converts the supplied US Gallons value to US Cups
+		/// </summary>
+		/// <param name="value">The US Gallons input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value * 16.0;
 	}
 	public static class USPints
 	{
+		/// <summary>
+		/// Converts the supplied US Pints value to Millilitres
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 473.17647299999997952;
+		/// <summary>
+		/// Converts the supplied US Pints value to Litres
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.47317647299999997952;
+		/// <summary>
+		/// Converts the supplied US Pints value to Kilolitres
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000473176472999999979;
+		/// <summary>
+		/// Converts the supplied US Pints value to Teaspoons
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 79.936688684773507072;
+		/// <summary>
+		/// Converts the supplied US Pints value to Tablespoons
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 26.645562894924500992;
+		/// <summary>
+		/// Converts the supplied US Pints value to Quarts
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 0.41633692023319535616;
+		/// <summary>
+		/// Converts the supplied US Pints value to Pints
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied US Pints value to Gallons
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value * 0.10408423005829883904;
+		/// <summary>
+		/// Converts the supplied US Pints value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 16.653476809327814656;
+		/// <summary>
+		/// Converts the supplied US Pints value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value * 96.0;
+		/// <summary>
+		/// Converts the supplied US Pints value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value * 32.0;
+		/// <summary>
+		/// Converts the supplied US Pints value to US Quarts
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 2.0;
+		/// <summary>
+		/// Converts the supplied US Pints value to US Gallons
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 8.0;
+		/// <summary>
+		/// Converts the supplied US Pints value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value * 16.0;
+		/// <summary>
+		/// Converts the supplied US Pints value to US Cups
+		/// </summary>
+		/// <param name="value">The US Pints input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value * 2.0;
 	}
 	public static class USQuarts
 	{
+		/// <summary>
+		/// Converts the supplied US Quarts value to Millilitres
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 946.35294599999995904;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Litres
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.94635294599999995904;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Kilolitres
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000946352945999999959;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Teaspoons
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 159.87337736954701824;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Tablespoons
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 53.291125789849001984;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Quarts
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Pints
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 1.6653476809327814656;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Gallons
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value * 0.20816846011659767808;
+		/// <summary>
+		/// Converts the supplied US Quarts value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 33.306953618655629312;
+		/// <summary>
+		/// Converts the supplied US Quarts value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value * 192.0;
+		/// <summary>
+		/// Converts the supplied US Quarts value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value * 64.0;
+		/// <summary>
+		/// Converts the supplied US Quarts value to US Pints
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value * 2.0;
+		/// <summary>
+		/// Converts the supplied US Quarts value to US Gallons
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 4.0;
+		/// <summary>
+		/// Converts the supplied US Quarts value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value * 32.0;
+		/// <summary>
+		/// Converts the supplied US Quarts value to US Cups
+		/// </summary>
+		/// <param name="value">The US Quarts input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value * 4.0;
 	}
 	public static class USTablespoons
 	{
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Millilitres
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 14.786764781249998848;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Litres
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.014786764781249998848;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Kilolitres
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000014786764781249998;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Teaspoons
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 2.4980215213991718912;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Tablespoons
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Quarts
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 0.013010528757287354368;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Pints
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 0.026021057514574708736;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Gallons
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value * 0.003252632189321838592;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 0.52042115029149417472;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to US Teaspoons
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in US Teaspoons</returns>
 		public static double ToUSTeaspoons(double value) => value * 3.0;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to US Quarts
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 64.0;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to US Pints
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 32.0;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to US Gallons
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 256.0;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 2.0;
+		/// <summary>
+		/// Converts the supplied US Tablespoons value to US Cups
+		/// </summary>
+		/// <param name="value">The US Tablespoons input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 16.0;
 	}
 	public static class USTeaspoons
 	{
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Millilitres
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Millilitres</returns>
 		public static double ToMillilitres(double value) => value * 4.928921593749999616;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Litres
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Litres</returns>
 		public static double ToLitres(double value) => value * 0.004928921593749999616;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Kilolitres
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Kilolitres</returns>
 		public static double ToKilolitres(double value) => value * 0.000004928921593749999;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Teaspoons
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Teaspoons</returns>
 		public static double ToTeaspoons(double value) => value * 0.83267384046639071232;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Tablespoons
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Tablespoons</returns>
 		public static double ToTablespoons(double value) => value * 0.27755794682213023744;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Quarts
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Quarts</returns>
 		public static double ToQuarts(double value) => value * 0.004336842919095784243;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Pints
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Pints</returns>
 		public static double ToPints(double value) => value * 0.008673685838191568486;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Gallons
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Gallons</returns>
 		public static double ToGallons(double value) => value * 0.00108421072977394606;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in Fluid Ounces</returns>
 		public static double ToFluidOunces(double value) => value * 0.1734737167638313984;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to US Tablespoons
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in US Tablespoons</returns>
 		public static double ToUSTablespoons(double value) => value / 3.0;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to US Quarts
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in US Quarts</returns>
 		public static double ToUSQuarts(double value) => value / 192.0;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to US Pints
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in US Pints</returns>
 		public static double ToUSPints(double value) => value / 96.0;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to US Gallons
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in US Gallons</returns>
 		public static double ToUSGallons(double value) => value / 768.0;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to US Fluid Ounces
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in US Fluid Ounces</returns>
 		public static double ToUSFluidOunces(double value) => value / 6.0;
+		/// <summary>
+		/// Converts the supplied US Teaspoons value to US Cups
+		/// </summary>
+		/// <param name="value">The US Teaspoons input value</param>
+		/// <returns>The value in US Cups</returns>
 		public static double ToUSCups(double value) => value / 48.0;
 	}
 }

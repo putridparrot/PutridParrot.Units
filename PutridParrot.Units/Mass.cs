@@ -10,65 +10,275 @@ public static class Mass
 {
 	public static class Grams
 	{
+		/// <summary>
+		/// Converts the supplied Grams value to Milligrams
+		/// </summary>
+		/// <param name="value">The Grams input value</param>
+		/// <returns>The value in Milligrams</returns>
 		public static double ToMilligrams(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Grams value to Kilograms
+		/// </summary>
+		/// <param name="value">The Grams input value</param>
+		/// <returns>The value in Kilograms</returns>
 		public static double ToKilograms(double value) => value / 1000.0;
+		/// <summary>
+		/// Converts the supplied Grams value to Tonnes
+		/// </summary>
+		/// <param name="value">The Grams input value</param>
+		/// <returns>The value in Tonnes</returns>
 		public static double ToTonnes(double value) => value * 1e-6;
+		/// <summary>
+		/// Converts the supplied Grams value to Ounces
+		/// </summary>
+		/// <param name="value">The Grams input value</param>
+		/// <returns>The value in Ounces</returns>
 		public static double ToOunces(double value) => value / 28.3495231;
+		/// <summary>
+		/// Converts the supplied Grams value to Pounds
+		/// </summary>
+		/// <param name="value">The Grams input value</param>
+		/// <returns>The value in Pounds</returns>
 		public static double ToPounds(double value) => value / 453.59237;
+		/// <summary>
+		/// Converts the supplied Grams value to Stones
+		/// </summary>
+		/// <param name="value">The Grams input value</param>
+		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value / 6350.29318;
 	}
 	public static class Kilograms
 	{
+		/// <summary>
+		/// Converts the supplied Kilograms value to Milligrams
+		/// </summary>
+		/// <param name="value">The Kilograms input value</param>
+		/// <returns>The value in Milligrams</returns>
 		public static double ToMilligrams(double value) => value * 1e+6;
+		/// <summary>
+		/// Converts the supplied Kilograms value to Grams
+		/// </summary>
+		/// <param name="value">The Kilograms input value</param>
+		/// <returns>The value in Grams</returns>
 		public static double ToGrams(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Kilograms value to Tonnes
+		/// </summary>
+		/// <param name="value">The Kilograms input value</param>
+		/// <returns>The value in Tonnes</returns>
 		public static double ToTonnes(double value) => value * 0.001;
+		/// <summary>
+		/// Converts the supplied Kilograms value to Ounces
+		/// </summary>
+		/// <param name="value">The Kilograms input value</param>
+		/// <returns>The value in Ounces</returns>
 		public static double ToOunces(double value) => value * 35.274;
+		/// <summary>
+		/// Converts the supplied Kilograms value to Pounds
+		/// </summary>
+		/// <param name="value">The Kilograms input value</param>
+		/// <returns>The value in Pounds</returns>
 		public static double ToPounds(double value) => value * 2.20462;
+		/// <summary>
+		/// Converts the supplied Kilograms value to Stones
+		/// </summary>
+		/// <param name="value">The Kilograms input value</param>
+		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value * 0.157473;
 	}
 	public static class Milligrams
 	{
+		/// <summary>
+		/// Converts the supplied Milligrams value to Grams
+		/// </summary>
+		/// <param name="value">The Milligrams input value</param>
+		/// <returns>The value in Grams</returns>
 		public static double ToGrams(double value) => value / 1000.0;
+		/// <summary>
+		/// Converts the supplied Milligrams value to Kilograms
+		/// </summary>
+		/// <param name="value">The Milligrams input value</param>
+		/// <returns>The value in Kilograms</returns>
 		public static double ToKilograms(double value) => value / 1e+6;
+		/// <summary>
+		/// Converts the supplied Milligrams value to Tonnes
+		/// </summary>
+		/// <param name="value">The Milligrams input value</param>
+		/// <returns>The value in Tonnes</returns>
 		public static double ToTonnes(double value) => value / 1e+9;
+		/// <summary>
+		/// Converts the supplied Milligrams value to Ounces
+		/// </summary>
+		/// <param name="value">The Milligrams input value</param>
+		/// <returns>The value in Ounces</returns>
 		public static double ToOunces(double value) => value / 28349.5231;
+		/// <summary>
+		/// Converts the supplied Milligrams value to Pounds
+		/// </summary>
+		/// <param name="value">The Milligrams input value</param>
+		/// <returns>The value in Pounds</returns>
 		public static double ToPounds(double value) => value / 453592.37;
+		/// <summary>
+		/// Converts the supplied Milligrams value to Stones
+		/// </summary>
+		/// <param name="value">The Milligrams input value</param>
+		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value / 6350293.18;
 	}
 	public static class Ounces
 	{
+		/// <summary>
+		/// Converts the supplied Ounces value to Milligrams
+		/// </summary>
+		/// <param name="value">The Ounces input value</param>
+		/// <returns>The value in Milligrams</returns>
 		public static double ToMilligrams(double value) => value * 28349.5231;
+		/// <summary>
+		/// Converts the supplied Ounces value to Grams
+		/// </summary>
+		/// <param name="value">The Ounces input value</param>
+		/// <returns>The value in Grams</returns>
 		public static double ToGrams(double value) => value * 28.3495231;
+		/// <summary>
+		/// Converts the supplied Ounces value to Kilograms
+		/// </summary>
+		/// <param name="value">The Ounces input value</param>
+		/// <returns>The value in Kilograms</returns>
 		public static double ToKilograms(double value) => value * 0.0283495;
+		/// <summary>
+		/// Converts the supplied Ounces value to Tonnes
+		/// </summary>
+		/// <param name="value">The Ounces input value</param>
+		/// <returns>The value in Tonnes</returns>
 		public static double ToTonnes(double value) => value * 0.0000283495231;
+		/// <summary>
+		/// Converts the supplied Ounces value to Pounds
+		/// </summary>
+		/// <param name="value">The Ounces input value</param>
+		/// <returns>The value in Pounds</returns>
 		public static double ToPounds(double value) => value * 0.0625;
+		/// <summary>
+		/// Converts the supplied Ounces value to Stones
+		/// </summary>
+		/// <param name="value">The Ounces input value</param>
+		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value * 0.00446429;
 	}
 	public static class Pounds
 	{
+		/// <summary>
+		/// Converts the supplied Pounds value to Milligrams
+		/// </summary>
+		/// <param name="value">The Pounds input value</param>
+		/// <returns>The value in Milligrams</returns>
 		public static double ToMilligrams(double value) => value * 453592.37;
+		/// <summary>
+		/// Converts the supplied Pounds value to Grams
+		/// </summary>
+		/// <param name="value">The Pounds input value</param>
+		/// <returns>The value in Grams</returns>
 		public static double ToGrams(double value) => value * 453.59237;
+		/// <summary>
+		/// Converts the supplied Pounds value to Kilograms
+		/// </summary>
+		/// <param name="value">The Pounds input value</param>
+		/// <returns>The value in Kilograms</returns>
 		public static double ToKilograms(double value) => value * 0.453592;
+		/// <summary>
+		/// Converts the supplied Pounds value to Tonnes
+		/// </summary>
+		/// <param name="value">The Pounds input value</param>
+		/// <returns>The value in Tonnes</returns>
 		public static double ToTonnes(double value) => value / 2204.62;
+		/// <summary>
+		/// Converts the supplied Pounds value to Ounces
+		/// </summary>
+		/// <param name="value">The Pounds input value</param>
+		/// <returns>The value in Ounces</returns>
 		public static double ToOunces(double value) => value * 16.0;
+		/// <summary>
+		/// Converts the supplied Pounds value to Stones
+		/// </summary>
+		/// <param name="value">The Pounds input value</param>
+		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value / 14.0;
 	}
 	public static class Stones
 	{
+		/// <summary>
+		/// Converts the supplied Stones value to Milligrams
+		/// </summary>
+		/// <param name="value">The Stones input value</param>
+		/// <returns>The value in Milligrams</returns>
 		public static double ToMilligrams(double value) => value * 6350293.18;
+		/// <summary>
+		/// Converts the supplied Stones value to Grams
+		/// </summary>
+		/// <param name="value">The Stones input value</param>
+		/// <returns>The value in Grams</returns>
 		public static double ToGrams(double value) => value * 6350.29318;
+		/// <summary>
+		/// Converts the supplied Stones value to Kilograms
+		/// </summary>
+		/// <param name="value">The Stones input value</param>
+		/// <returns>The value in Kilograms</returns>
 		public static double ToKilograms(double value) => value * 6.35029;
+		/// <summary>
+		/// Converts the supplied Stones value to Tonnes
+		/// </summary>
+		/// <param name="value">The Stones input value</param>
+		/// <returns>The value in Tonnes</returns>
 		public static double ToTonnes(double value) => value * 0.00635029;
+		/// <summary>
+		/// Converts the supplied Stones value to Ounces
+		/// </summary>
+		/// <param name="value">The Stones input value</param>
+		/// <returns>The value in Ounces</returns>
 		public static double ToOunces(double value) => value * 224.0;
+		/// <summary>
+		/// Converts the supplied Stones value to Pounds
+		/// </summary>
+		/// <param name="value">The Stones input value</param>
+		/// <returns>The value in Pounds</returns>
 		public static double ToPounds(double value) => value * 14.0;
 	}
 	public static class Tonnes
 	{
+		/// <summary>
+		/// Converts the supplied Tonnes value to Milligrams
+		/// </summary>
+		/// <param name="value">The Tonnes input value</param>
+		/// <returns>The value in Milligrams</returns>
 		public static double ToMilligrams(double value) => value * 1e+9;
+		/// <summary>
+		/// Converts the supplied Tonnes value to Grams
+		/// </summary>
+		/// <param name="value">The Tonnes input value</param>
+		/// <returns>The value in Grams</returns>
 		public static double ToGrams(double value) => value * 1e+6;
+		/// <summary>
+		/// Converts the supplied Tonnes value to Kilograms
+		/// </summary>
+		/// <param name="value">The Tonnes input value</param>
+		/// <returns>The value in Kilograms</returns>
 		public static double ToKilograms(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Tonnes value to Ounces
+		/// </summary>
+		/// <param name="value">The Tonnes input value</param>
+		/// <returns>The value in Ounces</returns>
 		public static double ToOunces(double value) => value / 0.0000283495231;
+		/// <summary>
+		/// Converts the supplied Tonnes value to Pounds
+		/// </summary>
+		/// <param name="value">The Tonnes input value</param>
+		/// <returns>The value in Pounds</returns>
 		public static double ToPounds(double value) => value * 2204.62;
+		/// <summary>
+		/// Converts the supplied Tonnes value to Stones
+		/// </summary>
+		/// <param name="value">The Tonnes input value</param>
+		/// <returns>The value in Stones</returns>
 		public static double ToStones(double value) => value * 157.473;
 	}
 }

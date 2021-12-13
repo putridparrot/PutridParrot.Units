@@ -10,24 +10,104 @@ public static class Energy
 {
 	public static class Btu
 	{
+		/// <summary>
+		/// Converts the supplied Btu value to Kilojoules
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value * 1.0550559;
+		/// <summary>
+		/// Converts the supplied Btu value to Kilocalories
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value / 3.966;
+		/// <summary>
+		/// Converts the supplied Btu value to Joules
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 1055.06;
+		/// <summary>
+		/// Converts the supplied Btu value to Calories
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value * 252.164;
+		/// <summary>
+		/// Converts the supplied Btu value to US Therms
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 99976.12448781215;
+		/// <summary>
+		/// Converts the supplied Btu value to Watt Hours
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value * 0.293071;
+		/// <summary>
+		/// Converts the supplied Btu value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value / 3412.14;
+		/// <summary>
+		/// Converts the supplied Btu value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The Btu input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 778.169;
 	}
 	public static class Calories
 	{
+		/// <summary>
+		/// Converts the supplied Calories value to Kilojoules
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value / 239.0057;
+		/// <summary>
+		/// Converts the supplied Calories value to Kilocalories
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value / 1000.0;
+		/// <summary>
+		/// Converts the supplied Calories value to Joules
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 4.184;
+		/// <summary>
+		/// Converts the supplied Calories value to Btu
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value / 252.164;
+		/// <summary>
+		/// Converts the supplied Calories value to US Therms
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 25210420.0;
+		/// <summary>
+		/// Converts the supplied Calories value to Watt Hours
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value * 0.00116222;
+		/// <summary>
+		/// Converts the supplied Calories value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value / 860421.0;
+		/// <summary>
+		/// Converts the supplied Calories value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The Calories input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 3.08596;
 	}
 	public static class ElectronVolts
@@ -35,79 +115,359 @@ public static class Energy
 	}
 	public static class FootPounds
 	{
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to Kilojoules
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value / 737.562;
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to Kilocalories
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value / 3085.96;
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to Joules
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 1.35582;
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to Btu
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value / 778.169;
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to Calories
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value / 3.08596;
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to US Therms
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 77816937.099186;
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to Watt Hours
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value / 2655.22;
+		/// <summary>
+		/// Converts the supplied Foot Pounds value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The Foot Pounds input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value * 0.00000037662;
 	}
 	public static class Joules
 	{
+		/// <summary>
+		/// Converts the supplied Joules value to Kilojoules
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value / 1000.0;
+		/// <summary>
+		/// Converts the supplied Joules value to Kilocalories
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value / 4184.0;
+		/// <summary>
+		/// Converts the supplied Joules value to Btu
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value / 1055.0;
+		/// <summary>
+		/// Converts the supplied Joules value to Calories
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value / 4.184;
+		/// <summary>
+		/// Converts the supplied Joules value to US Therms
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 105480400.0;
+		/// <summary>
+		/// Converts the supplied Joules value to Watt Hours
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value / 3600.0;
+		/// <summary>
+		/// Converts the supplied Joules value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value / 3.6e+6;
+		/// <summary>
+		/// Converts the supplied Joules value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The Joules input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value / 1.35582;
 	}
 	public static class Kilocalories
 	{
+		/// <summary>
+		/// Converts the supplied Kilocalories value to Kilojoules
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value * 4.184;
+		/// <summary>
+		/// Converts the supplied Kilocalories value to Joules
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 4184.0;
+		/// <summary>
+		/// Converts the supplied Kilocalories value to Btu
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value * 3.966;
+		/// <summary>
+		/// Converts the supplied Kilocalories value to Calories
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Kilocalories value to US Therms
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 25210.4;
+		/// <summary>
+		/// Converts the supplied Kilocalories value to Watt Hours
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value * 1.16222;
+		/// <summary>
+		/// Converts the supplied Kilocalories value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value / 860.421;
+		/// <summary>
+		/// Converts the supplied Kilocalories value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The Kilocalories input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 3085.96;
 	}
 	public static class Kilojoules
 	{
+		/// <summary>
+		/// Converts the supplied Kilojoules value to Kilocalories
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value / 4.184;
+		/// <summary>
+		/// Converts the supplied Kilojoules value to Joules
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Kilojoules value to Btu
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value / 1.0550559;
+		/// <summary>
+		/// Converts the supplied Kilojoules value to Calories
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value * 239.0057;
+		/// <summary>
+		/// Converts the supplied Kilojoules value to US Therms
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 105480.04;
+		/// <summary>
+		/// Converts the supplied Kilojoules value to Watt Hours
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value / 3.6;
+		/// <summary>
+		/// Converts the supplied Kilojoules value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value / 3600.0;
+		/// <summary>
+		/// Converts the supplied Kilojoules value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The Kilojoules input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 737.562;
 	}
 	public static class KilowattHours
 	{
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to Kilojoules
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value * 3600.0;
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to Kilocalories
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value * 860.421;
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to Joules
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 3.6e+6;
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to Btu
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value * 3412.14;
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to Calories
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value * 860421.0;
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to US Therms
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 29.3;
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to Watt Hours
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value * 1000.0;
+		/// <summary>
+		/// Converts the supplied Kilowatt Hours value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The Kilowatt Hours input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value / 0.00000037662;
 	}
 	public static class USTherms
 	{
+		/// <summary>
+		/// Converts the supplied US Therms value to Kilojoules
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value * 105480.04;
+		/// <summary>
+		/// Converts the supplied US Therms value to Kilocalories
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value * 25210.4;
+		/// <summary>
+		/// Converts the supplied US Therms value to Joules
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 105480400.0;
+		/// <summary>
+		/// Converts the supplied US Therms value to Btu
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value * 99976.12448781215;
+		/// <summary>
+		/// Converts the supplied US Therms value to Calories
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value * 25210420.0;
+		/// <summary>
+		/// Converts the supplied US Therms value to Watt Hours
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Watt Hours</returns>
 		public static double ToWattHours(double value) => value * 29300.1;
+		/// <summary>
+		/// Converts the supplied US Therms value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value * 29.3;
+		/// <summary>
+		/// Converts the supplied US Therms value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The US Therms input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 77816937.099186;
 	}
 	public static class WattHours
 	{
+		/// <summary>
+		/// Converts the supplied Watt Hours value to Kilojoules
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in Kilojoules</returns>
 		public static double ToKilojoules(double value) => value * 3.6;
+		/// <summary>
+		/// Converts the supplied Watt Hours value to Kilocalories
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in Kilocalories</returns>
 		public static double ToKilocalories(double value) => value / 1.16222;
+		/// <summary>
+		/// Converts the supplied Watt Hours value to Joules
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in Joules</returns>
 		public static double ToJoules(double value) => value * 3600.0;
+		/// <summary>
+		/// Converts the supplied Watt Hours value to Btu
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in Btu</returns>
 		public static double ToBtu(double value) => value / 0.293071;
+		/// <summary>
+		/// Converts the supplied Watt Hours value to Calories
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in Calories</returns>
 		public static double ToCalories(double value) => value / 0.00116222;
+		/// <summary>
+		/// Converts the supplied Watt Hours value to US Therms
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in US Therms</returns>
 		public static double ToUSTherms(double value) => value / 29300.1;
+		/// <summary>
+		/// Converts the supplied Watt Hours value to Kilowatt Hours
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in Kilowatt Hours</returns>
 		public static double ToKilowattHours(double value) => value / 1000.0;
+		/// <summary>
+		/// Converts the supplied Watt Hours value to Foot Pounds
+		/// </summary>
+		/// <param name="value">The Watt Hours input value</param>
+		/// <returns>The value in Foot Pounds</returns>
 		public static double ToFootPounds(double value) => value * 2655.22;
 	}
 }

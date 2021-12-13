@@ -10,10 +10,20 @@ public static class MagnetomotiveForce
 {
 	public static class Ampereturns
 	{
+		/// <summary>
+		/// Converts the supplied Ampere-turns value to Gilberts
+		/// </summary>
+		/// <param name="value">The Ampere-turns input value</param>
+		/// <returns>The value in Gilberts</returns>
 		public static double ToGilberts(double value) => value * 1.256637061436;
 	}
 	public static class Gilberts
 	{
+		/// <summary>
+		/// Converts the supplied Gilberts value to Ampere-turns
+		/// </summary>
+		/// <param name="value">The Gilberts input value</param>
+		/// <returns>The value in Ampere-turns</returns>
 		public static double ToAmpereturns(double value) => value * 0.7957747154595;
 	}
 }
