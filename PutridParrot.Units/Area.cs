@@ -4,395 +4,396 @@
 // Changes to this file will be lost if the code is regenerated
 // </auto-generated>
 
-namespace PutridParrot.Units;
-
-/// <summary>
-/// Area conversion functions
-/// </summary>
-public static class Area
+namespace PutridParrot.Units
 {
 	/// <summary>
-	/// Acres conversion functions
+	/// Area conversion functions
 	/// </summary>
-	public static class Acres
+	public static class Area
 	{
 		/// <summary>
-		/// Converts the supplied Acres value to Square Kilometres
+		/// Acres conversion functions
 		/// </summary>
-		/// <param name="value">The Acres input value</param>
-		/// <returns>The value in Square Kilometres</returns>
-		public static double ToSquareKilometres(double value) => value / 247.105;
+		public static class Acres
+		{
+			/// <summary>
+			/// Converts the supplied Acres value to Square Kilometres
+			/// </summary>
+			/// <param name="value">The Acres input value</param>
+			/// <returns>The value in Square Kilometres</returns>
+			public static double ToSquareKilometres(double value) => value / 247.105;
+			/// <summary>
+			/// Converts the supplied Acres value to Square Metres
+			/// </summary>
+			/// <param name="value">The Acres input value</param>
+			/// <returns>The value in Square Metres</returns>
+			public static double ToSquareMetres(double value) => value * 4046.86;
+			/// <summary>
+			/// Converts the supplied Acres value to Square Miles
+			/// </summary>
+			/// <param name="value">The Acres input value</param>
+			/// <returns>The value in Square Miles</returns>
+			public static double ToSquareMiles(double value) => value / 640.0;
+			/// <summary>
+			/// Converts the supplied Acres value to Square Yards
+			/// </summary>
+			/// <param name="value">The Acres input value</param>
+			/// <returns>The value in Square Yards</returns>
+			public static double ToSquareYards(double value) => value * 4840.0;
+			/// <summary>
+			/// Converts the supplied Acres value to Square Feet
+			/// </summary>
+			/// <param name="value">The Acres input value</param>
+			/// <returns>The value in Square Feet</returns>
+			public static double ToSquareFeet(double value) => value * 43560.0;
+			/// <summary>
+			/// Converts the supplied Acres value to Square Inches
+			/// </summary>
+			/// <param name="value">The Acres input value</param>
+			/// <returns>The value in Square Inches</returns>
+			public static double ToSquareInches(double value) => value * 6272640.0;
+			/// <summary>
+			/// Converts the supplied Acres value to Hectares
+			/// </summary>
+			/// <param name="value">The Acres input value</param>
+			/// <returns>The value in Hectares</returns>
+			public static double ToHectares(double value) => value / 2.471;
+		}
 		/// <summary>
-		/// Converts the supplied Acres value to Square Metres
+		/// Hectares conversion functions
 		/// </summary>
-		/// <param name="value">The Acres input value</param>
-		/// <returns>The value in Square Metres</returns>
-		public static double ToSquareMetres(double value) => value * 4046.86;
+		public static class Hectares
+		{
+			/// <summary>
+			/// Converts the supplied Hectares value to Square Kilometres
+			/// </summary>
+			/// <param name="value">The Hectares input value</param>
+			/// <returns>The value in Square Kilometres</returns>
+			public static double ToSquareKilometres(double value) => value / 100.0;
+			/// <summary>
+			/// Converts the supplied Hectares value to Square Metres
+			/// </summary>
+			/// <param name="value">The Hectares input value</param>
+			/// <returns>The value in Square Metres</returns>
+			public static double ToSquareMetres(double value) => value * 10000.0;
+			/// <summary>
+			/// Converts the supplied Hectares value to Square Miles
+			/// </summary>
+			/// <param name="value">The Hectares input value</param>
+			/// <returns>The value in Square Miles</returns>
+			public static double ToSquareMiles(double value) => value / 259.0;
+			/// <summary>
+			/// Converts the supplied Hectares value to Square Yards
+			/// </summary>
+			/// <param name="value">The Hectares input value</param>
+			/// <returns>The value in Square Yards</returns>
+			public static double ToSquareYards(double value) => value * 11959.900463011;
+			/// <summary>
+			/// Converts the supplied Hectares value to Square Feet
+			/// </summary>
+			/// <param name="value">The Hectares input value</param>
+			/// <returns>The value in Square Feet</returns>
+			public static double ToSquareFeet(double value) => value * 107639.0;
+			/// <summary>
+			/// Converts the supplied Hectares value to Square Inches
+			/// </summary>
+			/// <param name="value">The Hectares input value</param>
+			/// <returns>The value in Square Inches</returns>
+			public static double ToSquareInches(double value) => value * 15500031.0;
+			/// <summary>
+			/// Converts the supplied Hectares value to Acres
+			/// </summary>
+			/// <param name="value">The Hectares input value</param>
+			/// <returns>The value in Acres</returns>
+			public static double ToAcres(double value) => value * 2.471;
+		}
 		/// <summary>
-		/// Converts the supplied Acres value to Square Miles
+		/// Square Feet conversion functions
 		/// </summary>
-		/// <param name="value">The Acres input value</param>
-		/// <returns>The value in Square Miles</returns>
-		public static double ToSquareMiles(double value) => value / 640.0;
+		public static class SquareFeet
+		{
+			/// <summary>
+			/// Converts the supplied Square Feet value to Square Kilometres
+			/// </summary>
+			/// <param name="value">The Square Feet input value</param>
+			/// <returns>The value in Square Kilometres</returns>
+			public static double ToSquareKilometres(double value) => value / 10763910.41671;
+			/// <summary>
+			/// Converts the supplied Square Feet value to Square Metres
+			/// </summary>
+			/// <param name="value">The Square Feet input value</param>
+			/// <returns>The value in Square Metres</returns>
+			public static double ToSquareMetres(double value) => value / 10.764;
+			/// <summary>
+			/// Converts the supplied Square Feet value to Square Miles
+			/// </summary>
+			/// <param name="value">The Square Feet input value</param>
+			/// <returns>The value in Square Miles</returns>
+			public static double ToSquareMiles(double value) => value / 27878400.0;
+			/// <summary>
+			/// Converts the supplied Square Feet value to Square Yards
+			/// </summary>
+			/// <param name="value">The Square Feet input value</param>
+			/// <returns>The value in Square Yards</returns>
+			public static double ToSquareYards(double value) => value / 9.0;
+			/// <summary>
+			/// Converts the supplied Square Feet value to Square Inches
+			/// </summary>
+			/// <param name="value">The Square Feet input value</param>
+			/// <returns>The value in Square Inches</returns>
+			public static double ToSquareInches(double value) => value * 144.0;
+			/// <summary>
+			/// Converts the supplied Square Feet value to Hectares
+			/// </summary>
+			/// <param name="value">The Square Feet input value</param>
+			/// <returns>The value in Hectares</returns>
+			public static double ToHectares(double value) => value / 107639.0;
+			/// <summary>
+			/// Converts the supplied Square Feet value to Acres
+			/// </summary>
+			/// <param name="value">The Square Feet input value</param>
+			/// <returns>The value in Acres</returns>
+			public static double ToAcres(double value) => value / 43560.0;
+		}
 		/// <summary>
-		/// Converts the supplied Acres value to Square Yards
+		/// Square Inches conversion functions
 		/// </summary>
-		/// <param name="value">The Acres input value</param>
-		/// <returns>The value in Square Yards</returns>
-		public static double ToSquareYards(double value) => value * 4840.0;
+		public static class SquareInches
+		{
+			/// <summary>
+			/// Converts the supplied Square Inches value to Square Kilometres
+			/// </summary>
+			/// <param name="value">The Square Inches input value</param>
+			/// <returns>The value in Square Kilometres</returns>
+			public static double ToSquareKilometres(double value) => value / 1550003100.00;
+			/// <summary>
+			/// Converts the supplied Square Inches value to Square Metres
+			/// </summary>
+			/// <param name="value">The Square Inches input value</param>
+			/// <returns>The value in Square Metres</returns>
+			public static double ToSquareMetres(double value) => value / 1550.0;
+			/// <summary>
+			/// Converts the supplied Square Inches value to Square Miles
+			/// </summary>
+			/// <param name="value">The Square Inches input value</param>
+			/// <returns>The value in Square Miles</returns>
+			public static double ToSquareMiles(double value) => value / 4014489600.0;
+			/// <summary>
+			/// Converts the supplied Square Inches value to Square Yards
+			/// </summary>
+			/// <param name="value">The Square Inches input value</param>
+			/// <returns>The value in Square Yards</returns>
+			public static double ToSquareYards(double value) => value / 1296.0;
+			/// <summary>
+			/// Converts the supplied Square Inches value to Square Feet
+			/// </summary>
+			/// <param name="value">The Square Inches input value</param>
+			/// <returns>The value in Square Feet</returns>
+			public static double ToSquareFeet(double value) => value / 144.0;
+			/// <summary>
+			/// Converts the supplied Square Inches value to Hectares
+			/// </summary>
+			/// <param name="value">The Square Inches input value</param>
+			/// <returns>The value in Hectares</returns>
+			public static double ToHectares(double value) => value / 15500031.0;
+			/// <summary>
+			/// Converts the supplied Square Inches value to Acres
+			/// </summary>
+			/// <param name="value">The Square Inches input value</param>
+			/// <returns>The value in Acres</returns>
+			public static double ToAcres(double value) => value / 6272640.0;
+		}
 		/// <summary>
-		/// Converts the supplied Acres value to Square Feet
+		/// Square Kilometres conversion functions
 		/// </summary>
-		/// <param name="value">The Acres input value</param>
-		/// <returns>The value in Square Feet</returns>
-		public static double ToSquareFeet(double value) => value * 43560.0;
+		public static class SquareKilometres
+		{
+			/// <summary>
+			/// Converts the supplied Square Kilometres value to Square Metres
+			/// </summary>
+			/// <param name="value">The Square Kilometres input value</param>
+			/// <returns>The value in Square Metres</returns>
+			public static double ToSquareMetres(double value) => value * 1e+6;
+			/// <summary>
+			/// Converts the supplied Square Kilometres value to Square Miles
+			/// </summary>
+			/// <param name="value">The Square Kilometres input value</param>
+			/// <returns>The value in Square Miles</returns>
+			public static double ToSquareMiles(double value) => value / 2.58999;
+			/// <summary>
+			/// Converts the supplied Square Kilometres value to Square Yards
+			/// </summary>
+			/// <param name="value">The Square Kilometres input value</param>
+			/// <returns>The value in Square Yards</returns>
+			public static double ToSquareYards(double value) => value * 1195990.05;
+			/// <summary>
+			/// Converts the supplied Square Kilometres value to Square Feet
+			/// </summary>
+			/// <param name="value">The Square Kilometres input value</param>
+			/// <returns>The value in Square Feet</returns>
+			public static double ToSquareFeet(double value) => value * 10763910.41671;
+			/// <summary>
+			/// Converts the supplied Square Kilometres value to Square Inches
+			/// </summary>
+			/// <param name="value">The Square Kilometres input value</param>
+			/// <returns>The value in Square Inches</returns>
+			public static double ToSquareInches(double value) => value * 1550003100.00;
+			/// <summary>
+			/// Converts the supplied Square Kilometres value to Hectares
+			/// </summary>
+			/// <param name="value">The Square Kilometres input value</param>
+			/// <returns>The value in Hectares</returns>
+			public static double ToHectares(double value) => value * 100.0;
+			/// <summary>
+			/// Converts the supplied Square Kilometres value to Acres
+			/// </summary>
+			/// <param name="value">The Square Kilometres input value</param>
+			/// <returns>The value in Acres</returns>
+			public static double ToAcres(double value) => value * 247.105;
+		}
 		/// <summary>
-		/// Converts the supplied Acres value to Square Inches
+		/// Square Metres conversion functions
 		/// </summary>
-		/// <param name="value">The Acres input value</param>
-		/// <returns>The value in Square Inches</returns>
-		public static double ToSquareInches(double value) => value * 6272640.0;
+		public static class SquareMetres
+		{
+			/// <summary>
+			/// Converts the supplied Square Metres value to Square Kilometres
+			/// </summary>
+			/// <param name="value">The Square Metres input value</param>
+			/// <returns>The value in Square Kilometres</returns>
+			public static double ToSquareKilometres(double value) => value / 1e+6;
+			/// <summary>
+			/// Converts the supplied Square Metres value to Square Miles
+			/// </summary>
+			/// <param name="value">The Square Metres input value</param>
+			/// <returns>The value in Square Miles</returns>
+			public static double ToSquareMiles(double value) => value / 2589988.10;
+			/// <summary>
+			/// Converts the supplied Square Metres value to Square Yards
+			/// </summary>
+			/// <param name="value">The Square Metres input value</param>
+			/// <returns>The value in Square Yards</returns>
+			public static double ToSquareYards(double value) => value * 1.196;
+			/// <summary>
+			/// Converts the supplied Square Metres value to Square Feet
+			/// </summary>
+			/// <param name="value">The Square Metres input value</param>
+			/// <returns>The value in Square Feet</returns>
+			public static double ToSquareFeet(double value) => value * 10.764;
+			/// <summary>
+			/// Converts the supplied Square Metres value to Square Inches
+			/// </summary>
+			/// <param name="value">The Square Metres input value</param>
+			/// <returns>The value in Square Inches</returns>
+			public static double ToSquareInches(double value) => value * 1550.0;
+			/// <summary>
+			/// Converts the supplied Square Metres value to Hectares
+			/// </summary>
+			/// <param name="value">The Square Metres input value</param>
+			/// <returns>The value in Hectares</returns>
+			public static double ToHectares(double value) => value / 10000.0;
+			/// <summary>
+			/// Converts the supplied Square Metres value to Acres
+			/// </summary>
+			/// <param name="value">The Square Metres input value</param>
+			/// <returns>The value in Acres</returns>
+			public static double ToAcres(double value) => value / 4046.86;
+		}
 		/// <summary>
-		/// Converts the supplied Acres value to Hectares
+		/// Square Miles conversion functions
 		/// </summary>
-		/// <param name="value">The Acres input value</param>
-		/// <returns>The value in Hectares</returns>
-		public static double ToHectares(double value) => value / 2.471;
-	}
-	/// <summary>
-	/// Hectares conversion functions
-	/// </summary>
-	public static class Hectares
-	{
+		public static class SquareMiles
+		{
+			/// <summary>
+			/// Converts the supplied Square Miles value to Square Kilometres
+			/// </summary>
+			/// <param name="value">The Square Miles input value</param>
+			/// <returns>The value in Square Kilometres</returns>
+			public static double ToSquareKilometres(double value) => value * 2.58999;
+			/// <summary>
+			/// Converts the supplied Square Miles value to Square Metres
+			/// </summary>
+			/// <param name="value">The Square Miles input value</param>
+			/// <returns>The value in Square Metres</returns>
+			public static double ToSquareMetres(double value) => value * 2589988.10;
+			/// <summary>
+			/// Converts the supplied Square Miles value to Square Yards
+			/// </summary>
+			/// <param name="value">The Square Miles input value</param>
+			/// <returns>The value in Square Yards</returns>
+			public static double ToSquareYards(double value) => value * 3097600.0;
+			/// <summary>
+			/// Converts the supplied Square Miles value to Square Feet
+			/// </summary>
+			/// <param name="value">The Square Miles input value</param>
+			/// <returns>The value in Square Feet</returns>
+			public static double ToSquareFeet(double value) => value * 27878400.0;
+			/// <summary>
+			/// Converts the supplied Square Miles value to Square Inches
+			/// </summary>
+			/// <param name="value">The Square Miles input value</param>
+			/// <returns>The value in Square Inches</returns>
+			public static double ToSquareInches(double value) => value * 4014489600.0;
+			/// <summary>
+			/// Converts the supplied Square Miles value to Hectares
+			/// </summary>
+			/// <param name="value">The Square Miles input value</param>
+			/// <returns>The value in Hectares</returns>
+			public static double ToHectares(double value) => value * 259.0;
+			/// <summary>
+			/// Converts the supplied Square Miles value to Acres
+			/// </summary>
+			/// <param name="value">The Square Miles input value</param>
+			/// <returns>The value in Acres</returns>
+			public static double ToAcres(double value) => value * 640.0;
+		}
 		/// <summary>
-		/// Converts the supplied Hectares value to Square Kilometres
+		/// Square Yards conversion functions
 		/// </summary>
-		/// <param name="value">The Hectares input value</param>
-		/// <returns>The value in Square Kilometres</returns>
-		public static double ToSquareKilometres(double value) => value / 100.0;
-		/// <summary>
-		/// Converts the supplied Hectares value to Square Metres
-		/// </summary>
-		/// <param name="value">The Hectares input value</param>
-		/// <returns>The value in Square Metres</returns>
-		public static double ToSquareMetres(double value) => value * 10000.0;
-		/// <summary>
-		/// Converts the supplied Hectares value to Square Miles
-		/// </summary>
-		/// <param name="value">The Hectares input value</param>
-		/// <returns>The value in Square Miles</returns>
-		public static double ToSquareMiles(double value) => value / 259.0;
-		/// <summary>
-		/// Converts the supplied Hectares value to Square Yards
-		/// </summary>
-		/// <param name="value">The Hectares input value</param>
-		/// <returns>The value in Square Yards</returns>
-		public static double ToSquareYards(double value) => value * 11959.900463011;
-		/// <summary>
-		/// Converts the supplied Hectares value to Square Feet
-		/// </summary>
-		/// <param name="value">The Hectares input value</param>
-		/// <returns>The value in Square Feet</returns>
-		public static double ToSquareFeet(double value) => value * 107639.0;
-		/// <summary>
-		/// Converts the supplied Hectares value to Square Inches
-		/// </summary>
-		/// <param name="value">The Hectares input value</param>
-		/// <returns>The value in Square Inches</returns>
-		public static double ToSquareInches(double value) => value * 15500031.0;
-		/// <summary>
-		/// Converts the supplied Hectares value to Acres
-		/// </summary>
-		/// <param name="value">The Hectares input value</param>
-		/// <returns>The value in Acres</returns>
-		public static double ToAcres(double value) => value * 2.471;
-	}
-	/// <summary>
-	/// Square Feet conversion functions
-	/// </summary>
-	public static class SquareFeet
-	{
-		/// <summary>
-		/// Converts the supplied Square Feet value to Square Kilometres
-		/// </summary>
-		/// <param name="value">The Square Feet input value</param>
-		/// <returns>The value in Square Kilometres</returns>
-		public static double ToSquareKilometres(double value) => value / 10763910.41671;
-		/// <summary>
-		/// Converts the supplied Square Feet value to Square Metres
-		/// </summary>
-		/// <param name="value">The Square Feet input value</param>
-		/// <returns>The value in Square Metres</returns>
-		public static double ToSquareMetres(double value) => value / 10.764;
-		/// <summary>
-		/// Converts the supplied Square Feet value to Square Miles
-		/// </summary>
-		/// <param name="value">The Square Feet input value</param>
-		/// <returns>The value in Square Miles</returns>
-		public static double ToSquareMiles(double value) => value / 27878400.0;
-		/// <summary>
-		/// Converts the supplied Square Feet value to Square Yards
-		/// </summary>
-		/// <param name="value">The Square Feet input value</param>
-		/// <returns>The value in Square Yards</returns>
-		public static double ToSquareYards(double value) => value / 9.0;
-		/// <summary>
-		/// Converts the supplied Square Feet value to Square Inches
-		/// </summary>
-		/// <param name="value">The Square Feet input value</param>
-		/// <returns>The value in Square Inches</returns>
-		public static double ToSquareInches(double value) => value * 144.0;
-		/// <summary>
-		/// Converts the supplied Square Feet value to Hectares
-		/// </summary>
-		/// <param name="value">The Square Feet input value</param>
-		/// <returns>The value in Hectares</returns>
-		public static double ToHectares(double value) => value / 107639.0;
-		/// <summary>
-		/// Converts the supplied Square Feet value to Acres
-		/// </summary>
-		/// <param name="value">The Square Feet input value</param>
-		/// <returns>The value in Acres</returns>
-		public static double ToAcres(double value) => value / 43560.0;
-	}
-	/// <summary>
-	/// Square Inches conversion functions
-	/// </summary>
-	public static class SquareInches
-	{
-		/// <summary>
-		/// Converts the supplied Square Inches value to Square Kilometres
-		/// </summary>
-		/// <param name="value">The Square Inches input value</param>
-		/// <returns>The value in Square Kilometres</returns>
-		public static double ToSquareKilometres(double value) => value / 1550003100.00;
-		/// <summary>
-		/// Converts the supplied Square Inches value to Square Metres
-		/// </summary>
-		/// <param name="value">The Square Inches input value</param>
-		/// <returns>The value in Square Metres</returns>
-		public static double ToSquareMetres(double value) => value / 1550.0;
-		/// <summary>
-		/// Converts the supplied Square Inches value to Square Miles
-		/// </summary>
-		/// <param name="value">The Square Inches input value</param>
-		/// <returns>The value in Square Miles</returns>
-		public static double ToSquareMiles(double value) => value / 4014489600.0;
-		/// <summary>
-		/// Converts the supplied Square Inches value to Square Yards
-		/// </summary>
-		/// <param name="value">The Square Inches input value</param>
-		/// <returns>The value in Square Yards</returns>
-		public static double ToSquareYards(double value) => value / 1296.0;
-		/// <summary>
-		/// Converts the supplied Square Inches value to Square Feet
-		/// </summary>
-		/// <param name="value">The Square Inches input value</param>
-		/// <returns>The value in Square Feet</returns>
-		public static double ToSquareFeet(double value) => value / 144.0;
-		/// <summary>
-		/// Converts the supplied Square Inches value to Hectares
-		/// </summary>
-		/// <param name="value">The Square Inches input value</param>
-		/// <returns>The value in Hectares</returns>
-		public static double ToHectares(double value) => value / 15500031.0;
-		/// <summary>
-		/// Converts the supplied Square Inches value to Acres
-		/// </summary>
-		/// <param name="value">The Square Inches input value</param>
-		/// <returns>The value in Acres</returns>
-		public static double ToAcres(double value) => value / 6272640.0;
-	}
-	/// <summary>
-	/// Square Kilometres conversion functions
-	/// </summary>
-	public static class SquareKilometres
-	{
-		/// <summary>
-		/// Converts the supplied Square Kilometres value to Square Metres
-		/// </summary>
-		/// <param name="value">The Square Kilometres input value</param>
-		/// <returns>The value in Square Metres</returns>
-		public static double ToSquareMetres(double value) => value * 1e+6;
-		/// <summary>
-		/// Converts the supplied Square Kilometres value to Square Miles
-		/// </summary>
-		/// <param name="value">The Square Kilometres input value</param>
-		/// <returns>The value in Square Miles</returns>
-		public static double ToSquareMiles(double value) => value / 2.58999;
-		/// <summary>
-		/// Converts the supplied Square Kilometres value to Square Yards
-		/// </summary>
-		/// <param name="value">The Square Kilometres input value</param>
-		/// <returns>The value in Square Yards</returns>
-		public static double ToSquareYards(double value) => value * 1195990.05;
-		/// <summary>
-		/// Converts the supplied Square Kilometres value to Square Feet
-		/// </summary>
-		/// <param name="value">The Square Kilometres input value</param>
-		/// <returns>The value in Square Feet</returns>
-		public static double ToSquareFeet(double value) => value * 10763910.41671;
-		/// <summary>
-		/// Converts the supplied Square Kilometres value to Square Inches
-		/// </summary>
-		/// <param name="value">The Square Kilometres input value</param>
-		/// <returns>The value in Square Inches</returns>
-		public static double ToSquareInches(double value) => value * 1550003100.00;
-		/// <summary>
-		/// Converts the supplied Square Kilometres value to Hectares
-		/// </summary>
-		/// <param name="value">The Square Kilometres input value</param>
-		/// <returns>The value in Hectares</returns>
-		public static double ToHectares(double value) => value * 100.0;
-		/// <summary>
-		/// Converts the supplied Square Kilometres value to Acres
-		/// </summary>
-		/// <param name="value">The Square Kilometres input value</param>
-		/// <returns>The value in Acres</returns>
-		public static double ToAcres(double value) => value * 247.105;
-	}
-	/// <summary>
-	/// Square Metres conversion functions
-	/// </summary>
-	public static class SquareMetres
-	{
-		/// <summary>
-		/// Converts the supplied Square Metres value to Square Kilometres
-		/// </summary>
-		/// <param name="value">The Square Metres input value</param>
-		/// <returns>The value in Square Kilometres</returns>
-		public static double ToSquareKilometres(double value) => value / 1e+6;
-		/// <summary>
-		/// Converts the supplied Square Metres value to Square Miles
-		/// </summary>
-		/// <param name="value">The Square Metres input value</param>
-		/// <returns>The value in Square Miles</returns>
-		public static double ToSquareMiles(double value) => value / 2589988.10;
-		/// <summary>
-		/// Converts the supplied Square Metres value to Square Yards
-		/// </summary>
-		/// <param name="value">The Square Metres input value</param>
-		/// <returns>The value in Square Yards</returns>
-		public static double ToSquareYards(double value) => value * 1.196;
-		/// <summary>
-		/// Converts the supplied Square Metres value to Square Feet
-		/// </summary>
-		/// <param name="value">The Square Metres input value</param>
-		/// <returns>The value in Square Feet</returns>
-		public static double ToSquareFeet(double value) => value * 10.764;
-		/// <summary>
-		/// Converts the supplied Square Metres value to Square Inches
-		/// </summary>
-		/// <param name="value">The Square Metres input value</param>
-		/// <returns>The value in Square Inches</returns>
-		public static double ToSquareInches(double value) => value * 1550.0;
-		/// <summary>
-		/// Converts the supplied Square Metres value to Hectares
-		/// </summary>
-		/// <param name="value">The Square Metres input value</param>
-		/// <returns>The value in Hectares</returns>
-		public static double ToHectares(double value) => value / 10000.0;
-		/// <summary>
-		/// Converts the supplied Square Metres value to Acres
-		/// </summary>
-		/// <param name="value">The Square Metres input value</param>
-		/// <returns>The value in Acres</returns>
-		public static double ToAcres(double value) => value / 4046.86;
-	}
-	/// <summary>
-	/// Square Miles conversion functions
-	/// </summary>
-	public static class SquareMiles
-	{
-		/// <summary>
-		/// Converts the supplied Square Miles value to Square Kilometres
-		/// </summary>
-		/// <param name="value">The Square Miles input value</param>
-		/// <returns>The value in Square Kilometres</returns>
-		public static double ToSquareKilometres(double value) => value * 2.58999;
-		/// <summary>
-		/// Converts the supplied Square Miles value to Square Metres
-		/// </summary>
-		/// <param name="value">The Square Miles input value</param>
-		/// <returns>The value in Square Metres</returns>
-		public static double ToSquareMetres(double value) => value * 2589988.10;
-		/// <summary>
-		/// Converts the supplied Square Miles value to Square Yards
-		/// </summary>
-		/// <param name="value">The Square Miles input value</param>
-		/// <returns>The value in Square Yards</returns>
-		public static double ToSquareYards(double value) => value * 3097600.0;
-		/// <summary>
-		/// Converts the supplied Square Miles value to Square Feet
-		/// </summary>
-		/// <param name="value">The Square Miles input value</param>
-		/// <returns>The value in Square Feet</returns>
-		public static double ToSquareFeet(double value) => value * 27878400.0;
-		/// <summary>
-		/// Converts the supplied Square Miles value to Square Inches
-		/// </summary>
-		/// <param name="value">The Square Miles input value</param>
-		/// <returns>The value in Square Inches</returns>
-		public static double ToSquareInches(double value) => value * 4014489600.0;
-		/// <summary>
-		/// Converts the supplied Square Miles value to Hectares
-		/// </summary>
-		/// <param name="value">The Square Miles input value</param>
-		/// <returns>The value in Hectares</returns>
-		public static double ToHectares(double value) => value * 259.0;
-		/// <summary>
-		/// Converts the supplied Square Miles value to Acres
-		/// </summary>
-		/// <param name="value">The Square Miles input value</param>
-		/// <returns>The value in Acres</returns>
-		public static double ToAcres(double value) => value * 640.0;
-	}
-	/// <summary>
-	/// Square Yards conversion functions
-	/// </summary>
-	public static class SquareYards
-	{
-		/// <summary>
-		/// Converts the supplied Square Yards value to Square Kilometres
-		/// </summary>
-		/// <param name="value">The Square Yards input value</param>
-		/// <returns>The value in Square Kilometres</returns>
-		public static double ToSquareKilometres(double value) => value / 1195990.05;
-		/// <summary>
-		/// Converts the supplied Square Yards value to Square Metres
-		/// </summary>
-		/// <param name="value">The Square Yards input value</param>
-		/// <returns>The value in Square Metres</returns>
-		public static double ToSquareMetres(double value) => value / 1.196;
-		/// <summary>
-		/// Converts the supplied Square Yards value to Square Miles
-		/// </summary>
-		/// <param name="value">The Square Yards input value</param>
-		/// <returns>The value in Square Miles</returns>
-		public static double ToSquareMiles(double value) => value / 3097600.0;
-		/// <summary>
-		/// Converts the supplied Square Yards value to Square Feet
-		/// </summary>
-		/// <param name="value">The Square Yards input value</param>
-		/// <returns>The value in Square Feet</returns>
-		public static double ToSquareFeet(double value) => value * 9.0;
-		/// <summary>
-		/// Converts the supplied Square Yards value to Square Inches
-		/// </summary>
-		/// <param name="value">The Square Yards input value</param>
-		/// <returns>The value in Square Inches</returns>
-		public static double ToSquareInches(double value) => value * 1296.0;
-		/// <summary>
-		/// Converts the supplied Square Yards value to Hectares
-		/// </summary>
-		/// <param name="value">The Square Yards input value</param>
-		/// <returns>The value in Hectares</returns>
-		public static double ToHectares(double value) => value / 11959.900463011;
-		/// <summary>
-		/// Converts the supplied Square Yards value to Acres
-		/// </summary>
-		/// <param name="value">The Square Yards input value</param>
-		/// <returns>The value in Acres</returns>
-		public static double ToAcres(double value) => value / 4840.0;
+		public static class SquareYards
+		{
+			/// <summary>
+			/// Converts the supplied Square Yards value to Square Kilometres
+			/// </summary>
+			/// <param name="value">The Square Yards input value</param>
+			/// <returns>The value in Square Kilometres</returns>
+			public static double ToSquareKilometres(double value) => value / 1195990.05;
+			/// <summary>
+			/// Converts the supplied Square Yards value to Square Metres
+			/// </summary>
+			/// <param name="value">The Square Yards input value</param>
+			/// <returns>The value in Square Metres</returns>
+			public static double ToSquareMetres(double value) => value / 1.196;
+			/// <summary>
+			/// Converts the supplied Square Yards value to Square Miles
+			/// </summary>
+			/// <param name="value">The Square Yards input value</param>
+			/// <returns>The value in Square Miles</returns>
+			public static double ToSquareMiles(double value) => value / 3097600.0;
+			/// <summary>
+			/// Converts the supplied Square Yards value to Square Feet
+			/// </summary>
+			/// <param name="value">The Square Yards input value</param>
+			/// <returns>The value in Square Feet</returns>
+			public static double ToSquareFeet(double value) => value * 9.0;
+			/// <summary>
+			/// Converts the supplied Square Yards value to Square Inches
+			/// </summary>
+			/// <param name="value">The Square Yards input value</param>
+			/// <returns>The value in Square Inches</returns>
+			public static double ToSquareInches(double value) => value * 1296.0;
+			/// <summary>
+			/// Converts the supplied Square Yards value to Hectares
+			/// </summary>
+			/// <param name="value">The Square Yards input value</param>
+			/// <returns>The value in Hectares</returns>
+			public static double ToHectares(double value) => value / 11959.900463011;
+			/// <summary>
+			/// Converts the supplied Square Yards value to Acres
+			/// </summary>
+			/// <param name="value">The Square Yards input value</param>
+			/// <returns>The value in Acres</returns>
+			public static double ToAcres(double value) => value / 4840.0;
+		}
 	}
 }

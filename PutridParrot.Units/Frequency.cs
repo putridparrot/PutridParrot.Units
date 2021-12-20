@@ -4,107 +4,108 @@
 // Changes to this file will be lost if the code is regenerated
 // </auto-generated>
 
-namespace PutridParrot.Units;
-
-/// <summary>
-/// Frequency conversion functions
-/// </summary>
-public static class Frequency
+namespace PutridParrot.Units
 {
 	/// <summary>
-	/// Gigahertz conversion functions
+	/// Frequency conversion functions
 	/// </summary>
-	public static class Gigahertz
+	public static class Frequency
 	{
 		/// <summary>
-		/// Converts the supplied Gigahertz value to Hertz
+		/// Gigahertz conversion functions
 		/// </summary>
-		/// <param name="value">The Gigahertz input value</param>
-		/// <returns>The value in Hertz</returns>
-		public static double ToHertz(double value) => value * 1e+9;
+		public static class Gigahertz
+		{
+			/// <summary>
+			/// Converts the supplied Gigahertz value to Hertz
+			/// </summary>
+			/// <param name="value">The Gigahertz input value</param>
+			/// <returns>The value in Hertz</returns>
+			public static double ToHertz(double value) => value * 1e+9;
+			/// <summary>
+			/// Converts the supplied Gigahertz value to Kilohertz
+			/// </summary>
+			/// <param name="value">The Gigahertz input value</param>
+			/// <returns>The value in Kilohertz</returns>
+			public static double ToKilohertz(double value) => value * 1e+6;
+			/// <summary>
+			/// Converts the supplied Gigahertz value to Megahertz
+			/// </summary>
+			/// <param name="value">The Gigahertz input value</param>
+			/// <returns>The value in Megahertz</returns>
+			public static double ToMegahertz(double value) => value * 1000.0;
+		}
 		/// <summary>
-		/// Converts the supplied Gigahertz value to Kilohertz
+		/// Hertz conversion functions
 		/// </summary>
-		/// <param name="value">The Gigahertz input value</param>
-		/// <returns>The value in Kilohertz</returns>
-		public static double ToKilohertz(double value) => value * 1e+6;
+		public static class Hertz
+		{
+			/// <summary>
+			/// Converts the supplied Hertz value to Kilohertz
+			/// </summary>
+			/// <param name="value">The Hertz input value</param>
+			/// <returns>The value in Kilohertz</returns>
+			public static double ToKilohertz(double value) => value / 1000.0;
+			/// <summary>
+			/// Converts the supplied Hertz value to Megahertz
+			/// </summary>
+			/// <param name="value">The Hertz input value</param>
+			/// <returns>The value in Megahertz</returns>
+			public static double ToMegahertz(double value) => value / 1e+6;
+			/// <summary>
+			/// Converts the supplied Hertz value to Gigahertz
+			/// </summary>
+			/// <param name="value">The Hertz input value</param>
+			/// <returns>The value in Gigahertz</returns>
+			public static double ToGigahertz(double value) => value / 1e+9;
+		}
 		/// <summary>
-		/// Converts the supplied Gigahertz value to Megahertz
+		/// Kilohertz conversion functions
 		/// </summary>
-		/// <param name="value">The Gigahertz input value</param>
-		/// <returns>The value in Megahertz</returns>
-		public static double ToMegahertz(double value) => value * 1000.0;
-	}
-	/// <summary>
-	/// Hertz conversion functions
-	/// </summary>
-	public static class Hertz
-	{
+		public static class Kilohertz
+		{
+			/// <summary>
+			/// Converts the supplied Kilohertz value to Hertz
+			/// </summary>
+			/// <param name="value">The Kilohertz input value</param>
+			/// <returns>The value in Hertz</returns>
+			public static double ToHertz(double value) => value * 1000.0;
+			/// <summary>
+			/// Converts the supplied Kilohertz value to Megahertz
+			/// </summary>
+			/// <param name="value">The Kilohertz input value</param>
+			/// <returns>The value in Megahertz</returns>
+			public static double ToMegahertz(double value) => value / 1000.0;
+			/// <summary>
+			/// Converts the supplied Kilohertz value to Gigahertz
+			/// </summary>
+			/// <param name="value">The Kilohertz input value</param>
+			/// <returns>The value in Gigahertz</returns>
+			public static double ToGigahertz(double value) => value / 1e+6;
+		}
 		/// <summary>
-		/// Converts the supplied Hertz value to Kilohertz
+		/// Megahertz conversion functions
 		/// </summary>
-		/// <param name="value">The Hertz input value</param>
-		/// <returns>The value in Kilohertz</returns>
-		public static double ToKilohertz(double value) => value / 1000.0;
-		/// <summary>
-		/// Converts the supplied Hertz value to Megahertz
-		/// </summary>
-		/// <param name="value">The Hertz input value</param>
-		/// <returns>The value in Megahertz</returns>
-		public static double ToMegahertz(double value) => value / 1e+6;
-		/// <summary>
-		/// Converts the supplied Hertz value to Gigahertz
-		/// </summary>
-		/// <param name="value">The Hertz input value</param>
-		/// <returns>The value in Gigahertz</returns>
-		public static double ToGigahertz(double value) => value / 1e+9;
-	}
-	/// <summary>
-	/// Kilohertz conversion functions
-	/// </summary>
-	public static class Kilohertz
-	{
-		/// <summary>
-		/// Converts the supplied Kilohertz value to Hertz
-		/// </summary>
-		/// <param name="value">The Kilohertz input value</param>
-		/// <returns>The value in Hertz</returns>
-		public static double ToHertz(double value) => value * 1000.0;
-		/// <summary>
-		/// Converts the supplied Kilohertz value to Megahertz
-		/// </summary>
-		/// <param name="value">The Kilohertz input value</param>
-		/// <returns>The value in Megahertz</returns>
-		public static double ToMegahertz(double value) => value / 1000.0;
-		/// <summary>
-		/// Converts the supplied Kilohertz value to Gigahertz
-		/// </summary>
-		/// <param name="value">The Kilohertz input value</param>
-		/// <returns>The value in Gigahertz</returns>
-		public static double ToGigahertz(double value) => value / 1e+6;
-	}
-	/// <summary>
-	/// Megahertz conversion functions
-	/// </summary>
-	public static class Megahertz
-	{
-		/// <summary>
-		/// Converts the supplied Megahertz value to Hertz
-		/// </summary>
-		/// <param name="value">The Megahertz input value</param>
-		/// <returns>The value in Hertz</returns>
-		public static double ToHertz(double value) => value * 1e+6;
-		/// <summary>
-		/// Converts the supplied Megahertz value to Kilohertz
-		/// </summary>
-		/// <param name="value">The Megahertz input value</param>
-		/// <returns>The value in Kilohertz</returns>
-		public static double ToKilohertz(double value) => value * 1000.0;
-		/// <summary>
-		/// Converts the supplied Megahertz value to Gigahertz
-		/// </summary>
-		/// <param name="value">The Megahertz input value</param>
-		/// <returns>The value in Gigahertz</returns>
-		public static double ToGigahertz(double value) => value / 1000.0;
+		public static class Megahertz
+		{
+			/// <summary>
+			/// Converts the supplied Megahertz value to Hertz
+			/// </summary>
+			/// <param name="value">The Megahertz input value</param>
+			/// <returns>The value in Hertz</returns>
+			public static double ToHertz(double value) => value * 1e+6;
+			/// <summary>
+			/// Converts the supplied Megahertz value to Kilohertz
+			/// </summary>
+			/// <param name="value">The Megahertz input value</param>
+			/// <returns>The value in Kilohertz</returns>
+			public static double ToKilohertz(double value) => value * 1000.0;
+			/// <summary>
+			/// Converts the supplied Megahertz value to Gigahertz
+			/// </summary>
+			/// <param name="value">The Megahertz input value</param>
+			/// <returns>The value in Gigahertz</returns>
+			public static double ToGigahertz(double value) => value / 1000.0;
+		}
 	}
 }

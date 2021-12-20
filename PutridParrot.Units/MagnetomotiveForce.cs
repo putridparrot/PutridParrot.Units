@@ -4,35 +4,36 @@
 // Changes to this file will be lost if the code is regenerated
 // </auto-generated>
 
-namespace PutridParrot.Units;
-
-/// <summary>
-/// Magnetomotive Force conversion functions
-/// </summary>
-public static class MagnetomotiveForce
+namespace PutridParrot.Units
 {
 	/// <summary>
-	/// Ampere-turns conversion functions
+	/// Magnetomotive Force conversion functions
 	/// </summary>
-	public static class Ampereturns
+	public static class MagnetomotiveForce
 	{
 		/// <summary>
-		/// Converts the supplied Ampere-turns value to Gilberts
+		/// Ampere-turns conversion functions
 		/// </summary>
-		/// <param name="value">The Ampere-turns input value</param>
-		/// <returns>The value in Gilberts</returns>
-		public static double ToGilberts(double value) => value * 1.256637061436;
-	}
-	/// <summary>
-	/// Gilberts conversion functions
-	/// </summary>
-	public static class Gilberts
-	{
+		public static class Ampereturns
+		{
+			/// <summary>
+			/// Converts the supplied Ampere-turns value to Gilberts
+			/// </summary>
+			/// <param name="value">The Ampere-turns input value</param>
+			/// <returns>The value in Gilberts</returns>
+			public static double ToGilberts(double value) => value * 1.256637061436;
+		}
 		/// <summary>
-		/// Converts the supplied Gilberts value to Ampere-turns
+		/// Gilberts conversion functions
 		/// </summary>
-		/// <param name="value">The Gilberts input value</param>
-		/// <returns>The value in Ampere-turns</returns>
-		public static double ToAmpereturns(double value) => value * 0.7957747154595;
+		public static class Gilberts
+		{
+			/// <summary>
+			/// Converts the supplied Gilberts value to Ampere-turns
+			/// </summary>
+			/// <param name="value">The Gilberts input value</param>
+			/// <returns>The value in Ampere-turns</returns>
+			public static double ToAmpereturns(double value) => value * 0.7957747154595;
+		}
 	}
 }

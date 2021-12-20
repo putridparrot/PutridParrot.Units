@@ -4,107 +4,108 @@
 // Changes to this file will be lost if the code is regenerated
 // </auto-generated>
 
-namespace PutridParrot.Units;
-
-/// <summary>
-/// Luminous Energy conversion functions
-/// </summary>
-public static class LuminousEnergy
+namespace PutridParrot.Units
 {
 	/// <summary>
-	/// LumenHour conversion functions
+	/// Luminous Energy conversion functions
 	/// </summary>
-	public static class LumenHour
+	public static class LuminousEnergy
 	{
 		/// <summary>
-		/// Converts the supplied LumenHour value to Talbot
+		/// LumenHour conversion functions
 		/// </summary>
-		/// <param name="value">The LumenHour input value</param>
-		/// <returns>The value in Talbot</returns>
-		public static double ToTalbot(double value) => value * 3600.0;
+		public static class LumenHour
+		{
+			/// <summary>
+			/// Converts the supplied LumenHour value to Talbot
+			/// </summary>
+			/// <param name="value">The LumenHour input value</param>
+			/// <returns>The value in Talbot</returns>
+			public static double ToTalbot(double value) => value * 3600.0;
+			/// <summary>
+			/// Converts the supplied LumenHour value to LumenMinute
+			/// </summary>
+			/// <param name="value">The LumenHour input value</param>
+			/// <returns>The value in LumenMinute</returns>
+			public static double ToLumenMinute(double value) => value * 60.0;
+			/// <summary>
+			/// Converts the supplied LumenHour value to LumenSecond
+			/// </summary>
+			/// <param name="value">The LumenHour input value</param>
+			/// <returns>The value in LumenSecond</returns>
+			public static double ToLumenSecond(double value) => value * 3600.0;
+		}
 		/// <summary>
-		/// Converts the supplied LumenHour value to LumenMinute
+		/// LumenMinute conversion functions
 		/// </summary>
-		/// <param name="value">The LumenHour input value</param>
-		/// <returns>The value in LumenMinute</returns>
-		public static double ToLumenMinute(double value) => value * 60.0;
+		public static class LumenMinute
+		{
+			/// <summary>
+			/// Converts the supplied LumenMinute value to Talbot
+			/// </summary>
+			/// <param name="value">The LumenMinute input value</param>
+			/// <returns>The value in Talbot</returns>
+			public static double ToTalbot(double value) => value * 60.0;
+			/// <summary>
+			/// Converts the supplied LumenMinute value to LumenHour
+			/// </summary>
+			/// <param name="value">The LumenMinute input value</param>
+			/// <returns>The value in LumenHour</returns>
+			public static double ToLumenHour(double value) => value / 60.0;
+			/// <summary>
+			/// Converts the supplied LumenMinute value to LumenSecond
+			/// </summary>
+			/// <param name="value">The LumenMinute input value</param>
+			/// <returns>The value in LumenSecond</returns>
+			public static double ToLumenSecond(double value) => value * 60.0;
+		}
 		/// <summary>
-		/// Converts the supplied LumenHour value to LumenSecond
+		/// LumenSecond conversion functions
 		/// </summary>
-		/// <param name="value">The LumenHour input value</param>
-		/// <returns>The value in LumenSecond</returns>
-		public static double ToLumenSecond(double value) => value * 3600.0;
-	}
-	/// <summary>
-	/// LumenMinute conversion functions
-	/// </summary>
-	public static class LumenMinute
-	{
+		public static class LumenSecond
+		{
+			/// <summary>
+			/// Converts the supplied LumenSecond value to Talbot
+			/// </summary>
+			/// <param name="value">The LumenSecond input value</param>
+			/// <returns>The value in Talbot</returns>
+			public static double ToTalbot(double value) => value;
+			/// <summary>
+			/// Converts the supplied LumenSecond value to LumenHour
+			/// </summary>
+			/// <param name="value">The LumenSecond input value</param>
+			/// <returns>The value in LumenHour</returns>
+			public static double ToLumenHour(double value) => value / 3600.0;
+			/// <summary>
+			/// Converts the supplied LumenSecond value to LumenMinute
+			/// </summary>
+			/// <param name="value">The LumenSecond input value</param>
+			/// <returns>The value in LumenMinute</returns>
+			public static double ToLumenMinute(double value) => value / 60.0;
+		}
 		/// <summary>
-		/// Converts the supplied LumenMinute value to Talbot
+		/// Talbot conversion functions
 		/// </summary>
-		/// <param name="value">The LumenMinute input value</param>
-		/// <returns>The value in Talbot</returns>
-		public static double ToTalbot(double value) => value * 60.0;
-		/// <summary>
-		/// Converts the supplied LumenMinute value to LumenHour
-		/// </summary>
-		/// <param name="value">The LumenMinute input value</param>
-		/// <returns>The value in LumenHour</returns>
-		public static double ToLumenHour(double value) => value / 60.0;
-		/// <summary>
-		/// Converts the supplied LumenMinute value to LumenSecond
-		/// </summary>
-		/// <param name="value">The LumenMinute input value</param>
-		/// <returns>The value in LumenSecond</returns>
-		public static double ToLumenSecond(double value) => value * 60.0;
-	}
-	/// <summary>
-	/// LumenSecond conversion functions
-	/// </summary>
-	public static class LumenSecond
-	{
-		/// <summary>
-		/// Converts the supplied LumenSecond value to Talbot
-		/// </summary>
-		/// <param name="value">The LumenSecond input value</param>
-		/// <returns>The value in Talbot</returns>
-		public static double ToTalbot(double value) => value;
-		/// <summary>
-		/// Converts the supplied LumenSecond value to LumenHour
-		/// </summary>
-		/// <param name="value">The LumenSecond input value</param>
-		/// <returns>The value in LumenHour</returns>
-		public static double ToLumenHour(double value) => value / 3600.0;
-		/// <summary>
-		/// Converts the supplied LumenSecond value to LumenMinute
-		/// </summary>
-		/// <param name="value">The LumenSecond input value</param>
-		/// <returns>The value in LumenMinute</returns>
-		public static double ToLumenMinute(double value) => value / 60.0;
-	}
-	/// <summary>
-	/// Talbot conversion functions
-	/// </summary>
-	public static class Talbot
-	{
-		/// <summary>
-		/// Converts the supplied Talbot value to LumenSecond
-		/// </summary>
-		/// <param name="value">The Talbot input value</param>
-		/// <returns>The value in LumenSecond</returns>
-		public static double ToLumenSecond(double value) => value;
-		/// <summary>
-		/// Converts the supplied Talbot value to LumenHour
-		/// </summary>
-		/// <param name="value">The Talbot input value</param>
-		/// <returns>The value in LumenHour</returns>
-		public static double ToLumenHour(double value) => value / 3600.0;
-		/// <summary>
-		/// Converts the supplied Talbot value to LumenMinute
-		/// </summary>
-		/// <param name="value">The Talbot input value</param>
-		/// <returns>The value in LumenMinute</returns>
-		public static double ToLumenMinute(double value) => value / 60.0;
+		public static class Talbot
+		{
+			/// <summary>
+			/// Converts the supplied Talbot value to LumenSecond
+			/// </summary>
+			/// <param name="value">The Talbot input value</param>
+			/// <returns>The value in LumenSecond</returns>
+			public static double ToLumenSecond(double value) => value;
+			/// <summary>
+			/// Converts the supplied Talbot value to LumenHour
+			/// </summary>
+			/// <param name="value">The Talbot input value</param>
+			/// <returns>The value in LumenHour</returns>
+			public static double ToLumenHour(double value) => value / 3600.0;
+			/// <summary>
+			/// Converts the supplied Talbot value to LumenMinute
+			/// </summary>
+			/// <param name="value">The Talbot input value</param>
+			/// <returns>The value in LumenMinute</returns>
+			public static double ToLumenMinute(double value) => value / 60.0;
+		}
 	}
 }
