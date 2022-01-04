@@ -16,11 +16,15 @@ The code is written in the style of C# if you're after something aimed at F# che
 [F#](https://github.com/putridparrot/FSharp.Units)  
 [TypeScript](https://github.com/putridparrot/unit-conversions)  
 [Swift](https://github.com/putridparrot/SwiftUnits)  
-[Java](https://github.com/putridparrot/JavaUnits)### Example
+[Java](https://github.com/putridparrot/JavaUnits)  
+
+### Example
 
 Example of usage:
 
+```
 var fahrenheit = Temperature.Celsius.ToFahrenheit(12.0);
+```
 
 Each unit of measure then includes functions to convert to each for example, converting each Temperature unit of measure to each other Temperature.
 
