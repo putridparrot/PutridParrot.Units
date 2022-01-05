@@ -66,6 +66,7 @@ namespace PutridParrot.Units.Tests
 		[TestCase(900.0, 15707.969)]
 		[TestCase(76.0, 1326.45)]
 		[TestCase(4.5, 78.5398)]
+		[TestCase(23333.11, 407239.5873)]
 		public void ConvertKnownDegreesToMilliradians(double input, double expectation)
 		{
 			var result = Angle.Degrees.ToMilliradians(input);
@@ -167,8 +168,8 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(8.1, 127.2348)]
-		[TestCase(900.0, 14137.2)]
-		[TestCase(1902.5, 29884.47)]
+		[TestCase(900.0, 14137.167)]
+		[TestCase(1902.5, 29884.4)]
 		public void ConvertKnownGradiansToMilliradians(double input, double expectation)
 		{
 			var result = Angle.Gradians.ToMilliradians(input);
@@ -232,6 +233,7 @@ namespace PutridParrot.Units.Tests
 		[TestCase(5.9, 0.338045)]
 		[TestCase(109.0, 6.24524)]
 		[TestCase(7009.0, 401.5861)]
+		[TestCase(407239.5873, 23333.11)]
 		public void ConvertKnownMilliradiansToDegrees(double input, double expectation)
 		{
 			var result = Angle.Milliradians.ToDegrees(input);

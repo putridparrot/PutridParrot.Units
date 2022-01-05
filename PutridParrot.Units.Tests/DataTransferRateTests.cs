@@ -386,7 +386,7 @@ namespace PutridParrot.Units.Tests
 			}).QuickCheckThrowOnFailure();
 		}
 
-		[TestCase(0.8, 781250.4)]
+		[TestCase(0.8, 781250.0)]
 		[TestCase(0.012, 11718.75)]
 		[TestCase(0.002, 1953.125)]
 		public void ConvertKnownGigaBitsPerSecondToKibibitsPerSecond(double input, double expectation)

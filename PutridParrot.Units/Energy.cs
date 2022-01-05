@@ -201,7 +201,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Joules input value</param>
 			/// <returns>The value in Btu</returns>
-			public static double ToBtu(double value) => value / 1055.0;
+			public static double ToBtu(double value) => value / 1055.06;
 			/// <summary>
 			/// Converts the supplied Joules value to Calories
 			/// </summary>

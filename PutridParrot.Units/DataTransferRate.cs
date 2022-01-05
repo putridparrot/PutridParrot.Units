@@ -135,7 +135,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The GigaBits Per Second input value</param>
 			/// <returns>The value in Kibibits Per Second</returns>
-			public static double ToKibibitsPerSecond(double value) => value * 976563.0;
+			public static double ToKibibitsPerSecond(double value) => value * 976562.5;
 			/// <summary>
 			/// Converts the supplied GigaBits Per Second value to Mebibits Per Second
 			/// </summary>
@@ -237,7 +237,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Kibibits Per Second input value</param>
 			/// <returns>The value in GigaBits Per Second</returns>
-			public static double ToGigaBitsPerSecond(double value) => value / 976562.0;
+			public static double ToGigaBitsPerSecond(double value) => value / 976562.5;
 			/// <summary>
 			/// Converts the supplied Kibibits Per Second value to TeraBits Per Second
 			/// </summary>
@@ -537,7 +537,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The MegaBits Per Second input value</param>
 			/// <returns>The value in Mebibits Per Second</returns>
-			public static double ToMebibitsPerSecond(double value) => value * 0.953674;
+			public static double ToMebibitsPerSecond(double value) => value / 1.04858;
 		}
 		/// <summary>
 		/// MegaBytes Per Second conversion functions

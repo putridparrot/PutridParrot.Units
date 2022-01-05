@@ -35,7 +35,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Degrees input value</param>
 			/// <returns>The value in Milliradians</returns>
-			public static double ToMilliradians(double value) => value * 17.4533;
+			public static double ToMilliradians(double value) => value * (1000.0 * Math.PI)/180.0;
 			/// <summary>
 			/// Converts the supplied Degrees value to Minute Of Arc
 			/// </summary>
@@ -71,7 +71,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Gradians input value</param>
 			/// <returns>The value in Milliradians</returns>
-			public static double ToMilliradians(double value) => value * 15.708;
+			public static double ToMilliradians(double value) => value * (1000.0*Math.PI)/200.0;
 			/// <summary>
 			/// Converts the supplied Gradians value to Minute Of Arc
 			/// </summary>

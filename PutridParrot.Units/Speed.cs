@@ -21,7 +21,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Feet Per Second input value</param>
 			/// <returns>The value in Miles Per Hour</returns>
-			public static double ToMilesPerHour(double value) => value * 0.681818;
+			public static double ToMilesPerHour(double value) => value / 1.46667;
 			/// <summary>
 			/// Converts the supplied Feet Per Second value to Kilometres Per Hour
 			/// </summary>
@@ -33,13 +33,13 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Feet Per Second input value</param>
 			/// <returns>The value in Metres Per Second</returns>
-			public static double ToMetresPerSecond(double value) => value * 0.3048;
+			public static double ToMetresPerSecond(double value) => value / 3.28084;
 			/// <summary>
 			/// Converts the supplied Feet Per Second value to Knots
 			/// </summary>
 			/// <param name="value">The Feet Per Second input value</param>
 			/// <returns>The value in Knots</returns>
-			public static double ToKnots(double value) => value * 0.592484;
+			public static double ToKnots(double value) => value / 1.68781;
 		}
 		/// <summary>
 		/// Kilometres Per Hour conversion functions
@@ -51,25 +51,25 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Kilometres Per Hour input value</param>
 			/// <returns>The value in Miles Per Hour</returns>
-			public static double ToMilesPerHour(double value) => value * 0.621371;
+			public static double ToMilesPerHour(double value) => value / 1.60934;
 			/// <summary>
 			/// Converts the supplied Kilometres Per Hour value to Feet Per Second
 			/// </summary>
 			/// <param name="value">The Kilometres Per Hour input value</param>
 			/// <returns>The value in Feet Per Second</returns>
-			public static double ToFeetPerSecond(double value) => value * 0.911344;
+			public static double ToFeetPerSecond(double value) => value / 1.09728;
 			/// <summary>
 			/// Converts the supplied Kilometres Per Hour value to Metres Per Second
 			/// </summary>
 			/// <param name="value">The Kilometres Per Hour input value</param>
 			/// <returns>The value in Metres Per Second</returns>
-			public static double ToMetresPerSecond(double value) => value * 0.277778;
+			public static double ToMetresPerSecond(double value) => value / 3.6;
 			/// <summary>
 			/// Converts the supplied Kilometres Per Hour value to Knots
 			/// </summary>
 			/// <param name="value">The Kilometres Per Hour input value</param>
 			/// <returns>The value in Knots</returns>
-			public static double ToKnots(double value) => value * 0.539957;
+			public static double ToKnots(double value) => value / 1.852;
 		}
 		/// <summary>
 		/// Knots conversion functions
@@ -99,7 +99,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Knots input value</param>
 			/// <returns>The value in Metres Per Second</returns>
-			public static double ToMetresPerSecond(double value) => value * 0.514444;
+			public static double ToMetresPerSecond(double value) => value / 1.94384;
 		}
 		/// <summary>
 		/// Metres Per Second conversion functions
@@ -153,13 +153,13 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Miles Per Hour input value</param>
 			/// <returns>The value in Metres Per Second</returns>
-			public static double ToMetresPerSecond(double value) => value * 0.44704;
+			public static double ToMetresPerSecond(double value) => value / 2.23694;
 			/// <summary>
 			/// Converts the supplied Miles Per Hour value to Knots
 			/// </summary>
 			/// <param name="value">The Miles Per Hour input value</param>
 			/// <returns>The value in Knots</returns>
-			public static double ToKnots(double value) => value * 0.868976;
+			public static double ToKnots(double value) => value / 1.15078;
 		}
 	}
 }

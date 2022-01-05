@@ -129,7 +129,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Gallons input value</param>
 			/// <returns>The value in Kilolitres</returns>
-			public static double ToKilolitres(double value) => value * 0.004546091879;
+			public static double ToKilolitres(double value) => value * 0.0045460918799;
 			/// <summary>
 			/// Converts the supplied Gallons value to Teaspoons
 			/// </summary>

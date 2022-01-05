@@ -21,7 +21,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Ampere-turns input value</param>
 			/// <returns>The value in Gilberts</returns>
-			public static double ToGilberts(double value) => value * 1.256637061436;
+			public static double ToGilberts(double value) => value / 0.7957747154595;
 		}
 		/// <summary>
 		/// Gilberts conversion functions

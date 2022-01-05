@@ -93,7 +93,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Kilograms input value</param>
 			/// <returns>The value in Stones</returns>
-			public static double ToStones(double value) => value * 0.157473;
+			public static double ToStones(double value) => value / 6.35029;
 		}
 		/// <summary>
 		/// Milligrams conversion functions
@@ -159,7 +159,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Ounces input value</param>
 			/// <returns>The value in Kilograms</returns>
-			public static double ToKilograms(double value) => value * 0.0283495;
+			public static double ToKilograms(double value) => value / 35.274;
 			/// <summary>
 			/// Converts the supplied Ounces value to Tonnes
 			/// </summary>
@@ -177,7 +177,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Ounces input value</param>
 			/// <returns>The value in Stones</returns>
-			public static double ToStones(double value) => value * 0.00446429;
+			public static double ToStones(double value) => value / 224.0;
 		}
 		/// <summary>
 		/// Pounds conversion functions
@@ -201,7 +201,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Pounds input value</param>
 			/// <returns>The value in Kilograms</returns>
-			public static double ToKilograms(double value) => value * 0.453592;
+			public static double ToKilograms(double value) => value / 2.20462;
 			/// <summary>
 			/// Converts the supplied Pounds value to Tonnes
 			/// </summary>
@@ -249,7 +249,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Stones input value</param>
 			/// <returns>The value in Tonnes</returns>
-			public static double ToTonnes(double value) => value * 0.00635029;
+			public static double ToTonnes(double value) => value / 157.473;
 			/// <summary>
 			/// Converts the supplied Stones value to Ounces
 			/// </summary>
