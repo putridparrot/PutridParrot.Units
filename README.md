@@ -14,9 +14,10 @@ The code is written in the style of C# if you're after something aimed at F# che
 ### Unit conversions also available for 
 
 [F#](https://github.com/putridparrot/FSharp.Units)  
-[TypeScript](https://github.com/putridparrot/unit-conversions)  
-[Swift](https://github.com/putridparrot/SwiftUnits)  
 [Java](https://github.com/putridparrot/JavaUnits)  
+[Rust](https://github.com/putridparrot/RustUnits)   
+[Swift](https://github.com/putridparrot/SwiftUnits)     
+[TypeScript](https://github.com/putridparrot/unit-conversions)  
 
 ### Example
 
