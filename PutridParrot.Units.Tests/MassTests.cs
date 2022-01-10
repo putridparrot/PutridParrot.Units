@@ -10,6 +10,149 @@ using PropertyAttribute = FsCheck.NUnit.PropertyAttribute;
 
 namespace PutridParrot.Units.Tests
 {
+	public class CaratsTests
+	{
+		[Property]
+		public void FromCaratsToMilligramsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Carats.ToMilligrams(value);
+				var convertBack = Mass.Milligrams.ToCarats(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(2.1, 420.0)]
+		[TestCase(123.0, 24600.0)]
+		[TestCase(0.8, 160.0)]
+		public void ConvertKnownCaratsToMilligrams(double input, double expectation)
+		{
+			var result = Mass.Carats.ToMilligrams(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCaratsToGramsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Carats.ToGrams(value);
+				var convertBack = Mass.Grams.ToCarats(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.8, 0.16)]
+		[TestCase(1.5, 0.3)]
+		[TestCase(12.0, 2.4)]
+		public void ConvertKnownCaratsToGrams(double input, double expectation)
+		{
+			var result = Mass.Carats.ToGrams(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCaratsToKilogramsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Carats.ToKilograms(value);
+				var convertBack = Mass.Kilograms.ToCarats(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1009.0, 0.2018)]
+		[TestCase(999.0, 0.1998)]
+		[TestCase(1234.5, 0.2469)]
+		public void ConvertKnownCaratsToKilograms(double input, double expectation)
+		{
+			var result = Mass.Carats.ToKilograms(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCaratsToTonnesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Carats.ToTonnes(value);
+				var convertBack = Mass.Tonnes.ToCarats(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1234567.0, 0.2469134)]
+		[TestCase(9999999.0, 1.9999998)]
+		[TestCase(998877.99, 0.199775598)]
+		public void ConvertKnownCaratsToTonnes(double input, double expectation)
+		{
+			var result = Mass.Carats.ToTonnes(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCaratsToOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Carats.ToOunces(value);
+				var convertBack = Mass.Ounces.ToCarats(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900.0, 6.34931)]
+		[TestCase(123.45, 0.870914121)]
+		[TestCase(800.0, 5.64383)]
+		public void ConvertKnownCaratsToOunces(double input, double expectation)
+		{
+			var result = Mass.Carats.ToOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCaratsToPoundsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Carats.ToPounds(value);
+				var convertBack = Mass.Pounds.ToCarats(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1000.0, 0.440925)]
+		[TestCase(123456.0, 54.4347781)]
+		[TestCase(800.0, 0.35274)]
+		public void ConvertKnownCaratsToPounds(double input, double expectation)
+		{
+			var result = Mass.Carats.ToPounds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCaratsToStonesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Carats.ToStones(value);
+				var convertBack = Mass.Stones.ToCarats(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(9000.0, 0.2834515)]
+		[TestCase(123456.0, 3.88819843)]
+		[TestCase(80000.8, 2.519593906)]
+		public void ConvertKnownCaratsToStones(double input, double expectation)
+		{
+			var result = Mass.Carats.ToStones(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+	}
 	public class GramsTests
 	{
 		[Property]
@@ -129,6 +272,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownGramsToStones(double input, double expectation)
 		{
 			var result = Mass.Grams.ToStones(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromGramsToCaratsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Grams.ToCarats(value);
+				var convertBack = Mass.Carats.ToGrams(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(123.0, 615.0)]
+		[TestCase(90.1, 450.5)]
+		[TestCase(5000.0, 25000.0)]
+		public void ConvertKnownGramsToCarats(double input, double expectation)
+		{
+			var result = Mass.Grams.ToCarats(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -255,6 +418,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromKilogramsToCaratsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Kilograms.ToCarats(value);
+				var convertBack = Mass.Carats.ToKilograms(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.1, 500.0)]
+		[TestCase(0.08, 400.0)]
+		[TestCase(2.0, 10000.0)]
+		public void ConvertKnownKilogramsToCarats(double input, double expectation)
+		{
+			var result = Mass.Kilograms.ToCarats(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class MilligramsTests
 	{
@@ -375,6 +558,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownMilligramsToStones(double input, double expectation)
 		{
 			var result = Mass.Milligrams.ToStones(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMilligramsToCaratsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Milligrams.ToCarats(value);
+				var convertBack = Mass.Carats.ToMilligrams(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(600.0, 3.0)]
+		[TestCase(1234.0, 6.17)]
+		[TestCase(9090.0, 45.45)]
+		public void ConvertKnownMilligramsToCarats(double input, double expectation)
+		{
+			var result = Mass.Milligrams.ToCarats(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -501,6 +704,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromOuncesToCaratsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Ounces.ToCarats(value);
+				var convertBack = Mass.Carats.ToOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0012, 0.170097139)]
+		[TestCase(4.0, 566.99)]
+		[TestCase(1.4, 198.447)]
+		public void ConvertKnownOuncesToCarats(double input, double expectation)
+		{
+			var result = Mass.Ounces.ToCarats(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class PoundsTests
 	{
@@ -621,6 +844,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownPoundsToStones(double input, double expectation)
 		{
 			var result = Mass.Pounds.ToStones(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromPoundsToCaratsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Pounds.ToCarats(value);
+				var convertBack = Mass.Carats.ToPounds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(80.0, 181436.7522)]
+		[TestCase(2.34, 5307.031)]
+		[TestCase(0.9, 2041.17)]
+		public void ConvertKnownPoundsToCarats(double input, double expectation)
+		{
+			var result = Mass.Pounds.ToCarats(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -747,6 +990,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromStonesToCaratsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Stones.ToCarats(value);
+				var convertBack = Mass.Carats.ToStones(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.01, 317.5147)]
+		[TestCase(0.006, 190.5088)]
+		[TestCase(2.1, 66677.25)]
+		public void ConvertKnownStonesToCarats(double input, double expectation)
+		{
+			var result = Mass.Stones.ToCarats(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class TonnesTests
 	{
@@ -867,6 +1130,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownTonnesToStones(double input, double expectation)
 		{
 			var result = Mass.Tonnes.ToStones(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTonnesToCaratsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Mass.Tonnes.ToCarats(value);
+				var convertBack = Mass.Carats.ToTonnes(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.003, 15000.0)]
+		[TestCase(0.09, 450000.0)]
+		[TestCase(0.0012, 6000.0)]
+		public void ConvertKnownTonnesToCarats(double input, double expectation)
+		{
+			var result = Mass.Tonnes.ToCarats(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 

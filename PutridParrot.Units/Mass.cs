@@ -12,6 +12,54 @@ namespace PutridParrot.Units
 	public static class Mass
 	{
 		/// <summary>
+		/// Carats conversion functions
+		/// </summary>
+		public static class Carats
+		{
+			/// <summary>
+			/// Converts the supplied Carats value to Milligrams
+			/// </summary>
+			/// <param name="value">The Carats input value</param>
+			/// <returns>The value in Milligrams</returns>
+			public static double ToMilligrams(double value) => value * 200.0;
+			/// <summary>
+			/// Converts the supplied Carats value to Grams
+			/// </summary>
+			/// <param name="value">The Carats input value</param>
+			/// <returns>The value in Grams</returns>
+			public static double ToGrams(double value) => value / 5.0;
+			/// <summary>
+			/// Converts the supplied Carats value to Kilograms
+			/// </summary>
+			/// <param name="value">The Carats input value</param>
+			/// <returns>The value in Kilograms</returns>
+			public static double ToKilograms(double value) => value / 5000.0;
+			/// <summary>
+			/// Converts the supplied Carats value to Tonnes
+			/// </summary>
+			/// <param name="value">The Carats input value</param>
+			/// <returns>The value in Tonnes</returns>
+			public static double ToTonnes(double value) => value / 5e+6;
+			/// <summary>
+			/// Converts the supplied Carats value to Ounces
+			/// </summary>
+			/// <param name="value">The Carats input value</param>
+			/// <returns>The value in Ounces</returns>
+			public static double ToOunces(double value) => value * 0.00705479;
+			/// <summary>
+			/// Converts the supplied Carats value to Pounds
+			/// </summary>
+			/// <param name="value">The Carats input value</param>
+			/// <returns>The value in Pounds</returns>
+			public static double ToPounds(double value) => value * 0.000440925;
+			/// <summary>
+			/// Converts the supplied Carats value to Stones
+			/// </summary>
+			/// <param name="value">The Carats input value</param>
+			/// <returns>The value in Stones</returns>
+			public static double ToStones(double value) => value * 3.1495e-5;
+		}
+		/// <summary>
 		/// Grams conversion functions
 		/// </summary>
 		public static class Grams
@@ -52,6 +100,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Grams input value</param>
 			/// <returns>The value in Stones</returns>
 			public static double ToStones(double value) => value / 6350.29318;
+			/// <summary>
+			/// Converts the supplied Grams value to Carats
+			/// </summary>
+			/// <param name="value">The Grams input value</param>
+			/// <returns>The value in Carats</returns>
+			public static double ToCarats(double value) => value * 5.0;
 		}
 		/// <summary>
 		/// Kilograms conversion functions
@@ -94,6 +148,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Kilograms input value</param>
 			/// <returns>The value in Stones</returns>
 			public static double ToStones(double value) => value / 6.35029;
+			/// <summary>
+			/// Converts the supplied Kilograms value to Carats
+			/// </summary>
+			/// <param name="value">The Kilograms input value</param>
+			/// <returns>The value in Carats</returns>
+			public static double ToCarats(double value) => value * 5000.0;
 		}
 		/// <summary>
 		/// Milligrams conversion functions
@@ -136,6 +196,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Milligrams input value</param>
 			/// <returns>The value in Stones</returns>
 			public static double ToStones(double value) => value / 6350293.18;
+			/// <summary>
+			/// Converts the supplied Milligrams value to Carats
+			/// </summary>
+			/// <param name="value">The Milligrams input value</param>
+			/// <returns>The value in Carats</returns>
+			public static double ToCarats(double value) => value / 200.0;
 		}
 		/// <summary>
 		/// Ounces conversion functions
@@ -178,6 +244,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Ounces input value</param>
 			/// <returns>The value in Stones</returns>
 			public static double ToStones(double value) => value / 224.0;
+			/// <summary>
+			/// Converts the supplied Ounces value to Carats
+			/// </summary>
+			/// <param name="value">The Ounces input value</param>
+			/// <returns>The value in Carats</returns>
+			public static double ToCarats(double value) => value / 0.00705479;
 		}
 		/// <summary>
 		/// Pounds conversion functions
@@ -220,6 +292,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Pounds input value</param>
 			/// <returns>The value in Stones</returns>
 			public static double ToStones(double value) => value / 14.0;
+			/// <summary>
+			/// Converts the supplied Pounds value to Carats
+			/// </summary>
+			/// <param name="value">The Pounds input value</param>
+			/// <returns>The value in Carats</returns>
+			public static double ToCarats(double value) => value / 0.000440925;
 		}
 		/// <summary>
 		/// Stones conversion functions
@@ -262,6 +340,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Stones input value</param>
 			/// <returns>The value in Pounds</returns>
 			public static double ToPounds(double value) => value * 14.0;
+			/// <summary>
+			/// Converts the supplied Stones value to Carats
+			/// </summary>
+			/// <param name="value">The Stones input value</param>
+			/// <returns>The value in Carats</returns>
+			public static double ToCarats(double value) => value / 3.1495e-5;
 		}
 		/// <summary>
 		/// Tonnes conversion functions
@@ -304,6 +388,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Tonnes input value</param>
 			/// <returns>The value in Stones</returns>
 			public static double ToStones(double value) => value * 157.473;
+			/// <summary>
+			/// Converts the supplied Tonnes value to Carats
+			/// </summary>
+			/// <param name="value">The Tonnes input value</param>
+			/// <returns>The value in Carats</returns>
+			public static double ToCarats(double value) => value * 5e+6;
 		}
 	}
 }
