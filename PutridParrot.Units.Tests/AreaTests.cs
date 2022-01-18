@@ -798,9 +798,9 @@ namespace PutridParrot.Units.Tests
 			}).QuickCheckThrowOnFailure();
 		}
 
-		[TestCase(90.0, 968.752)]
-		[TestCase(180.0, 1937.52)]
-		[TestCase(123.4, 1328.2775)]
+		[TestCase(90.0, 968.7519375)]
+		[TestCase(180.0, 1937.503875)]
+		[TestCase(123.4, 1328.2665454)]
 		public void ConvertKnownSquareMetresToSquareFeet(double input, double expectation)
 		{
 			var result = Area.SquareMetres.ToSquareFeet(input);
@@ -981,7 +981,7 @@ namespace PutridParrot.Units.Tests
 			}).QuickCheckThrowOnFailure();
 		}
 
-		[TestCase(100.0, 25900.0)]
+		[TestCase(100.0, 25899.881103)]
 		[TestCase(2.3, 595.697)]
 		[TestCase(0.9, 233.099)]
 		public void ConvertKnownSquareMilesToHectares(double input, double expectation)

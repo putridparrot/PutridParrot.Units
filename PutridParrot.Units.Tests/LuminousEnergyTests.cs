@@ -45,7 +45,7 @@ namespace PutridParrot.Units.Tests
 
 		[TestCase(1.2, 72.0)]
 		[TestCase(0.8, 48.0)]
-		[TestCase(109.00, 6540)]
+		[TestCase(109.00, 6540.0)]
 		public void ConvertKnownLumenHourToLumenMinute(double input, double expectation)
 		{
 			var result = LuminousEnergy.LumenHour.ToLumenMinute(input);

@@ -7,7 +7,6 @@
 namespace PutridParrot.Units
 {
 	using System;
-
 	/// <summary>
 	/// Angle conversion functions
 	/// </summary>

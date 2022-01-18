@@ -1981,7 +1981,7 @@ namespace PutridParrot.Units.Tests
 			}).QuickCheckThrowOnFailure();
 		}
 
-		[TestCase(67.6, 2704)]
+		[TestCase(67.6, 2704.0)]
 		[TestCase(1009.0, 40360.0)]
 		[TestCase(6.2, 248.0)]
 		public void ConvertKnownQuartsToFluidOunces(double input, double expectation)

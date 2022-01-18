@@ -81,7 +81,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Hectares input value</param>
 			/// <returns>The value in Square Miles</returns>
-			public static double ToSquareMiles(double value) => value / 259.0;
+			public static double ToSquareMiles(double value) => value / 258.99881103;
 			/// <summary>
 			/// Converts the supplied Hectares value to Square Yards
 			/// </summary>
@@ -123,7 +123,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Square Feet input value</param>
 			/// <returns>The value in Square Metres</returns>
-			public static double ToSquareMetres(double value) => value / 10.764;
+			public static double ToSquareMetres(double value) => value / 10.76391042;
 			/// <summary>
 			/// Converts the supplied Square Feet value to Square Miles
 			/// </summary>
@@ -273,13 +273,13 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Square Metres input value</param>
 			/// <returns>The value in Square Yards</returns>
-			public static double ToSquareYards(double value) => value * 1.196;
+			public static double ToSquareYards(double value) => value * 1.1959900463;
 			/// <summary>
 			/// Converts the supplied Square Metres value to Square Feet
 			/// </summary>
 			/// <param name="value">The Square Metres input value</param>
 			/// <returns>The value in Square Feet</returns>
-			public static double ToSquareFeet(double value) => value * 10.764;
+			public static double ToSquareFeet(double value) => value * 10.76391042;
 			/// <summary>
 			/// Converts the supplied Square Metres value to Square Inches
 			/// </summary>
@@ -339,7 +339,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Square Miles input value</param>
 			/// <returns>The value in Hectares</returns>
-			public static double ToHectares(double value) => value * 259.0;
+			public static double ToHectares(double value) => value * 258.99881103;
 			/// <summary>
 			/// Converts the supplied Square Miles value to Acres
 			/// </summary>
@@ -363,7 +363,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Square Yards input value</param>
 			/// <returns>The value in Square Metres</returns>
-			public static double ToSquareMetres(double value) => value / 1.196;
+			public static double ToSquareMetres(double value) => value / 1.1959900463;
 			/// <summary>
 			/// Converts the supplied Square Yards value to Square Miles
 			/// </summary>

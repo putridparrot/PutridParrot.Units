@@ -430,7 +430,7 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(0.004, 32000000.0)]
-		[TestCase(0.012, 96000000)]
+		[TestCase(0.012, 96000000.0)]
 		[TestCase(3e-9, 24.0)]
 		public void ConvertKnownGigabytesToBits(double input, double expectation)
 		{
@@ -694,7 +694,7 @@ namespace PutridParrot.Units.Tests
 
 		[TestCase(123456.0, 0.126418944)]
 		[TestCase(8000000.0, 8.192)]
-		[TestCase(1276876, 1.307521024)]
+		[TestCase(1276876.0, 1.307521024)]
 		public void ConvertKnownKibibitsToGigabits(double input, double expectation)
 		{
 			var result = DataStorage.Kibibits.ToGigabits(input);
@@ -895,7 +895,7 @@ namespace PutridParrot.Units.Tests
 			}).QuickCheckThrowOnFailure();
 		}
 
-		[TestCase(191987578, 0.191987578)]
+		[TestCase(191987578.0, 0.191987578)]
 		[TestCase(9010081903.0, 9.010081903)]
 		[TestCase(123456789.0, 0.123456789)]
 		public void ConvertKnownKilobitsToTerabits(double input, double expectation)
@@ -1040,7 +1040,7 @@ namespace PutridParrot.Units.Tests
 
 		[TestCase(123.456, 987648.0)]
 		[TestCase(900.0, 7.2e+6)]
-		[TestCase(100200.0, 801600000)]
+		[TestCase(100200.0, 801600000.0)]
 		public void ConvertKnownKilobytesToBits(double input, double expectation)
 		{
 			var result = DataStorage.Kilobytes.ToBits(input);
@@ -1179,7 +1179,7 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(0.9, 9e-10)]
-		[TestCase(140000000, 0.14)]
+		[TestCase(140000000.0, 0.14)]
 		[TestCase(7.0, 7e-9)]
 		public void ConvertKnownKilobytesToTerabytes(double input, double expectation)
 		{

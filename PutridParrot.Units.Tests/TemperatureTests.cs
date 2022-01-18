@@ -64,8 +64,8 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(900.0, 2111.67)]
-		[TestCase(12, 513.27)]
-		[TestCase(-3, 486.27)]
+		[TestCase(12.0, 513.27)]
+		[TestCase(-3.0, 486.27)]
 		public void ConvertKnownCelsiusToRankine(double input, double expectation)
 		{
 			var result = Temperature.Celsius.ToRankine(input);

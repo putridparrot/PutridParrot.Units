@@ -44,8 +44,8 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(67.9, 17.12196)]
-		[TestCase(109.9, 27.712868)]
-		[TestCase(5000.0, 1260.716)]
+		[TestCase(109.9, 27.7009516484)]
+		[TestCase(5000.0, 1260.279874814)]
 		public void ConvertKnownBtuToKilocalories(double input, double expectation)
 		{
 			var result = Energy.Btu.ToKilocalories(input);
@@ -716,8 +716,8 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(3.4, 13.4833)]
-		[TestCase(109.0, 432.2940)]
-		[TestCase(22.89, 90.774114)]
+		[TestCase(109.0, 432.4436269206)]
+		[TestCase(22.89, 90.8131616)]
 		public void ConvertKnownKilocaloriesToBtu(double input, double expectation)
 		{
 			var result = Energy.Kilocalories.ToBtu(input);

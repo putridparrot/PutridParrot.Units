@@ -495,7 +495,7 @@ namespace PutridParrot.Units.Tests
 			}).QuickCheckThrowOnFailure();
 		}
 
-		[TestCase(90.0, 5400)]
+		[TestCase(90.0, 5400.0)]
 		[TestCase(0.9, 54.0)]
 		[TestCase(123.0, 7380.0)]
 		public void ConvertKnownMinutesToSeconds(double input, double expectation)

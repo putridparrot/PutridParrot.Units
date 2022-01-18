@@ -554,7 +554,7 @@ namespace PutridParrot.Units.Tests
 
 		[TestCase(0.8, 800.0)]
 		[TestCase(45.0, 45000.0)]
-		[TestCase(1.2, 1200)]
+		[TestCase(1.2, 1200.0)]
 		public void ConvertKnownKilometresToMetres(double input, double expectation)
 		{
 			var result = Length.Kilometres.ToMetres(input);
@@ -572,8 +572,8 @@ namespace PutridParrot.Units.Tests
 			}).QuickCheckThrowOnFailure();
 		}
 
-		[TestCase(1.2, 47244.1)]
-		[TestCase(0.65, 25590.55)]
+		[TestCase(1.2, 47244.094488)]
+		[TestCase(0.65, 25590.551181)]
 		[TestCase(5.0, 196850.3937)]
 		public void ConvertKnownKilometresToInches(double input, double expectation)
 		{

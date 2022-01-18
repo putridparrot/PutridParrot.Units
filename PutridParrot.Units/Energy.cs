@@ -27,7 +27,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Btu input value</param>
 			/// <returns>The value in Kilocalories</returns>
-			public static double ToKilocalories(double value) => value / 3.966;
+			public static double ToKilocalories(double value) => value / 3.9673727240424;
 			/// <summary>
 			/// Converts the supplied Btu value to Joules
 			/// </summary>
@@ -255,7 +255,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Kilocalories input value</param>
 			/// <returns>The value in Btu</returns>
-			public static double ToBtu(double value) => value * 3.966;
+			public static double ToBtu(double value) => value * 3.9673727240424;
 			/// <summary>
 			/// Converts the supplied Kilocalories value to Calories
 			/// </summary>
@@ -381,7 +381,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Kilowatt Hours input value</param>
 			/// <returns>The value in US Therms</returns>
-			public static double ToUSTherms(double value) => value / 29.3;
+			public static double ToUSTherms(double value) => value / 29.3001;
 			/// <summary>
 			/// Converts the supplied Kilowatt Hours value to Watt Hours
 			/// </summary>
@@ -441,7 +441,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The US Therms input value</param>
 			/// <returns>The value in Kilowatt Hours</returns>
-			public static double ToKilowattHours(double value) => value * 29.3;
+			public static double ToKilowattHours(double value) => value * 29.3001;
 			/// <summary>
 			/// Converts the supplied US Therms value to Foot Pounds
 			/// </summary>

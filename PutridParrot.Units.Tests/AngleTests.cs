@@ -105,7 +105,7 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(12.0, 43200.0)]
-		[TestCase(910.4, 3277440)]
+		[TestCase(910.4, 3277440.0)]
 		[TestCase(5.6, 20160.0)]
 		public void ConvertKnownDegreesToSecondsOfArc(double input, double expectation)
 		{
