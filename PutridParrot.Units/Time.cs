@@ -45,7 +45,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Centuries input value</param>
 			/// <returns>The value in Weeks</returns>
-			public static double ToWeeks(double value) => value * 5214.0;
+			public static double ToWeeks(double value) => value * 5214.29;
 			/// <summary>
 			/// Converts the supplied Centuries value to Months
 			/// </summary>
@@ -99,7 +99,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Days input value</param>
 			/// <returns>The value in Months</returns>
-			public static double ToMonths(double value) => value / 30.417;
+			public static double ToMonths(double value) => value / 30.4167;
 			/// <summary>
 			/// Converts the supplied Days value to Years
 			/// </summary>
@@ -207,7 +207,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Hours input value</param>
 			/// <returns>The value in Months</returns>
-			public static double ToMonths(double value) => value / 730.0;
+			public static double ToMonths(double value) => value / 730.001;
 			/// <summary>
 			/// Converts the supplied Hours value to Years
 			/// </summary>
@@ -303,19 +303,19 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Months input value</param>
 			/// <returns>The value in Hours</returns>
-			public static double ToHours(double value) => value * 730.0;
+			public static double ToHours(double value) => value * 730.001;
 			/// <summary>
 			/// Converts the supplied Months value to Days
 			/// </summary>
 			/// <param name="value">The Months input value</param>
 			/// <returns>The value in Days</returns>
-			public static double ToDays(double value) => value * 30.417;
+			public static double ToDays(double value) => value * 30.4167;
 			/// <summary>
 			/// Converts the supplied Months value to Weeks
 			/// </summary>
 			/// <param name="value">The Months input value</param>
 			/// <returns>The value in Weeks</returns>
-			public static double ToWeeks(double value) => value * 4.345;
+			public static double ToWeeks(double value) => value * 4.34524;
 			/// <summary>
 			/// Converts the supplied Months value to Years
 			/// </summary>
@@ -423,7 +423,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Weeks input value</param>
 			/// <returns>The value in Months</returns>
-			public static double ToMonths(double value) => value / 4.345;
+			public static double ToMonths(double value) => value / 4.34524;
 			/// <summary>
 			/// Converts the supplied Weeks value to Years
 			/// </summary>
@@ -441,7 +441,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Weeks input value</param>
 			/// <returns>The value in Centuries</returns>
-			public static double ToCenturies(double value) => value / 5214.0;
+			public static double ToCenturies(double value) => value / 5214.29;
 		}
 		/// <summary>
 		/// Years conversion functions

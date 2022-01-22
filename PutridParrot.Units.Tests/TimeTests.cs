@@ -701,7 +701,7 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(4.5, 136.875)]
-		[TestCase(90.0, 2737.53)]
+		[TestCase(90.0, 2737.5029)]
 		[TestCase(0.4, 12.1667)]
 		public void ConvertKnownMonthsToDays(double input, double expectation)
 		{
@@ -721,7 +721,7 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(0.5, 2.17262)]
-		[TestCase(88.0, 382.359)]
+		[TestCase(88.0, 382.381120)]
 		[TestCase(12.6, 54.75006)]
 		public void ConvertKnownMonthsToWeeks(double input, double expectation)
 		{
@@ -1011,7 +1011,7 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(4.0, 0.920547)]
-		[TestCase(900.0, 207.134637)]
+		[TestCase(900.0, 207.12319687)]
 		[TestCase(3.8, 0.87452)]
 		public void ConvertKnownWeeksToMonths(double input, double expectation)
 		{

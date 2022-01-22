@@ -172,6 +172,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromBtuToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Btu.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToBtu(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0000000789, 519567655294184.88)]
+		[TestCase(0.000001002, 6598311667994592.0)]
+		[TestCase(0.000000001, 6585141385224.14)]
+		public void ConvertKnownBtuToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.Btu.ToElectronvolts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class CaloriesTests
 	{
@@ -332,6 +352,209 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownCaloriesToFootPounds(double input, double expectation)
 		{
 			var result = Energy.Calories.ToFootPounds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCaloriesToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Calories.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToCalories(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0000091, 237800626261534.66)]
+		[TestCase(0.0008, 20905549561453600.0)]
+		[TestCase(0.00123, 32142282450734908.0)]
+		public void ConvertKnownCaloriesToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.Calories.ToElectronvolts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+	}
+	public class ElectronvoltsTests
+	{
+		[Property]
+		public void FromElectronvoltsToKilojoulesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToKilojoules(value);
+				var convertBack = Energy.Kilojoules.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(123456789.0, 1.9779957413e-14)]
+		[TestCase(900900900.0, 1.4434023094e-13)]
+		[TestCase(123456789123456789.0, 1.977995743237493669e-5)]
+		public void ConvertKnownElectronvoltsToKilojoules(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToKilojoules(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToKilocaloriesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToKilocalories(value);
+				var convertBack = Energy.Kilocalories.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(100200300400.0, 1.6053857310684e-11)]
+		[TestCase(123456789.0, 1.9779957413e-14)]
+		[TestCase(900800700600.0, 1.4432417722369e-10)]
+		public void ConvertKnownElectronvoltsToKilocalories(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToKilocalories(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToJoulesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToJoules(value);
+				var convertBack = Energy.Joules.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(123456789123.0, 1.9779957432302e-8)]
+		[TestCase(900800700600.0, 1.4432417722369e-7)]
+		[TestCase(999888777666.0, 1.601998367183e-7)]
+		public void ConvertKnownElectronvoltsToJoules(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToJoules(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToBtuAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToBtu(value);
+				var convertBack = Energy.Btu.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(100020003000100020003000.0, 15.188741377060267723)]
+		[TestCase(999888777666999888777666.0, 151.84014791315084381)]
+		[TestCase(12345678912341234567891234.0, 1874.7782293466862029)]
+		public void ConvertKnownElectronvoltsToBtu(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToBtu(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToCaloriesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToCalories(value);
+				var convertBack = Energy.Calories.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(666333111999.0, 2.5515853167503e-8)]
+		[TestCase(999888777666555.0, 3.8288679904011702e-5)]
+		[TestCase(12345678901234.0, 4.727523282641506e-7)]
+		public void ConvertKnownElectronvoltsToCalories(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToCalories(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToUSThermsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToUSTherms(value);
+				var convertBack = Energy.USTherms.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(666333111999.0, 1.0118737258101e-10)]
+		[TestCase(999888777666555.0, 1.5184014791308327e-7)]
+		[TestCase(12345678901234.0, 1.874778227659974e-9)]
+		public void ConvertKnownElectronvoltsToUSTherms(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToUSTherms(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToWattHoursAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToWattHours(value);
+				var convertBack = Energy.WattHours.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(100900700100.0, 4.490576030342e-12)]
+		[TestCase(9000800070006000.0, 4.00579748289276988e-7)]
+		[TestCase(12345678987654321.0, 5.494432653620188248e-7)]
+		public void ConvertKnownElectronvoltsToWattHours(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToWattHours(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToKilowattHoursAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToKilowattHours(value);
+				var convertBack = Energy.KilowattHours.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(100900700100.0, 4.490576030342e-15)]
+		[TestCase(999988887777.0, 4.4504410034909e-14)]
+		[TestCase(12345678987654321.0, 5.494432653620187834e-10)]
+		public void ConvertKnownElectronvoltsToKilowattHours(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToKilowattHours(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromElectronvoltsToFootPoundsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Electronvolts.ToFootPounds(value);
+				var convertBack = Energy.FootPounds.ToElectronvolts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(100900700100.0, 1.1923484070355e-8)]
+		[TestCase(999988887777.0, 1.1816916594359e-7)]
+		[TestCase(12345678987654321.0, 0.0014588948005427860004)]
+		public void ConvertKnownElectronvoltsToFootPounds(double input, double expectation)
+		{
+			var result = Energy.Electronvolts.ToFootPounds(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -498,6 +721,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromFootPoundsToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.FootPounds.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToFootPounds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.00123, 10408691651641586.0)]
+		[TestCase(0.0009, 7616115842664575.0)]
+		[TestCase(0.00000888, 75145676314290.469)]
+		public void ConvertKnownFootPoundsToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.FootPounds.ToElectronvolts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class JoulesTests
 	{
@@ -658,6 +901,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownJoulesToFootPounds(double input, double expectation)
 		{
 			var result = Energy.Joules.ToFootPounds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromJoulesToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Joules.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToJoules(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.00000888, 55424602968504.0)]
+		[TestCase(0.00001234, 77020225296322.0)]
+		[TestCase(0.00000666, 41568452226378.0)]
+		public void ConvertKnownJoulesToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.Joules.ToElectronvolts(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -824,6 +1087,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromKilocaloriesToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Kilocalories.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToKilocalories(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0000000666, 1740388069688132.2)]
+		[TestCase(0.000002, 52263905996640608.0)]
+		[TestCase(0.000000999, 26105821045321988.0)]
+		public void ConvertKnownKilocaloriesToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.Kilocalories.ToElectronvolts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class KilojoulesTests
 	{
@@ -984,6 +1267,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownKilojoulesToFootPounds(double input, double expectation)
 		{
 			var result = Energy.Kilojoules.ToFootPounds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromKilojoulesToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.Kilojoules.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToKilojoules(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.000000999, 6235268234766989.0)]
+		[TestCase(0.0000002, 1248301948902300.0)]
+		[TestCase(0.00567, 3.5389360251380204E+19)]
+		public void ConvertKnownKilojoulesToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.Kilojoules.ToElectronvolts(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -1150,6 +1453,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromKilowattHoursToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.KilowattHours.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToKilowattHours(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.000008, 179755440000000000000.0)]
+		[TestCase(0.0000000128, 2.8760870400000003E+17)]
+		[TestCase(0.0000000001, 2246943000000000.2)]
+		public void ConvertKnownKilowattHoursToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.KilowattHours.ToElectronvolts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class USThermsTests
 	{
@@ -1313,6 +1636,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromUSThermsToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.USTherms.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToUSTherms(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0000009, 592520940098199000000.0)]
+		[TestCase(0.000000001339, 8.815394875460983E+17)]
+		[TestCase(0.0000000000666, 43846549567266728.0)]
+		public void ConvertKnownUSThermsToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.USTherms.ToElectronvolts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class WattHoursTests
 	{
@@ -1473,6 +1816,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownWattHoursToFootPounds(double input, double expectation)
 		{
 			var result = Energy.WattHours.ToFootPounds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromWattHoursToElectronvoltsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Energy.WattHours.ToElectronvolts(value);
+				var convertBack = Energy.Electronvolts.ToWattHours(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0000000000666, 1496463565615.39)]
+		[TestCase(0.000000008, 179755383257104.03)]
+		[TestCase(0.0000123, 2.7637390175779744E+17)]
+		public void ConvertKnownWattHoursToElectronvolts(double input, double expectation)
+		{
+			var result = Energy.WattHours.ToElectronvolts(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 

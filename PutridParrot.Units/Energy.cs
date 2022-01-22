@@ -64,6 +64,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Btu input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value * 778.169;
+			/// <summary>
+			/// Converts the supplied Btu value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Btu input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 6585141385224143241216.00;
 		}
 		/// <summary>
 		/// Calories conversion functions
@@ -118,12 +124,72 @@ namespace PutridParrot.Units
 			/// <param name="value">The Calories input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value * 3.08596;
+			/// <summary>
+			/// Converts the supplied Calories value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Calories input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 2.6131936951817e+19;
 		}
 		/// <summary>
-		/// ElectronVolts conversion functions
+		/// Electronvolts conversion functions
 		/// </summary>
-		public static class ElectronVolts
+		public static class Electronvolts
 		{
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Kilojoules
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Kilojoules</returns>
+			public static double ToKilojoules(double value) => value / 6241509744511500156928.00;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Kilocalories
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Kilocalories</returns>
+			public static double ToKilocalories(double value) => value / 26131952998320305078272.00;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Joules
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Joules</returns>
+			public static double ToJoules(double value) => value / 6241509343300000000.0;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Btu
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Btu</returns>
+			public static double ToBtu(double value) => value / 6585141385224143241216.0;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Calories
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Calories</returns>
+			public static double ToCalories(double value) => value / 2.6131936951817e+19;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to US Therms
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in US Therms</returns>
+			public static double ToUSTherms(double value) => value / 6.5835660010911e+26;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Watt Hours
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Watt Hours</returns>
+			public static double ToWattHours(double value) => value / 2.2469422907138e+22;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Kilowatt Hours
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Kilowatt Hours</returns>
+			public static double ToKilowattHours(double value) => value / 2.246943e+25;
+			/// <summary>
+			/// Converts the supplied Electronvolts value to Foot Pounds
+			/// </summary>
+			/// <param name="value">The Electronvolts input value</param>
+			/// <returns>The value in Foot Pounds</returns>
+			public static double ToFootPounds(double value) => value / 8462350936293971968.00;
 		}
 		/// <summary>
 		/// Foot Pounds conversion functions
@@ -178,6 +244,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Foot Pounds input value</param>
 			/// <returns>The value in Kilowatt Hours</returns>
 			public static double ToKilowattHours(double value) => value * 0.00000037662;
+			/// <summary>
+			/// Converts the supplied Foot Pounds value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Foot Pounds input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 8462350936293971968.00;
 		}
 		/// <summary>
 		/// Joules conversion functions
@@ -232,6 +304,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Joules input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value / 1.35582;
+			/// <summary>
+			/// Converts the supplied Joules value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Joules input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 6241509343300000000.0;
 		}
 		/// <summary>
 		/// Kilocalories conversion functions
@@ -286,6 +364,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Kilocalories input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value * 3085.96;
+			/// <summary>
+			/// Converts the supplied Kilocalories value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Kilocalories input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 26131952998320305078272.00;
 		}
 		/// <summary>
 		/// Kilojoules conversion functions
@@ -340,6 +424,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Kilojoules input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value * 737.562;
+			/// <summary>
+			/// Converts the supplied Kilojoules value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Kilojoules input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 6241509744511500156928.00;
 		}
 		/// <summary>
 		/// Kilowatt Hours conversion functions
@@ -394,6 +484,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Kilowatt Hours input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value / 0.00000037662;
+			/// <summary>
+			/// Converts the supplied Kilowatt Hours value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Kilowatt Hours input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 2.246943e+25;
 		}
 		/// <summary>
 		/// US Therms conversion functions
@@ -448,6 +544,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Therms input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value * 77816937.099186;
+			/// <summary>
+			/// Converts the supplied US Therms value to Electronvolts
+			/// </summary>
+			/// <param name="value">The US Therms input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 6.5835660010911e+26;
 		}
 		/// <summary>
 		/// Watt Hours conversion functions
@@ -502,6 +604,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Watt Hours input value</param>
 			/// <returns>The value in Foot Pounds</returns>
 			public static double ToFootPounds(double value) => value * 2655.22;
+			/// <summary>
+			/// Converts the supplied Watt Hours value to Electronvolts
+			/// </summary>
+			/// <param name="value">The Watt Hours input value</param>
+			/// <returns>The value in Electronvolts</returns>
+			public static double ToElectronvolts(double value) => value * 2.2469422907138e+22;
 		}
 	}
 }

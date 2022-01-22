@@ -141,7 +141,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Inches input value</param>
 			/// <returns>The value in Metres</returns>
-			public static double ToMetres(double value) => value / 39.3701;
+			public static double ToMetres(double value) => value / 39.37007874;
 			/// <summary>
 			/// Converts the supplied Inches value to Kilometres
 			/// </summary>
@@ -255,7 +255,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Metres input value</param>
 			/// <returns>The value in Inches</returns>
-			public static double ToInches(double value) => value * 39.3701;
+			public static double ToInches(double value) => value * 39.37007874;
 			/// <summary>
 			/// Converts the supplied Metres value to Feet
 			/// </summary>
