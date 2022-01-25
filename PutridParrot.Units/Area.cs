@@ -57,7 +57,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Acres input value</param>
 			/// <returns>The value in Hectares</returns>
-			public static double ToHectares(double value) => value / 2.471;
+			public static double ToHectares(double value) => value / 2.4710538146717;
 		}
 		/// <summary>
 		/// Hectares conversion functions
@@ -105,7 +105,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Hectares input value</param>
 			/// <returns>The value in Acres</returns>
-			public static double ToAcres(double value) => value * 2.471;
+			public static double ToAcres(double value) => value * 2.4710538146717;
 		}
 		/// <summary>
 		/// Square Feet conversion functions
