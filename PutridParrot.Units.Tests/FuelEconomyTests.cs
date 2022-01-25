@@ -53,12 +53,12 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[Property]
-		public void FromKilometrePerLitreToLitresper100KilometresAndBack()
+		public void FromKilometrePerLitreToLitresPer100KilometresAndBack()
 		{
 			Prop.ForAll<int>(value =>
 			{
-				var convertTo = FuelEconomy.KilometrePerLitre.ToLitresper100Kilometres(value);
-				var convertBack = FuelEconomy.Litresper100Kilometres.ToKilometrePerLitre(convertTo);
+				var convertTo = FuelEconomy.KilometrePerLitre.ToLitresPer100Kilometres(value);
+				var convertBack = FuelEconomy.LitresPer100Kilometres.ToKilometrePerLitre(convertTo);
 				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
 			}).QuickCheckThrowOnFailure();
 		}
@@ -66,22 +66,22 @@ namespace PutridParrot.Units.Tests
 		[TestCase(109.0, 0.917431)]
 		[TestCase(0.8, 125.0)]
 		[TestCase(2.3, 43.4783)]
-		public void ConvertKnownKilometrePerLitreToLitresper100Kilometres(double input, double expectation)
+		public void ConvertKnownKilometrePerLitreToLitresPer100Kilometres(double input, double expectation)
 		{
-			var result = FuelEconomy.KilometrePerLitre.ToLitresper100Kilometres(input);
+			var result = FuelEconomy.KilometrePerLitre.ToLitresPer100Kilometres(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
 	}
-	public class Litresper100KilometresTests
+	public class LitresPer100KilometresTests
 	{
 		[Property]
-		public void FromLitresper100KilometresToKilometrePerLitreAndBack()
+		public void FromLitresPer100KilometresToKilometrePerLitreAndBack()
 		{
 			Prop.ForAll<int>(value =>
 			{
-				var convertTo = FuelEconomy.Litresper100Kilometres.ToKilometrePerLitre(value);
-				var convertBack = FuelEconomy.KilometrePerLitre.ToLitresper100Kilometres(convertTo);
+				var convertTo = FuelEconomy.LitresPer100Kilometres.ToKilometrePerLitre(value);
+				var convertBack = FuelEconomy.KilometrePerLitre.ToLitresPer100Kilometres(convertTo);
 				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
 			}).QuickCheckThrowOnFailure();
 		}
@@ -89,19 +89,19 @@ namespace PutridParrot.Units.Tests
 		[TestCase(0.7, 142.857)]
 		[TestCase(109.0, 0.917431)]
 		[TestCase(0.012, 8333.3333)]
-		public void ConvertKnownLitresper100KilometresToKilometrePerLitre(double input, double expectation)
+		public void ConvertKnownLitresPer100KilometresToKilometrePerLitre(double input, double expectation)
 		{
-			var result = FuelEconomy.Litresper100Kilometres.ToKilometrePerLitre(input);
+			var result = FuelEconomy.LitresPer100Kilometres.ToKilometrePerLitre(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
 		[Property]
-		public void FromLitresper100KilometresToMilesPerGallonAndBack()
+		public void FromLitresPer100KilometresToMilesPerGallonAndBack()
 		{
 			Prop.ForAll<int>(value =>
 			{
-				var convertTo = FuelEconomy.Litresper100Kilometres.ToMilesPerGallon(value);
-				var convertBack = FuelEconomy.MilesPerGallon.ToLitresper100Kilometres(convertTo);
+				var convertTo = FuelEconomy.LitresPer100Kilometres.ToMilesPerGallon(value);
+				var convertBack = FuelEconomy.MilesPerGallon.ToLitresPer100Kilometres(convertTo);
 				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
 			}).QuickCheckThrowOnFailure();
 		}
@@ -109,19 +109,19 @@ namespace PutridParrot.Units.Tests
 		[TestCase(107.0, 2.64001)]
 		[TestCase(0.8, 353.101)]
 		[TestCase(0.02, 14124.05)]
-		public void ConvertKnownLitresper100KilometresToMilesPerGallon(double input, double expectation)
+		public void ConvertKnownLitresPer100KilometresToMilesPerGallon(double input, double expectation)
 		{
-			var result = FuelEconomy.Litresper100Kilometres.ToMilesPerGallon(input);
+			var result = FuelEconomy.LitresPer100Kilometres.ToMilesPerGallon(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
 		[Property]
-		public void FromLitresper100KilometresToUSMilesPerGallonAndBack()
+		public void FromLitresPer100KilometresToUSMilesPerGallonAndBack()
 		{
 			Prop.ForAll<int>(value =>
 			{
-				var convertTo = FuelEconomy.Litresper100Kilometres.ToUSMilesPerGallon(value);
-				var convertBack = FuelEconomy.USMilesPerGallon.ToLitresper100Kilometres(convertTo);
+				var convertTo = FuelEconomy.LitresPer100Kilometres.ToUSMilesPerGallon(value);
+				var convertBack = FuelEconomy.USMilesPerGallon.ToLitresPer100Kilometres(convertTo);
 				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
 			}).QuickCheckThrowOnFailure();
 		}
@@ -129,9 +129,9 @@ namespace PutridParrot.Units.Tests
 		[TestCase(12.0, 19.6012)]
 		[TestCase(0.3, 784.049)]
 		[TestCase(1.5, 156.81)]
-		public void ConvertKnownLitresper100KilometresToUSMilesPerGallon(double input, double expectation)
+		public void ConvertKnownLitresPer100KilometresToUSMilesPerGallon(double input, double expectation)
 		{
-			var result = FuelEconomy.Litresper100Kilometres.ToUSMilesPerGallon(input);
+			var result = FuelEconomy.LitresPer100Kilometres.ToUSMilesPerGallon(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -179,12 +179,12 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[Property]
-		public void FromMilesPerGallonToLitresper100KilometresAndBack()
+		public void FromMilesPerGallonToLitresPer100KilometresAndBack()
 		{
 			Prop.ForAll<int>(value =>
 			{
-				var convertTo = FuelEconomy.MilesPerGallon.ToLitresper100Kilometres(value);
-				var convertBack = FuelEconomy.Litresper100Kilometres.ToMilesPerGallon(convertTo);
+				var convertTo = FuelEconomy.MilesPerGallon.ToLitresPer100Kilometres(value);
+				var convertBack = FuelEconomy.LitresPer100Kilometres.ToMilesPerGallon(convertTo);
 				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
 			}).QuickCheckThrowOnFailure();
 		}
@@ -192,9 +192,9 @@ namespace PutridParrot.Units.Tests
 		[TestCase(22.3, 12.66731)]
 		[TestCase(0.4, 706.202)]
 		[TestCase(5.2, 54.3233)]
-		public void ConvertKnownMilesPerGallonToLitresper100Kilometres(double input, double expectation)
+		public void ConvertKnownMilesPerGallonToLitresPer100Kilometres(double input, double expectation)
 		{
-			var result = FuelEconomy.MilesPerGallon.ToLitresper100Kilometres(input);
+			var result = FuelEconomy.MilesPerGallon.ToLitresPer100Kilometres(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -242,12 +242,12 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[Property]
-		public void FromUSMilesPerGallonToLitresper100KilometresAndBack()
+		public void FromUSMilesPerGallonToLitresPer100KilometresAndBack()
 		{
 			Prop.ForAll<int>(value =>
 			{
-				var convertTo = FuelEconomy.USMilesPerGallon.ToLitresper100Kilometres(value);
-				var convertBack = FuelEconomy.Litresper100Kilometres.ToUSMilesPerGallon(convertTo);
+				var convertTo = FuelEconomy.USMilesPerGallon.ToLitresPer100Kilometres(value);
+				var convertBack = FuelEconomy.LitresPer100Kilometres.ToUSMilesPerGallon(convertTo);
 				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
 			}).QuickCheckThrowOnFailure();
 		}
@@ -255,9 +255,9 @@ namespace PutridParrot.Units.Tests
 		[TestCase(111.0, 2.11905)]
 		[TestCase(0.4, 588.036)]
 		[TestCase(5.2, 45.2336)]
-		public void ConvertKnownUSMilesPerGallonToLitresper100Kilometres(double input, double expectation)
+		public void ConvertKnownUSMilesPerGallonToLitresPer100Kilometres(double input, double expectation)
 		{
-			var result = FuelEconomy.USMilesPerGallon.ToLitresper100Kilometres(input);
+			var result = FuelEconomy.USMilesPerGallon.ToLitresPer100Kilometres(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
