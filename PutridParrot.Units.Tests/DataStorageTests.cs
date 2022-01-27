@@ -407,8 +407,8 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(0.002, 1.9073486)]
-		[TestCase(0.9, 858.6)]
-		[TestCase(6.1, 5819.4)]
+		[TestCase(0.9, 858.30688476562)]
+		[TestCase(6.1, 5817.413330078125)]
 		public void ConvertKnownGigabitsToMebibits(double input, double expectation)
 		{
 			var result = DataStorage.Gigabits.ToMebibits(input);
@@ -1199,7 +1199,7 @@ namespace PutridParrot.Units.Tests
 		}
 
 		[TestCase(0.009, 0.0703125)]
-		[TestCase(6e+3, 46872.0)]
+		[TestCase(6e+3, 46875.0)]
 		[TestCase(1.23, 9.609375)]
 		public void ConvertKnownKilobytesToKibibits(double input, double expectation)
 		{

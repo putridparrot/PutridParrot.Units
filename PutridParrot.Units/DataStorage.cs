@@ -141,7 +141,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Gigabits input value</param>
 			/// <returns>The value in Mebibits</returns>
-			public static double ToMebibits(double value) => value * 954.0;
+			public static double ToMebibits(double value) => value * 953.67431640625;
 		}
 		/// <summary>
 		/// Gigabytes conversion functions
@@ -249,7 +249,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Kibibits input value</param>
 			/// <returns>The value in Kilobytes</returns>
-			public static double ToKilobytes(double value) => value / 7.812;
+			public static double ToKilobytes(double value) => value / 7.8125;
 			/// <summary>
 			/// Converts the supplied Kibibits value to Megabytes
 			/// </summary>
@@ -399,7 +399,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Kilobytes input value</param>
 			/// <returns>The value in Kibibits</returns>
-			public static double ToKibibits(double value) => value * 7.812;
+			public static double ToKibibits(double value) => value * 7.8125;
 			/// <summary>
 			/// Converts the supplied Kilobytes value to Mebibits
 			/// </summary>
@@ -435,7 +435,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Mebibits input value</param>
 			/// <returns>The value in Gigabits</returns>
-			public static double ToGigabits(double value) => value / 954.0;
+			public static double ToGigabits(double value) => value / 953.67431640625;
 			/// <summary>
 			/// Converts the supplied Mebibits value to Terabits
 			/// </summary>

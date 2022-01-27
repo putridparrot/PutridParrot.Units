@@ -153,7 +153,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Decades input value</param>
 			/// <returns>The value in Weeks</returns>
-			public static double ToWeeks(double value) => value * 521.0;
+			public static double ToWeeks(double value) => value * 521.429;
 			/// <summary>
 			/// Converts the supplied Decades value to Months
 			/// </summary>
@@ -435,7 +435,7 @@ namespace PutridParrot.Units
 			/// </summary>
 			/// <param name="value">The Weeks input value</param>
 			/// <returns>The value in Decades</returns>
-			public static double ToDecades(double value) => value / 521.0;
+			public static double ToDecades(double value) => value / 521.429;
 			/// <summary>
 			/// Converts the supplied Weeks value to Centuries
 			/// </summary>
