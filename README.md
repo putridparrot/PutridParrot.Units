@@ -15,8 +15,8 @@ The code is written in the style of C# if you're after something aimed at F# che
 
 These methods are used in the My Unit Conversion app.
 
-[![On Android](https://play.google.com/store/apps/details?id=com.putridparrot.MyUnitConversion)]
-[![On iOS](https://apps.apple.com/app/my-unit-conversion/id1600275661)]
+<!-- [![On Android](https://play.google.com/store/apps/details?id=com.putridparrot.MyUnitConversion)]
+[![On iOS](https://apps.apple.com/app/my-unit-conversion/id1600275661)]-->
 
 ### Unit conversions also available for 
 
