@@ -17,6 +17,24 @@ namespace PutridParrot.Units
 		public static class Centuries
 		{
 			/// <summary>
+			/// Converts the supplied Centuries value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Centuries input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 3.154e+18;
+			/// <summary>
+			/// Converts the supplied Centuries value to Microseconds
+			/// </summary>
+			/// <param name="value">The Centuries input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 3.154e+15;
+			/// <summary>
+			/// Converts the supplied Centuries value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Centuries input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 3.154e+12;
+			/// <summary>
 			/// Converts the supplied Centuries value to Seconds
 			/// </summary>
 			/// <param name="value">The Centuries input value</param>
@@ -70,6 +88,24 @@ namespace PutridParrot.Units
 		/// </summary>
 		public static class Days
 		{
+			/// <summary>
+			/// Converts the supplied Days value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Days input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 8.64e+13;
+			/// <summary>
+			/// Converts the supplied Days value to Microseconds
+			/// </summary>
+			/// <param name="value">The Days input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 8.64e+10;
+			/// <summary>
+			/// Converts the supplied Days value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Days input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 8.64e+7;
 			/// <summary>
 			/// Converts the supplied Days value to Seconds
 			/// </summary>
@@ -125,6 +161,24 @@ namespace PutridParrot.Units
 		public static class Decades
 		{
 			/// <summary>
+			/// Converts the supplied Decades value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Decades input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 3.154e+17;
+			/// <summary>
+			/// Converts the supplied Decades value to Microseconds
+			/// </summary>
+			/// <param name="value">The Decades input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 3.154e+14;
+			/// <summary>
+			/// Converts the supplied Decades value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Decades input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 3.154e+11;
+			/// <summary>
 			/// Converts the supplied Decades value to Seconds
 			/// </summary>
 			/// <param name="value">The Decades input value</param>
@@ -179,6 +233,24 @@ namespace PutridParrot.Units
 		public static class Hours
 		{
 			/// <summary>
+			/// Converts the supplied Hours value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Hours input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 3.6e+12;
+			/// <summary>
+			/// Converts the supplied Hours value to Microseconds
+			/// </summary>
+			/// <param name="value">The Hours input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 3.6e+9;
+			/// <summary>
+			/// Converts the supplied Hours value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Hours input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 3.6e+6;
+			/// <summary>
 			/// Converts the supplied Hours value to Seconds
 			/// </summary>
 			/// <param name="value">The Hours input value</param>
@@ -228,10 +300,172 @@ namespace PutridParrot.Units
 			public static double ToCenturies(double value) => value / 876000.0;
 		}
 		/// <summary>
+		/// Microseconds conversion functions
+		/// </summary>
+		public static class Microseconds
+		{
+			/// <summary>
+			/// Converts the supplied Microseconds value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 1000.0;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value / 1000.0;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Seconds
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Seconds</returns>
+			public static double ToSeconds(double value) => value / 1e+6;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Minutes
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Minutes</returns>
+			public static double ToMinutes(double value) => value / 6e+7;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Hours
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Hours</returns>
+			public static double ToHours(double value) => value / 3.6e+9;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Days
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Days</returns>
+			public static double ToDays(double value) => value / 8.64e+10;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Weeks
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Weeks</returns>
+			public static double ToWeeks(double value) => value / 6.048e+11;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Months
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Months</returns>
+			public static double ToMonths(double value) => value / 2629746000000.0;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Years
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Years</returns>
+			public static double ToYears(double value) => value / 3.154e+13;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Decades
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Decades</returns>
+			public static double ToDecades(double value) => value / 3.154e+14;
+			/// <summary>
+			/// Converts the supplied Microseconds value to Centuries
+			/// </summary>
+			/// <param name="value">The Microseconds input value</param>
+			/// <returns>The value in Centuries</returns>
+			public static double ToCenturies(double value) => value / 3.154e+15;
+		}
+		/// <summary>
+		/// Milliseconds conversion functions
+		/// </summary>
+		public static class Milliseconds
+		{
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 1e+6;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Microseconds
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 1000.0;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Seconds
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Seconds</returns>
+			public static double ToSeconds(double value) => value / 1000.0;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Minutes
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Minutes</returns>
+			public static double ToMinutes(double value) => value / 60000.0;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Hours
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Hours</returns>
+			public static double ToHours(double value) => value / 3.6e+6;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Days
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Days</returns>
+			public static double ToDays(double value) => value / 8.64e+7;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Weeks
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Weeks</returns>
+			public static double ToWeeks(double value) => value / 6.048e+8;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Months
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Months</returns>
+			public static double ToMonths(double value) => value / 2629746000.0;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Years
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Years</returns>
+			public static double ToYears(double value) => value / 31556952000.0;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Decades
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Decades</returns>
+			public static double ToDecades(double value) => value / 3.154e+11;
+			/// <summary>
+			/// Converts the supplied Milliseconds value to Centuries
+			/// </summary>
+			/// <param name="value">The Milliseconds input value</param>
+			/// <returns>The value in Centuries</returns>
+			public static double ToCenturies(double value) => value / 3.154e+12;
+		}
+		/// <summary>
 		/// Minutes conversion functions
 		/// </summary>
 		public static class Minutes
 		{
+			/// <summary>
+			/// Converts the supplied Minutes value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Minutes input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 6e+10;
+			/// <summary>
+			/// Converts the supplied Minutes value to Microseconds
+			/// </summary>
+			/// <param name="value">The Minutes input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 6e+7;
+			/// <summary>
+			/// Converts the supplied Minutes value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Minutes input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 60000.0;
 			/// <summary>
 			/// Converts the supplied Minutes value to Seconds
 			/// </summary>
@@ -287,6 +521,24 @@ namespace PutridParrot.Units
 		public static class Months
 		{
 			/// <summary>
+			/// Converts the supplied Months value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Months input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 2629746000000000.0;
+			/// <summary>
+			/// Converts the supplied Months value to Microseconds
+			/// </summary>
+			/// <param name="value">The Months input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 2629746000000.0;
+			/// <summary>
+			/// Converts the supplied Months value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Months input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 2629746000.0;
+			/// <summary>
 			/// Converts the supplied Months value to Seconds
 			/// </summary>
 			/// <param name="value">The Months input value</param>
@@ -336,10 +588,100 @@ namespace PutridParrot.Units
 			public static double ToCenturies(double value) => value / 1200.0;
 		}
 		/// <summary>
+		/// Nanoseconds conversion functions
+		/// </summary>
+		public static class Nanoseconds
+		{
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Microseconds
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value / 1000.0;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value / 1e+6;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Seconds
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Seconds</returns>
+			public static double ToSeconds(double value) => value / 1e+9;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Minutes
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Minutes</returns>
+			public static double ToMinutes(double value) => value / 6e+10;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Hours
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Hours</returns>
+			public static double ToHours(double value) => value / 3.6e+12;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Days
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Days</returns>
+			public static double ToDays(double value) => value / 8.64e+13;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Weeks
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Weeks</returns>
+			public static double ToWeeks(double value) => value / 6.048e+14;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Months
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Months</returns>
+			public static double ToMonths(double value) => value / 2629746000000000.0;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Years
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Years</returns>
+			public static double ToYears(double value) => value / 3.154e+16;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Decades
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Decades</returns>
+			public static double ToDecades(double value) => value / 3.154e+17;
+			/// <summary>
+			/// Converts the supplied Nanoseconds value to Centuries
+			/// </summary>
+			/// <param name="value">The Nanoseconds input value</param>
+			/// <returns>The value in Centuries</returns>
+			public static double ToCenturies(double value) => value / 3.154e+18;
+		}
+		/// <summary>
 		/// Seconds conversion functions
 		/// </summary>
 		public static class Seconds
 		{
+			/// <summary>
+			/// Converts the supplied Seconds value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Seconds input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 1e+9;
+			/// <summary>
+			/// Converts the supplied Seconds value to Microseconds
+			/// </summary>
+			/// <param name="value">The Seconds input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 1e+6;
+			/// <summary>
+			/// Converts the supplied Seconds value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Seconds input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 1000.0;
 			/// <summary>
 			/// Converts the supplied Seconds value to Minutes
 			/// </summary>
@@ -395,6 +737,24 @@ namespace PutridParrot.Units
 		public static class Weeks
 		{
 			/// <summary>
+			/// Converts the supplied Weeks value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Weeks input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 6.048e+14;
+			/// <summary>
+			/// Converts the supplied Weeks value to Microseconds
+			/// </summary>
+			/// <param name="value">The Weeks input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 6.048e+11;
+			/// <summary>
+			/// Converts the supplied Weeks value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Weeks input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 6.048e+8;
+			/// <summary>
 			/// Converts the supplied Weeks value to Seconds
 			/// </summary>
 			/// <param name="value">The Weeks input value</param>
@@ -448,6 +808,24 @@ namespace PutridParrot.Units
 		/// </summary>
 		public static class Years
 		{
+			/// <summary>
+			/// Converts the supplied Years value to Nanoseconds
+			/// </summary>
+			/// <param name="value">The Years input value</param>
+			/// <returns>The value in Nanoseconds</returns>
+			public static double ToNanoseconds(double value) => value * 3.154e+16;
+			/// <summary>
+			/// Converts the supplied Years value to Microseconds
+			/// </summary>
+			/// <param name="value">The Years input value</param>
+			/// <returns>The value in Microseconds</returns>
+			public static double ToMicroseconds(double value) => value * 3.154e+13;
+			/// <summary>
+			/// Converts the supplied Years value to Milliseconds
+			/// </summary>
+			/// <param name="value">The Years input value</param>
+			/// <returns>The value in Milliseconds</returns>
+			public static double ToMilliseconds(double value) => value * 31556952000.0;
 			/// <summary>
 			/// Converts the supplied Years value to Seconds
 			/// </summary>

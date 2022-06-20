@@ -13,6 +13,39 @@ namespace PutridParrot.Units.Tests
 	public class CenturiesTests
 	{
 		[Property]
+		public void FromCenturiesToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Centuries.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToCenturies(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromCenturiesToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Centuries.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToCenturies(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromCenturiesToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Centuries.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToCenturies(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
 		public void FromCenturiesToSecondsAndBack()
 		{
 			Prop.ForAll<int>(value =>
@@ -103,6 +136,48 @@ namespace PutridParrot.Units.Tests
 	}
 	public class DaysTests
 	{
+		[Property]
+		public void FromDaysToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Days.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToDays(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromDaysToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Days.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToDays(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromDaysToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Days.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToDays(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0009, 77760.0)]
+		[TestCase(0.03, 2592000.0)]
+		[TestCase(0.006, 518400.0)]
+		public void ConvertKnownDaysToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Days.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 		[Property]
 		public void FromDaysToSecondsAndBack()
 		{
@@ -249,6 +324,39 @@ namespace PutridParrot.Units.Tests
 	public class DecadesTests
 	{
 		[Property]
+		public void FromDecadesToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Decades.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToDecades(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromDecadesToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Decades.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToDecades(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromDecadesToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Decades.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToDecades(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
 		public void FromDecadesToSecondsAndBack()
 		{
 			Prop.ForAll<int>(value =>
@@ -339,6 +447,48 @@ namespace PutridParrot.Units.Tests
 	}
 	public class HoursTests
 	{
+		[Property]
+		public void FromHoursToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Hours.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToHours(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromHoursToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Hours.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToHours(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromHoursToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Hours.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToHours(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.006, 21600.0)]
+		[TestCase(0.09, 324000.0)]
+		[TestCase(0.007, 25200.0)]
+		public void ConvertKnownHoursToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Hours.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 		[Property]
 		public void FromHoursToSecondsAndBack()
 		{
@@ -482,8 +632,361 @@ namespace PutridParrot.Units.Tests
 		}
 
 	}
+	public class MicrosecondsTests
+	{
+		[Property]
+		public void FromMicrosecondsToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToSecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToSeconds(value);
+				var convertBack = Time.Seconds.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToMinutesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToMinutes(value);
+				var convertBack = Time.Minutes.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToHoursAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToHours(value);
+				var convertBack = Time.Hours.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToDaysAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToDays(value);
+				var convertBack = Time.Days.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToWeeksAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToWeeks(value);
+				var convertBack = Time.Weeks.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToMonthsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToMonths(value);
+				var convertBack = Time.Months.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToYearsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToYears(value);
+				var convertBack = Time.Years.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToDecadesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToDecades(value);
+				var convertBack = Time.Decades.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMicrosecondsToCenturiesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Microseconds.ToCenturies(value);
+				var convertBack = Time.Centuries.ToMicroseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+	}
+	public class MillisecondsTests
+	{
+		[Property]
+		public void FromMillisecondsToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMillisecondsToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMillisecondsToSecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToSeconds(value);
+				var convertBack = Time.Seconds.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(8.0, 0.008)]
+		[TestCase(780.0, 0.78)]
+		[TestCase(900.0, 0.9)]
+		public void ConvertKnownMillisecondsToSeconds(double input, double expectation)
+		{
+			var result = Time.Milliseconds.ToSeconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillisecondsToMinutesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToMinutes(value);
+				var convertBack = Time.Minutes.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900.0, 0.015)]
+		[TestCase(67000.0, 1.1166667)]
+		[TestCase(1234567.0, 20.57611667)]
+		public void ConvertKnownMillisecondsToMinutes(double input, double expectation)
+		{
+			var result = Time.Milliseconds.ToMinutes(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillisecondsToHoursAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToHours(value);
+				var convertBack = Time.Hours.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1234567.0, 0.3429352778)]
+		[TestCase(100900.0, 0.0280277778)]
+		[TestCase(46000.0, 0.012777778)]
+		public void ConvertKnownMillisecondsToHours(double input, double expectation)
+		{
+			var result = Time.Milliseconds.ToHours(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillisecondsToDaysAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToDays(value);
+				var convertBack = Time.Days.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(9000000.0, 0.1041666667)]
+		[TestCase(123456789.0, 1.42889802083)]
+		[TestCase(89008900.0, 1.0301956019)]
+		public void ConvertKnownMillisecondsToDays(double input, double expectation)
+		{
+			var result = Time.Milliseconds.ToDays(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillisecondsToWeeksAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToWeeks(value);
+				var convertBack = Time.Weeks.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(89008900.0, 0.14717080026)]
+		[TestCase(1234567890.0, 2.041282886905)]
+		[TestCase(100200300.0, 0.165675099206)]
+		public void ConvertKnownMillisecondsToWeeks(double input, double expectation)
+		{
+			var result = Time.Milliseconds.ToWeeks(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillisecondsToMonthsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToMonths(value);
+				var convertBack = Time.Months.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(100200300400.0, 38.102653412154631)]
+		[TestCase(90001000.0, 0.034246918329)]
+		[TestCase(8888888888.0, 3.382374104552)]
+		public void ConvertKnownMillisecondsToMonths(double input, double expectation)
+		{
+			var result = Time.Milliseconds.ToMonths(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillisecondsToYearsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToYears(value);
+				var convertBack = Time.Years.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(8888888888.0, 0.28167767558793383)]
+		[TestCase(123456789123.0, 3.9121899074093087)]
+		[TestCase(900080007000.0, 28.522399977032002)]
+		public void ConvertKnownMillisecondsToYears(double input, double expectation)
+		{
+			var result = Time.Milliseconds.ToYears(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillisecondsToDecadesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToDecades(value);
+				var convertBack = Time.Decades.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMillisecondsToCenturiesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Milliseconds.ToCenturies(value);
+				var convertBack = Time.Centuries.ToMilliseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+	}
 	public class MinutesTests
 	{
+		[Property]
+		public void FromMinutesToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Minutes.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToMinutes(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMinutesToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Minutes.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToMinutes(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMinutesToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Minutes.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToMinutes(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.007, 420.0)]
+		[TestCase(0.8, 48000.0)]
+		[TestCase(9.0, 540000.0)]
+		public void ConvertKnownMinutesToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Minutes.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 		[Property]
 		public void FromMinutesToSecondsAndBack()
 		{
@@ -630,6 +1133,48 @@ namespace PutridParrot.Units.Tests
 	public class MonthsTests
 	{
 		[Property]
+		public void FromMonthsToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Months.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToMonths(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMonthsToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Months.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToMonths(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromMonthsToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Months.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToMonths(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.00034, 894113.64)]
+		[TestCase(0.001, 2629746.0)]
+		[TestCase(0.006, 15778476.0)]
+		public void ConvertKnownMonthsToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Months.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
 		public void FromMonthsToSecondsAndBack()
 		{
 			Prop.ForAll<int>(value =>
@@ -772,8 +1317,219 @@ namespace PutridParrot.Units.Tests
 		}
 
 	}
+	public class NanosecondsTests
+	{
+		[Property]
+		public void FromNanosecondsToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1234.0, 1.234)]
+		[TestCase(90.9, 0.0909)]
+		[TestCase(70000.0, 70.0)]
+		public void ConvertKnownNanosecondsToMicroseconds(double input, double expectation)
+		{
+			var result = Time.Nanoseconds.ToMicroseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromNanosecondsToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(70000.0, 0.07)]
+		[TestCase(123456.0, 0.123456)]
+		[TestCase(900900, 0.9009)]
+		public void ConvertKnownNanosecondsToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Nanoseconds.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromNanosecondsToSecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToSeconds(value);
+				var convertBack = Time.Seconds.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900000000.0, 0.9)]
+		[TestCase(123456789.0, 0.123456789)]
+		[TestCase(800400700.0, 0.8004007)]
+		public void ConvertKnownNanosecondsToSeconds(double input, double expectation)
+		{
+			var result = Time.Nanoseconds.ToSeconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromNanosecondsToMinutesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToMinutes(value);
+				var convertBack = Time.Minutes.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1234567890.0, 0.0205761315)]
+		[TestCase(800400700.0, 0.0133400116667)]
+		[TestCase(800100800.0, 0.0133350133333)]
+		public void ConvertKnownNanosecondsToMinutes(double input, double expectation)
+		{
+			var result = Time.Nanoseconds.ToMinutes(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromNanosecondsToHoursAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToHours(value);
+				var convertBack = Time.Hours.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1234567890123.0, 0.3429355250341667)]
+		[TestCase(900800700600.0, 0.250222416833333)]
+		[TestCase(66677788999.0, 0.018521608055278)]
+		public void ConvertKnownNanosecondsToHours(double input, double expectation)
+		{
+			var result = Time.Nanoseconds.ToHours(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromNanosecondsToDaysAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToDays(value);
+				var convertBack = Time.Days.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromNanosecondsToWeeksAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToWeeks(value);
+				var convertBack = Time.Weeks.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromNanosecondsToMonthsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToMonths(value);
+				var convertBack = Time.Months.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromNanosecondsToYearsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToYears(value);
+				var convertBack = Time.Years.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromNanosecondsToDecadesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToDecades(value);
+				var convertBack = Time.Decades.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromNanosecondsToCenturiesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Nanoseconds.ToCenturies(value);
+				var convertBack = Time.Centuries.ToNanoseconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+	}
 	public class SecondsTests
 	{
+		[Property]
+		public void FromSecondsToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Seconds.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToSeconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromSecondsToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Seconds.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToSeconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromSecondsToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Seconds.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToSeconds(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(9.0, 9000.0)]
+		[TestCase(3.1, 3100.0)]
+		[TestCase(0.9, 900.0)]
+		public void ConvertKnownSecondsToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Seconds.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 		[Property]
 		public void FromSecondsToMinutesAndBack()
 		{
@@ -920,6 +1676,48 @@ namespace PutridParrot.Units.Tests
 	public class WeeksTests
 	{
 		[Property]
+		public void FromWeeksToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Weeks.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToWeeks(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromWeeksToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Weeks.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToWeeks(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromWeeksToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Weeks.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToWeeks(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.001, 604800.0)]
+		[TestCase(0.005, 3024000.0)]
+		[TestCase(0.0009, 544320.0)]
+		public void ConvertKnownWeeksToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Weeks.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
 		public void FromWeeksToSecondsAndBack()
 		{
 			Prop.ForAll<int>(value =>
@@ -1064,6 +1862,48 @@ namespace PutridParrot.Units.Tests
 	}
 	public class YearsTests
 	{
+		[Property]
+		public void FromYearsToNanosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Years.ToNanoseconds(value);
+				var convertBack = Time.Nanoseconds.ToYears(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromYearsToMicrosecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Years.ToMicroseconds(value);
+				var convertBack = Time.Microseconds.ToYears(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[Property]
+		public void FromYearsToMillisecondsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Time.Years.ToMilliseconds(value);
+				var convertBack = Time.Milliseconds.ToYears(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.001, 31556952.0)]
+		[TestCase(0.0009, 28401256.8)]
+		[TestCase(0.00034, 10729363.680000002)]
+		public void ConvertKnownYearsToMilliseconds(double input, double expectation)
+		{
+			var result = Time.Years.ToMilliseconds(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 		[Property]
 		public void FromYearsToSecondsAndBack()
 		{
