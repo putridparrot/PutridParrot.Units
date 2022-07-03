@@ -17,6 +17,7 @@ Package available via [nuget](https://www.nuget.org/packages/PutridParrot.Units/
 
 [Dart](https://github.com/putridparrot/DartUnits)  
 [F#](https://github.com/putridparrot/FSharp.Units)  
+[Go](https://github.com/putridparrot/GoUnits)  
 [Java](https://github.com/putridparrot/JavaUnits)  
 [Python](https://github.com/putridparrot/PyUnits)  
 [Rust](https://github.com/putridparrot/RustUnits)   
