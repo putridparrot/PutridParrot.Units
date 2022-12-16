@@ -794,7 +794,7 @@ namespace PutridParrot.Units.Tests
 
 		[TestCase(120000000.0, 0.01536)]
 		[TestCase(88e12, 11264.0)]
-		[TestCase(9000000.0, 0.009216)]
+		[TestCase(9000000.0, 0.001152)]
 		public void ConvertKnownKibibitsToTerabytes(double input, double expectation)
 		{
 			var result = DataStorage.Kibibits.ToTerabytes(input);

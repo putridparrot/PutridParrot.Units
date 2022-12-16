@@ -1352,7 +1352,7 @@ namespace PutridParrot.Units.Tests
 
 		[TestCase(70000.0, 0.07)]
 		[TestCase(123456.0, 0.123456)]
-		[TestCase(900900, 0.9009)]
+		[TestCase(900900.0, 0.9009)]
 		public void ConvertKnownNanosecondsToMilliseconds(double input, double expectation)
 		{
 			var result = Time.Nanoseconds.ToMilliseconds(input);

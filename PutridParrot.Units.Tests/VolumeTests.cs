@@ -10,6 +10,1155 @@ using PropertyAttribute = FsCheck.NUnit.PropertyAttribute;
 
 namespace PutridParrot.Units.Tests
 {
+	public class CubicFeetTests
+	{
+		[Property]
+		public void FromCubicFeetToMillilitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToMillilitres(value);
+				var convertBack = Volume.Millilitres.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.08, 2265.348)]
+		[TestCase(6.0, 169900.79)]
+		[TestCase(0.2393275, 6776.988)]
+		public void ConvertKnownCubicFeetToMillilitres(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToMillilitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToLitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToLitres(value);
+				var convertBack = Volume.Litres.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.3, 8.49505)]
+		[TestCase(6.0, 169.901)]
+		[TestCase(56.0, 1585.74)]
+		public void ConvertKnownCubicFeetToLitres(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToLitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToKilolitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToKilolitres(value);
+				var convertBack = Volume.Kilolitres.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(300.0, 8.49505)]
+		[TestCase(141.259, 4.0)]
+		[TestCase(111.0, 3.14317)]
+		public void ConvertKnownCubicFeetToKilolitres(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToKilolitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToTeaspoons(value);
+				var convertBack = Volume.Teaspoons.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.3, 1435.12)]
+		[TestCase(4.0, 19134.95)]
+		[TestCase(67.0, 320510.579)]
+		public void ConvertKnownCubicFeetToTeaspoons(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToTablespoons(value);
+				var convertBack = Volume.Tablespoons.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.7, 1116.21)]
+		[TestCase(1.1, 1754.04)]
+		[TestCase(0.494174, 788.0)]
+		public void ConvertKnownCubicFeetToTablespoons(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToQuarts(value);
+				var convertBack = Volume.Quarts.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.6, 14.9492)]
+		[TestCase(0.20068, 5.0)]
+		[TestCase(0.301019, 7.5)]
+		public void ConvertKnownCubicFeetToQuarts(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToPints(value);
+				var convertBack = Volume.Pints.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.6, 29.8984)]
+		[TestCase(0.88299, 44.0)]
+		[TestCase(18.0612, 900.0)]
+		public void ConvertKnownCubicFeetToPints(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToGallons(value);
+				var convertBack = Volume.Gallons.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(3.0, 18.6865)]
+		[TestCase(2.08707, 13.0)]
+		[TestCase(14.1278, 88.0)]
+		public void ConvertKnownCubicFeetToGallons(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToFluidOunces(value);
+				var convertBack = Volume.FluidOunces.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(14.0, 13952.6)]
+		[TestCase(7.0, 6976.3)]
+		[TestCase(0.34777769, 346.6)]
+		public void ConvertKnownCubicFeetToFluidOunces(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToUSTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToUSTeaspoons(value);
+				var convertBack = Volume.USTeaspoons.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(5.0, 28725.2)]
+		[TestCase(0.4, 2298.02)]
+		[TestCase(9.2, 52854.3679)]
+		public void ConvertKnownCubicFeetToUSTeaspoons(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToUSTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToUSTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToUSTablespoons(value);
+				var convertBack = Volume.USTablespoons.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1.4, 2681.02)]
+		[TestCase(4.0, 7660.04)]
+		[TestCase(0.6443821, 1234.0)]
+		public void ConvertKnownCubicFeetToUSTablespoons(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToUSTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToUSQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToUSQuarts(value);
+				var convertBack = Volume.USQuarts.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(6.0, 179.532)]
+		[TestCase(12.0, 359.065)]
+		[TestCase(25.9674, 777.0)]
+		public void ConvertKnownCubicFeetToUSQuarts(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToUSQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToUSPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToUSPints(value);
+				var convertBack = Volume.USPints.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(6.9, 412.925)]
+		[TestCase(23.0, 1376.42)]
+		[TestCase(14.8385, 888.0)]
+		public void ConvertKnownCubicFeetToUSPints(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToUSPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToUSGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToUSGallons(value);
+				var convertBack = Volume.USGallons.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(77.0, 576.0)]
+		[TestCase(45.0, 336.623)]
+		[TestCase(4.0, 29.9221)]
+		public void ConvertKnownCubicFeetToUSGallons(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToUSGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToUSFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToUSFluidOunces(value);
+				var convertBack = Volume.USFluidOunces.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(20.0, 19150.119)]
+		[TestCase(0.359266, 344.0)]
+		[TestCase(0.699734, 670.0)]
+		public void ConvertKnownCubicFeetToUSFluidOunces(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToUSFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToUSCupsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToUSCups(value);
+				var convertBack = Volume.USCups.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(77.0, 9084.99)]
+		[TestCase(8.0, 943.895)]
+		[TestCase(4.79714, 566.0)]
+		public void ConvertKnownCubicFeetToUSCups(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(28.2517, 0.8)]
+		[TestCase(45.0, 1.27426)]
+		[TestCase(2719.23, 77.0)]
+		public void ConvertKnownCubicFeetToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(6.8, 11750.4)]
+		[TestCase(5666.0, 9790848.0)]
+		[TestCase(0.7, 1209.6)]
+		public void ConvertKnownCubicFeetToCubicInches(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicFeetToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicFeet.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToCubicFeet(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(67.0, 11.9332)]
+		[TestCase(44.0, 7.83673)]
+		[TestCase(67.375, 12.0)]
+		public void ConvertKnownCubicFeetToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.CubicFeet.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+	}
+	public class CubicInchesTests
+	{
+		[Property]
+		public void FromCubicInchesToMillilitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToMillilitres(value);
+				var convertBack = Volume.Millilitres.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(3.9, 63.9095)]
+		[TestCase(4.0, 65.5483)]
+		[TestCase(5.37009, 88.0)]
+		public void ConvertKnownCubicInchesToMillilitres(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToMillilitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToLitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToLitres(value);
+				var convertBack = Volume.Litres.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(560.0, 9.17676)]
+		[TestCase(555.0, 9.09482)]
+		[TestCase(7444.9, 122.0)]
+		public void ConvertKnownCubicInchesToLitres(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToLitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToKilolitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToKilolitres(value);
+				var convertBack = Volume.Kilolitres.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(560.0, 0.009176)]
+		[TestCase(5555.0, 0.09103014)]
+		[TestCase(100000.0, 1.6387064)]
+		public void ConvertKnownCubicInchesToKilolitres(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToKilolitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToTeaspoons(value);
+				var convertBack = Volume.Teaspoons.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(5.0, 13.8419)]
+		[TestCase(6.0, 16.6102)]
+		[TestCase(11.5591, 32.0)]
+		public void ConvertKnownCubicInchesToTeaspoons(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToTablespoons(value);
+				var convertBack = Volume.Tablespoons.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(34.0, 31.3749)]
+		[TestCase(11.9204, 11.0)]
+		[TestCase(99.0, 91.3562246)]
+		public void ConvertKnownCubicInchesToTablespoons(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToQuarts(value);
+				var convertBack = Volume.Quarts.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(800.0, 11.5349)]
+		[TestCase(77.0, 1.11023)]
+		[TestCase(4577.42, 66.0)]
+		public void ConvertKnownCubicInchesToQuarts(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToPints(value);
+				var convertBack = Volume.Pints.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(89.5, 2.58093)]
+		[TestCase(23095.2, 666.0)]
+		[TestCase(2670.16, 77.0)]
+		public void ConvertKnownCubicInchesToPints(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToGallons(value);
+				var convertBack = Volume.Gallons.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900.0, 3.24419)]
+		[TestCase(666.0, 2.4007)]
+		[TestCase(21361.3, 77.0)]
+		public void ConvertKnownCubicInchesToGallons(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToFluidOunces(value);
+				var convertBack = Volume.FluidOunces.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(77.0, 44.4093)]
+		[TestCase(55.0, 31.7209)]
+		[TestCase(27.7419, 16.0)]
+		public void ConvertKnownCubicInchesToFluidOunces(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToUSTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToUSTeaspoons(value);
+				var convertBack = Volume.USTeaspoons.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(678.0, 2254.13)]
+		[TestCase(55.0, 182.857)]
+		[TestCase(26.4687, 88.0)]
+		public void ConvertKnownCubicInchesToUSTeaspoons(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToUSTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToUSTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToUSTablespoons(value);
+				var convertBack = Volume.USTablespoons.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(66.0, 73.1429)]
+		[TestCase(55.0, 60.9524)]
+		[TestCase(10.8281, 12.0)]
+		public void ConvertKnownCubicInchesToUSTablespoons(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToUSTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToUSQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToUSQuarts(value);
+				var convertBack = Volume.USQuarts.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(345.0, 5.97403)]
+		[TestCase(33.0, 0.571429)]
+		[TestCase(3176.25, 55.0)]
+		public void ConvertKnownCubicInchesToUSQuarts(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToUSQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToUSPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToUSPints(value);
+				var convertBack = Volume.USPints.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(89.0, 3.08225)]
+		[TestCase(3176.25, 110.0)]
+		[TestCase(462.0, 16.0)]
+		public void ConvertKnownCubicInchesToUSPints(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToUSPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToUSGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToUSGallons(value);
+				var convertBack = Volume.USGallons.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(600.0, 2.5974)]
+		[TestCase(462.0, 2.0)]
+		[TestCase(899.0, 3.89177)]
+		public void ConvertKnownCubicInchesToUSGallons(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToUSGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToUSFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToUSFluidOunces(value);
+				var convertBack = Volume.USFluidOunces.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900.0, 498.700607)]
+		[TestCase(777.0, 430.544858)]
+		[TestCase(178.664, 98.99982822)]
+		public void ConvertKnownCubicInchesToUSFluidOunces(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToUSFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToUSCupsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToUSCups(value);
+				var convertBack = Volume.USCups.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(7.0, 0.477956)]
+		[TestCase(77.0, 5.25752)]
+		[TestCase(123.0, 8.39837)]
+		public void ConvertKnownCubicInchesToUSCups(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(24409.5, 0.4)]
+		[TestCase(7777.0, 0.1274422)]
+		[TestCase(366142.0, 6.0)]
+		public void ConvertKnownCubicInchesToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(11750.4, 6.8)]
+		[TestCase(57024.0, 33.0)]
+		[TestCase(1234.0, 0.7141204)]
+		public void ConvertKnownCubicInchesToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicInchesToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicInches.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToCubicInches(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(90000.0, 9.2764378)]
+		[TestCase(8888.0, 0.9160998)]
+		[TestCase(11642.4, 1.2)]
+		public void ConvertKnownCubicInchesToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.CubicInches.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+	}
+	public class CubicMetresTests
+	{
+		[Property]
+		public void FromCubicMetresToMillilitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToMillilitres(value);
+				var convertBack = Volume.Millilitres.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.01, 10000.0)]
+		[TestCase(0.2306735, 230673.5)]
+		[TestCase(0.009, 9000.0)]
+		public void ConvertKnownCubicMetresToMillilitres(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToMillilitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToLitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToLitres(value);
+				var convertBack = Volume.Litres.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.1, 100.0)]
+		[TestCase(0.009, 9.0)]
+		[TestCase(0.08989, 89.89)]
+		public void ConvertKnownCubicMetresToLitres(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToLitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToKilolitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToKilolitres(value);
+				var convertBack = Volume.Kilolitres.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.9, 0.9)]
+		[TestCase(100.9, 100.9)]
+		[TestCase(666.9, 666.9)]
+		public void ConvertKnownCubicMetresToKilolitres(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToKilolitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToTeaspoons(value);
+				var convertBack = Volume.Teaspoons.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.1, 16893.6)]
+		[TestCase(3.0, 506808.0)]
+		[TestCase(0.91, 153731.76)]
+		public void ConvertKnownCubicMetresToTeaspoons(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToTablespoons(value);
+				var convertBack = Volume.Tablespoons.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.9, 50680.8899)]
+		[TestCase(0.1, 5631.21)]
+		[TestCase(9.0, 506808.89)]
+		public void ConvertKnownCubicMetresToTablespoons(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToQuarts(value);
+				var convertBack = Volume.Quarts.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.8, 703.902)]
+		[TestCase(0.4, 351.951)]
+		[TestCase(6.0, 5279.26)]
+		public void ConvertKnownCubicMetresToQuarts(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToPints(value);
+				var convertBack = Volume.Pints.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.7, 1231.83)]
+		[TestCase(4.5, 7918.875)]
+		[TestCase(0.06, 105.5852)]
+		public void ConvertKnownCubicMetresToPints(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToGallons(value);
+				var convertBack = Volume.Gallons.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.2, 43.9938)]
+		[TestCase(0.4, 87.9877)]
+		[TestCase(0.0272765, 6.0)]
+		public void ConvertKnownCubicMetresToGallons(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToFluidOunces(value);
+				var convertBack = Volume.FluidOunces.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.7, 24636.569)]
+		[TestCase(0.09, 3167.557)]
+		[TestCase(4.0, 140780.399)]
+		public void ConvertKnownCubicMetresToFluidOunces(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToUSTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToUSTeaspoons(value);
+				var convertBack = Volume.USTeaspoons.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.5, 101442.0)]
+		[TestCase(2.0, 405768.0)]
+		[TestCase(0.3, 60865.199)]
+		public void ConvertKnownCubicMetresToUSTeaspoons(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToUSTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToUSTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToUSTablespoons(value);
+				var convertBack = Volume.USTablespoons.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.2, 13525.6)]
+		[TestCase(0.9, 60865.2)]
+		[TestCase(2.0, 135256.0)]
+		public void ConvertKnownCubicMetresToUSTablespoons(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToUSTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToUSQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToUSQuarts(value);
+				var convertBack = Volume.USQuarts.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.2, 211.338)]
+		[TestCase(4.0, 4226.76)]
+		[TestCase(0.851718, 900.0)]
+		public void ConvertKnownCubicMetresToUSQuarts(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToUSQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToUSPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToUSPints(value);
+				var convertBack = Volume.USPints.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.4, 845.351)]
+		[TestCase(7.0, 14793.66)]
+		[TestCase(6.0, 12680.280)]
+		public void ConvertKnownCubicMetresToUSPints(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToUSPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToUSGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToUSGallons(value);
+				var convertBack = Volume.USGallons.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.7, 184.92)]
+		[TestCase(0.851718, 225.0)]
+		[TestCase(0.02, 5.283441)]
+		public void ConvertKnownCubicMetresToUSGallons(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToUSGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToUSFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToUSFluidOunces(value);
+				var convertBack = Volume.USFluidOunces.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.9, 30432.6)]
+		[TestCase(0.3, 10144.2)]
+		[TestCase(3.3, 111586.2)]
+		public void ConvertKnownCubicMetresToUSFluidOunces(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToUSFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToUSCupsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToUSCups(value);
+				var convertBack = Volume.USCups.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(7.0, 29166.7)]
+		[TestCase(11.0, 45833.37)]
+		[TestCase(66.0, 275000.22)]
+		public void ConvertKnownCubicMetresToUSCups(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.8, 28.2517)]
+		[TestCase(5.0, 176.573)]
+		[TestCase(12.12, 428.014163)]
+		public void ConvertKnownCubicMetresToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.4, 24409.48)]
+		[TestCase(3.0, 183071.099)]
+		[TestCase(0.99, 60413.4629)]
+		public void ConvertKnownCubicMetresToCubicInches(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromCubicMetresToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.CubicMetres.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToCubicMetres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.09, 0.566083)]
+		[TestCase(5.0, 31.4491)]
+		[TestCase(1.2, 7.547772)]
+		public void ConvertKnownCubicMetresToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.CubicMetres.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+	}
 	public class FluidOuncesTests
 	{
 		[Property]
@@ -309,6 +1458,86 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownFluidOuncesToUSCups(double input, double expectation)
 		{
 			var result = Volume.FluidOunces.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromFluidOuncesToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.FluidOunces.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(316756.0, 9.00000284)]
+		[TestCase(8000.0, 0.2273043690)]
+		[TestCase(123456.0, 3.5077610)]
+		public void ConvertKnownFluidOuncesToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.FluidOunces.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromFluidOuncesToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.FluidOunces.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(888.0, 0.891017)]
+		[TestCase(100900.0, 101.242841)]
+		[TestCase(678.0, 0.680304)]
+		public void ConvertKnownFluidOuncesToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.FluidOunces.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromFluidOuncesToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.FluidOunces.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(7.0, 12.1371)]
+		[TestCase(900.0, 1560.48)]
+		[TestCase(6.0, 10.4032)]
+		public void ConvertKnownFluidOuncesToCubicInches(double input, double expectation)
+		{
+			var result = Volume.FluidOunces.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromFluidOuncesToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.FluidOunces.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(430859.0, 77.0)]
+		[TestCase(777.0, 0.13886)]
+		[TestCase(1234.0, 0.2205316)]
+		public void ConvertKnownFluidOuncesToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.FluidOunces.ToOilBarrels(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -615,6 +1844,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromGallonsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Gallons.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(9898.62, 45.0)]
+		[TestCase(12345.0, 56.121481)]
+		[TestCase(80.0, 0.363687)]
+		public void ConvertKnownGallonsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Gallons.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromGallonsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Gallons.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(55.0, 8.8299)]
+		[TestCase(90.5, 14.5292)]
+		[TestCase(123.0, 19.7469)]
+		public void ConvertKnownGallonsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Gallons.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromGallonsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Gallons.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(66.0, 18309.6539)]
+		[TestCase(2.4007, 666.0)]
+		[TestCase(77.0, 21361.2629)]
+		public void ConvertKnownGallonsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Gallons.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromGallonsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Gallons.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(174.862, 5.0)]
+		[TestCase(19409.6, 555.0)]
+		[TestCase(24.4806, 0.7)]
+		public void ConvertKnownGallonsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Gallons.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class KilolitresTests
 	{
@@ -915,6 +2224,86 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownKilolitresToUSCups(double input, double expectation)
 		{
 			var result = Volume.Kilolitres.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromKilolitresToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Kilolitres.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToKilolitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1000.0, 1000.0)]
+		[TestCase(0.9, 0.9)]
+		[TestCase(6.09, 6.09)]
+		public void ConvertKnownKilolitresToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Kilolitres.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromKilolitresToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Kilolitres.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToKilolitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.0566337, 2.0)]
+		[TestCase(7.9, 278.986)]
+		[TestCase(88.0, 3107.69)]
+		public void ConvertKnownKilolitresToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Kilolitres.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromKilolitresToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Kilolitres.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToKilolitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(6.0, 366142.19999)]
+		[TestCase(0.1, 6102.37)]
+		[TestCase(0.8, 48818.959)]
+		public void ConvertKnownKilolitresToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Kilolitres.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromKilolitresToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Kilolitres.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToKilolitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.476962, 3.0)]
+		[TestCase(4.0, 25.1592)]
+		[TestCase(6.0, 37.7389)]
+		public void ConvertKnownKilolitresToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Kilolitres.ToOilBarrels(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -1221,6 +2610,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromLitresToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Litres.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToLitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(400.5, 0.4005)]
+		[TestCase(900.0, 0.9)]
+		[TestCase(6090.0, 6.09)]
+		public void ConvertKnownLitresToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Litres.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromLitresToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Litres.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToLitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(5.0, 0.176573)]
+		[TestCase(84.9505, 3.0)]
+		[TestCase(6.0, 0.211888)]
+		public void ConvertKnownLitresToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Litres.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromLitresToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Litres.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToLitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(666.0, 40641.7842)]
+		[TestCase(788.0, 48086.675599)]
+		[TestCase(4.0, 244.095)]
+		public void ConvertKnownLitresToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Litres.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromLitresToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Litres.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToLitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(8744.3, 55.0)]
+		[TestCase(1234.0, 7.761626)]
+		[TestCase(953.924, 6.0)]
+		public void ConvertKnownLitresToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Litres.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class MillilitresTests
 	{
@@ -1521,6 +2990,469 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownMillilitresToUSCups(double input, double expectation)
 		{
 			var result = Volume.Millilitres.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillilitresToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Millilitres.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToMillilitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(9999999.0, 9.999999)]
+		[TestCase(123456.0, 0.123456)]
+		[TestCase(400500.0, 0.4005)]
+		public void ConvertKnownMillilitresToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Millilitres.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillilitresToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Millilitres.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToMillilitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(254852.0, 9.0)]
+		[TestCase(6000.0, 0.211888)]
+		[TestCase(70792.1, 2.5)]
+		public void ConvertKnownMillilitresToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Millilitres.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillilitresToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Millilitres.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToMillilitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(777.0, 47.4154)]
+		[TestCase(98.3224, 5.999987)]
+		[TestCase(12.0, 0.732285)]
+		public void ConvertKnownMillilitresToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Millilitres.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromMillilitresToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Millilitres.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToMillilitres(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(47696.2, 0.3)]
+		[TestCase(143089.0, 0.9)]
+		[TestCase(317.97459, 0.002)]
+		public void ConvertKnownMillilitresToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Millilitres.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+	}
+	public class OilBarrelsTests
+	{
+		[Property]
+		public void FromOilBarrelsToMillilitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToMillilitres(value);
+				var convertBack = Volume.Millilitres.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.8, 127189.6)]
+		[TestCase(6.0, 953922.0)]
+		[TestCase(0.06289182, 9998.981786)]
+		public void ConvertKnownOilBarrelsToMillilitres(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToMillilitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToLitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToLitres(value);
+				var convertBack = Volume.Litres.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(12.0, 1907.85)]
+		[TestCase(6.0, 953.924)]
+		[TestCase(77.0, 12242.0)]
+		public void ConvertKnownOilBarrelsToLitres(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToLitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToKilolitresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToKilolitres(value);
+				var convertBack = Volume.Kilolitres.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(12.0, 1.90785)]
+		[TestCase(8.0, 1.2719)]
+		[TestCase(77.0, 12.242)]
+		public void ConvertKnownOilBarrelsToKilolitres(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToKilolitres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToTeaspoons(value);
+				var convertBack = Volume.Teaspoons.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.6, 16115.219)]
+		[TestCase(4.0, 107434.8)]
+		[TestCase(6.7, 179953.29)]
+		public void ConvertKnownOilBarrelsToTeaspoons(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToTablespoons(value);
+				var convertBack = Volume.Tablespoons.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.7, 6267.04)]
+		[TestCase(8.0, 71623.279)]
+		[TestCase(10.052487, 89999.011387)]
+		public void ConvertKnownOilBarrelsToTablespoons(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToQuarts(value);
+				var convertBack = Volume.Quarts.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(88.0, 12310.232)]
+		[TestCase(12.0, 1678.67)]
+		[TestCase(6.0, 839.336)]
+		public void ConvertKnownOilBarrelsToQuarts(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToPints(value);
+				var convertBack = Volume.Pints.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(8.0, 2238.23)]
+		[TestCase(6.0, 1678.67)]
+		[TestCase(0.275218, 77.0)]
+		public void ConvertKnownOilBarrelsToPints(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToGallons(value);
+				var convertBack = Volume.Gallons.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(4.0, 139.889)]
+		[TestCase(6.0, 209.834)]
+		[TestCase(18.0, 629.502)]
+		public void ConvertKnownOilBarrelsToGallons(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToFluidOunces(value);
+				var convertBack = Volume.FluidOunces.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.5, 2797.79)]
+		[TestCase(6.0, 33573.4199)]
+		[TestCase(77.0, 430858.889)]
+		public void ConvertKnownOilBarrelsToFluidOunces(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToUSTeaspoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToUSTeaspoons(value);
+				var convertBack = Volume.USTeaspoons.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.3, 9676.8)]
+		[TestCase(7.0, 225792.0)]
+		[TestCase(1.5, 48384.0)]
+		public void ConvertKnownOilBarrelsToUSTeaspoons(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToUSTeaspoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToUSTablespoonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToUSTablespoons(value);
+				var convertBack = Volume.USTablespoons.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.2, 2150.4)]
+		[TestCase(6.0, 64512.0)]
+		[TestCase(77.0, 827904.0)]
+		public void ConvertKnownOilBarrelsToUSTablespoons(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToUSTablespoons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToUSQuartsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToUSQuarts(value);
+				var convertBack = Volume.USQuarts.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(4.5, 756.0)]
+		[TestCase(77.0, 12936.0)]
+		[TestCase(0.7, 117.6)]
+		public void ConvertKnownOilBarrelsToUSQuarts(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToUSQuarts(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToUSPintsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToUSPints(value);
+				var convertBack = Volume.USPints.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(7.8, 2620.8)]
+		[TestCase(0.7, 235.2)]
+		[TestCase(3.0, 1008.0)]
+		public void ConvertKnownOilBarrelsToUSPints(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToUSPints(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToUSGallonsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToUSGallons(value);
+				var convertBack = Volume.USGallons.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(78.0, 3276.0)]
+		[TestCase(3.0, 126.0)]
+		[TestCase(777.0, 32634.0)]
+		public void ConvertKnownOilBarrelsToUSGallons(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToUSGallons(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToUSFluidOuncesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToUSFluidOunces(value);
+				var convertBack = Volume.USFluidOunces.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(4.9, 26342.4)]
+		[TestCase(0.4, 2150.4)]
+		[TestCase(3.0, 16128.0)]
+		public void ConvertKnownOilBarrelsToUSFluidOunces(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToUSFluidOunces(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToUSCupsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToUSCups(value);
+				var convertBack = Volume.USCups.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(55.0, 36434.5849)]
+		[TestCase(0.686847, 455.0)]
+		[TestCase(9.2, 6094.51)]
+		public void ConvertKnownOilBarrelsToUSCups(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(7.0, 1.1129112)]
+		[TestCase(3.0, 0.476962)]
+		[TestCase(78.0, 12.401)]
+		public void ConvertKnownOilBarrelsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(88.0, 494.083)]
+		[TestCase(3.0, 16.8438)]
+		[TestCase(11.0, 61.7604)]
+		public void ConvertKnownOilBarrelsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromOilBarrelsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.OilBarrels.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToOilBarrels(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(100.4, 974080.8)]
+		[TestCase(5.0, 48510.0)]
+		[TestCase(66.0, 640332.0)]
+		public void ConvertKnownOilBarrelsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.OilBarrels.ToCubicInches(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -1827,6 +3759,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromPintsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Pints.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(21117.0, 12.0)]
+		[TestCase(14078.0, 8.0)]
+		[TestCase(9999.0, 5.682044)]
+		public void ConvertKnownPintsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Pints.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromPintsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Pints.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(44.0, 0.88299)]
+		[TestCase(1234.0, 24.76386)]
+		[TestCase(8000.0, 160.5436)]
+		public void ConvertKnownPintsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Pints.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromPintsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Pints.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(5.0, 173.387)]
+		[TestCase(777.0, 26944.33979)]
+		[TestCase(35.58511, 1234.0)]
+		public void ConvertKnownPintsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Pints.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromPintsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Pints.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1398.89, 5.0)]
+		[TestCase(122.0, 0.436059)]
+		[TestCase(559.557, 2.0)]
+		public void ConvertKnownPintsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Pints.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class QuartsTests
 	{
@@ -2127,6 +4139,86 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownQuartsToUSCups(double input, double expectation)
 		{
 			var result = Volume.Quarts.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromQuartsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Quarts.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(7918.89, 9.0)]
+		[TestCase(1200.0, 1.363827)]
+		[TestCase(8000.0, 9.09218)]
+		public void ConvertKnownQuartsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Quarts.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromQuartsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Quarts.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(20.0, 0.802718)]
+		[TestCase(800.0, 32.1087)]
+		[TestCase(67.0, 2.68911)]
+		public void ConvertKnownQuartsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Quarts.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromQuartsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Quarts.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(777.0, 53888.75729)]
+		[TestCase(8.16093, 566.0)]
+		[TestCase(76.0, 5270.97)]
+		public void ConvertKnownQuartsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Quarts.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromQuartsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Quarts.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(839.336, 6.0)]
+		[TestCase(41.9668, 0.3)]
+		[TestCase(22.0, 0.157267)]
+		public void ConvertKnownQuartsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Quarts.ToOilBarrels(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -2433,6 +4525,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromTablespoonsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Tablespoons.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(10000.0, 0.1775817)]
+		[TestCase(3378.726, 0.059999995422)]
+		[TestCase(800009.0, 14.2066969)]
+		public void ConvertKnownTablespoonsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Tablespoons.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTablespoonsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Tablespoons.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(780.0, 0.489157)]
+		[TestCase(6378.32, 4.0)]
+		[TestCase(8451.28, 5.3)]
+		public void ConvertKnownTablespoonsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Tablespoons.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTablespoonsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Tablespoons.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(66.0, 71.5222)]
+		[TestCase(123.0, 133.291)]
+		[TestCase(56.0, 60.6855)]
+		public void ConvertKnownTablespoonsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Tablespoons.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTablespoonsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Tablespoons.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(44764.5, 5.0)]
+		[TestCase(12222.0, 1.3651429)]
+		[TestCase(800.0, 0.0893564)]
+		public void ConvertKnownTablespoonsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Tablespoons.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class TeaspoonsTests
 	{
@@ -2669,7 +4841,7 @@ namespace PutridParrot.Units.Tests
 
 		[TestCase(106.0, 1.32605)]
 		[TestCase(34.0, 0.425337)]
-		[TestCase(6.21, 0.07656059)]
+		[TestCase(6.21, 0.07768648)]
 		public void ConvertKnownTeaspoonsToUSPints(double input, double expectation)
 		{
 			var result = Volume.Teaspoons.ToUSPints(input);
@@ -2733,6 +4905,86 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownTeaspoonsToUSCups(double input, double expectation)
 		{
 			var result = Volume.Teaspoons.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTeaspoonsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Teaspoons.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(152043.0, 0.9)]
+		[TestCase(3378.726, 0.02)]
+		[TestCase(8000.0, 0.04735512)]
+		public void ConvertKnownTeaspoonsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.Teaspoons.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTeaspoonsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Teaspoons.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(600.0, 0.125425)]
+		[TestCase(1234.0, 0.257957)]
+		[TestCase(880.0, 0.183956)]
+		public void ConvertKnownTeaspoonsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.Teaspoons.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTeaspoonsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Teaspoons.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(8.0, 2.88979)]
+		[TestCase(12.0, 4.33468)]
+		[TestCase(666.0, 240.575)]
+		public void ConvertKnownTeaspoonsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.Teaspoons.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromTeaspoonsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.Teaspoons.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(10743.5, 0.4)]
+		[TestCase(107435.0, 4.0)]
+		[TestCase(134294.0, 5.0)]
+		public void ConvertKnownTeaspoonsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.Teaspoons.ToOilBarrels(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -3039,6 +5291,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromUSCupsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USCups.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToUSCups(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(4555.0, 1.0932)]
+		[TestCase(100900.0, 24.216)]
+		[TestCase(7800.0, 1.872)]
+		public void ConvertKnownUSCupsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.USCups.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSCupsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USCups.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToUSCups(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(88.0, 0.745846)]
+		[TestCase(471.947, 4.0)]
+		[TestCase(123.0, 1.04249)]
+		public void ConvertKnownUSCupsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.USCups.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSCupsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USCups.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToUSCups(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(6.0, 87.8742)]
+		[TestCase(2.3, 33.6851)]
+		[TestCase(0.9, 13.1811)]
+		public void ConvertKnownUSCupsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.USCups.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSCupsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USCups.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToUSCups(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(43721.5, 66.0)]
+		[TestCase(1111.0, 1.677115)]
+		[TestCase(3312.24, 5.0)]
+		public void ConvertKnownUSCupsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.USCups.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class USFluidOuncesTests
 	{
@@ -3339,6 +5671,86 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownUSFluidOuncesToUSCups(double input, double expectation)
 		{
 			var result = Volume.USFluidOunces.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSFluidOuncesToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USFluidOunces.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToUSFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(800900.0, 23.6854398)]
+		[TestCase(789.0, 0.0233335)]
+		[TestCase(100100.0, 2.96031031)]
+		public void ConvertKnownUSFluidOuncesToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.USFluidOunces.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSFluidOuncesToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USFluidOunces.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToUSFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(344.0, 0.359266)]
+		[TestCase(8009.0, 8.364434)]
+		[TestCase(3830.03, 4.0)]
+		public void ConvertKnownUSFluidOuncesToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.USFluidOunces.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSFluidOuncesToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USFluidOunces.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToUSFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(66.0, 119.109)]
+		[TestCase(900.0, 1624.22)]
+		[TestCase(8.0, 14.4375)]
+		public void ConvertKnownUSFluidOuncesToCubicInches(double input, double expectation)
+		{
+			var result = Volume.USFluidOunces.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSFluidOuncesToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USFluidOunces.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToUSFluidOunces(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(32256.0, 6.0)]
+		[TestCase(1899.0, 0.3532366)]
+		[TestCase(6988.8, 1.3)]
+		public void ConvertKnownUSFluidOuncesToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.USFluidOunces.ToOilBarrels(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -3645,6 +6057,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromUSGallonsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USGallons.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToUSGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1849.2, 7.0)]
+		[TestCase(87.0, 0.329331)]
+		[TestCase(123456.0, 467.331797)]
+		public void ConvertKnownUSGallonsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.USGallons.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSGallonsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USGallons.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToUSGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(6.0, 0.802083)]
+		[TestCase(24.0, 3.20833)]
+		[TestCase(5.0, 0.668403)]
+		public void ConvertKnownUSGallonsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.USGallons.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSGallonsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USGallons.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToUSGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(6.0, 1386.0)]
+		[TestCase(190.0, 43890.0)]
+		[TestCase(55.0, 12705.0)]
+		public void ConvertKnownUSGallonsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.USGallons.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSGallonsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USGallons.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToUSGallons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(966.0, 23.0)]
+		[TestCase(1234.0, 29.38095)]
+		[TestCase(16.8, 0.4)]
+		public void ConvertKnownUSGallonsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.USGallons.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class USPintsTests
 	{
@@ -3945,6 +6437,86 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownUSPintsToUSCups(double input, double expectation)
 		{
 			var result = Volume.USPints.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSPintsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USPints.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToUSPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(14793.6, 7.0)]
+		[TestCase(700.0, 0.331224)]
+		[TestCase(123456.0, 58.4164747)]
+		public void ConvertKnownUSPintsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.USPints.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSPintsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USPints.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToUSPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(66.0, 1.10286)]
+		[TestCase(2692.99, 45.0)]
+		[TestCase(123.0, 2.05534)]
+		public void ConvertKnownUSPintsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.USPints.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSPintsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USPints.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToUSPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(66.0, 1905.75)]
+		[TestCase(900.0, 25987.5)]
+		[TestCase(6.7, 193.463)]
+		public void ConvertKnownUSPintsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.USPints.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSPintsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USPints.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToUSPints(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(223776.0, 666.0)]
+		[TestCase(1234.0, 3.672619)]
+		[TestCase(302.4, 0.9)]
+		public void ConvertKnownUSPintsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.USPints.ToOilBarrels(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -4251,6 +6823,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromUSQuartsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USQuarts.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToUSQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(8453.51, 8.0)]
+		[TestCase(5000.0, 4.731765)]
+		[TestCase(123456.0, 116.832949)]
+		public void ConvertKnownUSQuartsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.USQuarts.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSQuartsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USQuarts.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToUSQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(44.0, 1.47049)]
+		[TestCase(2663.06, 89.0)]
+		[TestCase(444.0, 14.8385)]
+		public void ConvertKnownUSQuartsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.USQuarts.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSQuartsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USQuarts.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToUSQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(44.0, 2541.0)]
+		[TestCase(800.0, 46200.0)]
+		[TestCase(6.0, 346.5)]
+		public void ConvertKnownUSQuartsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.USQuarts.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSQuartsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USQuarts.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToUSQuarts(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(9240.0, 55.0)]
+		[TestCase(1344.0, 8.0)]
+		[TestCase(207312.0, 1234.0)]
+		public void ConvertKnownUSQuartsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.USQuarts.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class USTablespoonsTests
 	{
@@ -4554,6 +7206,86 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromUSTablespoonsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTablespoons.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToUSTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(541024.0, 8.0)]
+		[TestCase(10200.0, 0.150825)]
+		[TestCase(123456.0, 1.82551483)]
+		public void ConvertKnownUSTablespoonsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.USTablespoons.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSTablespoonsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTablespoons.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToUSTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(66.0, 0.0344645)]
+		[TestCase(7660.05, 4.0)]
+		[TestCase(1234.0, 0.6443821)]
+		public void ConvertKnownUSTablespoonsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.USTablespoons.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSTablespoonsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTablespoons.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToUSTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900.0, 812.109)]
+		[TestCase(10.0, 9.02344)]
+		[TestCase(4.0, 3.60938)]
+		public void ConvertKnownUSTablespoonsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.USTablespoons.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSTablespoonsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTablespoons.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToUSTablespoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(591360.0, 55.0)]
+		[TestCase(4300.8, 0.4)]
+		[TestCase(34406.4, 3.2)]
+		public void ConvertKnownUSTablespoonsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.USTablespoons.ToOilBarrels(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class USTeaspoonsTests
 	{
@@ -4854,6 +7586,86 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownUSTeaspoonsToUSCups(double input, double expectation)
 		{
 			var result = Volume.USTeaspoons.ToUSCups(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSTeaspoonsToCubicMetresAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTeaspoons.ToCubicMetres(value);
+				var convertBack = Volume.CubicMetres.ToUSTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(405768.0, 2.0)]
+		[TestCase(80808.0, 0.39829617)]
+		[TestCase(123456.0, 0.608504748)]
+		public void ConvertKnownUSTeaspoonsToCubicMetres(double input, double expectation)
+		{
+			var result = Volume.USTeaspoons.ToCubicMetres(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSTeaspoonsToCubicFeetAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTeaspoons.ToCubicFeet(value);
+				var convertBack = Volume.CubicFeet.ToUSTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(2000.0, 0.3481263)]
+		[TestCase(6894.05, 1.2)]
+		[TestCase(12345.0, 2.1488098)]
+		public void ConvertKnownUSTeaspoonsToCubicFeet(double input, double expectation)
+		{
+			var result = Volume.USTeaspoons.ToCubicFeet(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSTeaspoonsToCubicInchesAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTeaspoons.ToCubicInches(value);
+				var convertBack = Volume.CubicInches.ToUSTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(23.2727, 7.0)]
+		[TestCase(219.429, 66.0)]
+		[TestCase(39.8961, 12.0)]
+		public void ConvertKnownUSTeaspoonsToCubicInches(double input, double expectation)
+		{
+			var result = Volume.USTeaspoons.ToCubicInches(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromUSTeaspoonsToOilBarrelsAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Volume.USTeaspoons.ToOilBarrels(value);
+				var convertBack = Volume.OilBarrels.ToUSTeaspoons(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(103219.0, 3.2)]
+		[TestCase(6666.0, 0.2066592)]
+		[TestCase(64512.0, 2.0)]
+		public void ConvertKnownUSTeaspoonsToOilBarrels(double input, double expectation)
+		{
+			var result = Volume.USTeaspoons.ToOilBarrels(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 

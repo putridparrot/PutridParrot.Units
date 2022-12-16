@@ -12,6 +12,366 @@ namespace PutridParrot.Units
 	public static class Volume
 	{
 		/// <summary>
+		/// Cubic Feet conversion functions
+		/// </summary>
+		public static class CubicFeet
+		{
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Millilitres
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Millilitres</returns>
+			public static double ToMillilitres(double value) => value * 28316.8;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Litres
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Litres</returns>
+			public static double ToLitres(double value) => value * 28.3168;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Kilolitres
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Kilolitres</returns>
+			public static double ToKilolitres(double value) => value / 35.3147;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Teaspoons
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Teaspoons</returns>
+			public static double ToTeaspoons(double value) => value * 4783.74;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Tablespoons
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Tablespoons</returns>
+			public static double ToTablespoons(double value) => value * 1594.58;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Quarts
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Quarts</returns>
+			public static double ToQuarts(double value) => value * 24.9153;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Pints
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Pints</returns>
+			public static double ToPints(double value) => value * 49.8307;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Gallons
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Gallons</returns>
+			public static double ToGallons(double value) => value * 6.22884;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Fluid Ounces</returns>
+			public static double ToFluidOunces(double value) => value * 996.614;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to US Teaspoons
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in US Teaspoons</returns>
+			public static double ToUSTeaspoons(double value) => value * 5745.04;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to US Tablespoons
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in US Tablespoons</returns>
+			public static double ToUSTablespoons(double value) => value * 1915.01;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to US Quarts
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in US Quarts</returns>
+			public static double ToUSQuarts(double value) => value * 29.9221;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to US Pints
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in US Pints</returns>
+			public static double ToUSPints(double value) => value * 59.8442;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to US Gallons
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in US Gallons</returns>
+			public static double ToUSGallons(double value) => value * 7.48052;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to US Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in US Fluid Ounces</returns>
+			public static double ToUSFluidOunces(double value) => value * 957.506;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to US Cups
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in US Cups</returns>
+			public static double ToUSCups(double value) => value * 117.987;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 35.3147;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 1728.0;
+			/// <summary>
+			/// Converts the supplied Cubic Feet value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Cubic Feet input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 5.61458;
+		}
+		/// <summary>
+		/// Cubic Inches conversion functions
+		/// </summary>
+		public static class CubicInches
+		{
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Millilitres
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Millilitres</returns>
+			public static double ToMillilitres(double value) => value * 16.3871;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Litres
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Litres</returns>
+			public static double ToLitres(double value) => value / 61.0237;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Kilolitres
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Kilolitres</returns>
+			public static double ToKilolitres(double value) => value / 61023.7;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Teaspoons
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Teaspoons</returns>
+			public static double ToTeaspoons(double value) => value * 2.76837;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Tablespoons
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Tablespoons</returns>
+			public static double ToTablespoons(double value) => value / 1.08367;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Quarts
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Quarts</returns>
+			public static double ToQuarts(double value) => value / 69.3549;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Pints
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Pints</returns>
+			public static double ToPints(double value) => value / 34.6774;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Gallons
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Gallons</returns>
+			public static double ToGallons(double value) => value / 277.419;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Fluid Ounces</returns>
+			public static double ToFluidOunces(double value) => value / 1.73387;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to US Teaspoons
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in US Teaspoons</returns>
+			public static double ToUSTeaspoons(double value) => value * 3.32468;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to US Tablespoons
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in US Tablespoons</returns>
+			public static double ToUSTablespoons(double value) => value * 1.10823;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to US Quarts
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in US Quarts</returns>
+			public static double ToUSQuarts(double value) => value / 57.75;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to US Pints
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in US Pints</returns>
+			public static double ToUSPints(double value) => value / 28.875;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to US Gallons
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in US Gallons</returns>
+			public static double ToUSGallons(double value) => value / 231.0;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to US Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in US Fluid Ounces</returns>
+			public static double ToUSFluidOunces(double value) => value / 1.80469;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to US Cups
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in US Cups</returns>
+			public static double ToUSCups(double value) => value / 14.6457;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 61023.7;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 1728.0;
+			/// <summary>
+			/// Converts the supplied Cubic Inches value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Cubic Inches input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 9702.0;
+		}
+		/// <summary>
+		/// Cubic Metres conversion functions
+		/// </summary>
+		public static class CubicMetres
+		{
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Millilitres
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Millilitres</returns>
+			public static double ToMillilitres(double value) => value * 1000000.0;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Litres
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Litres</returns>
+			public static double ToLitres(double value) => value * 1000.0;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Kilolitres
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Kilolitres</returns>
+			public static double ToKilolitres(double value) => value * 1.0;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Teaspoons
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Teaspoons</returns>
+			public static double ToTeaspoons(double value) => value * 168936.0;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Tablespoons
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Tablespoons</returns>
+			public static double ToTablespoons(double value) => value * 56312.1;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Quarts
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Quarts</returns>
+			public static double ToQuarts(double value) => value * 879.877;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Pints
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Pints</returns>
+			public static double ToPints(double value) => value * 1759.75;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Gallons
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Gallons</returns>
+			public static double ToGallons(double value) => value * 219.969;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Fluid Ounces</returns>
+			public static double ToFluidOunces(double value) => value * 35195.1;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to US Teaspoons
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in US Teaspoons</returns>
+			public static double ToUSTeaspoons(double value) => value * 202884.0;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to US Tablespoons
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in US Tablespoons</returns>
+			public static double ToUSTablespoons(double value) => value * 67628.0;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to US Quarts
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in US Quarts</returns>
+			public static double ToUSQuarts(double value) => value * 1056.69;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to US Pints
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in US Pints</returns>
+			public static double ToUSPints(double value) => value * 2113.38;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to US Gallons
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in US Gallons</returns>
+			public static double ToUSGallons(double value) => value * 264.172;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to US Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in US Fluid Ounces</returns>
+			public static double ToUSFluidOunces(double value) => value * 33814.0;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to US Cups
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in US Cups</returns>
+			public static double ToUSCups(double value) => value * 4166.67;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value * 35.3147;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 61023.7;
+			/// <summary>
+			/// Converts the supplied Cubic Metres value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Cubic Metres input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value * 6.28981;
+		}
+		/// <summary>
 		/// Fluid Ounces conversion functions
 		/// </summary>
 		public static class FluidOunces
@@ -106,6 +466,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Fluid Ounces input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 8.3267384046639071232;
+			/// <summary>
+			/// Converts the supplied Fluid Ounces value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Fluid Ounces input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 35195.1;
+			/// <summary>
+			/// Converts the supplied Fluid Ounces value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Fluid Ounces input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 996.614;
+			/// <summary>
+			/// Converts the supplied Fluid Ounces value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Fluid Ounces input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 1.73387;
+			/// <summary>
+			/// Converts the supplied Fluid Ounces value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Fluid Ounces input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 5595.57;
 		}
 		/// <summary>
 		/// Gallons conversion functions
@@ -202,6 +586,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Gallons input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 0.052042115029149417472;
+			/// <summary>
+			/// Converts the supplied Gallons value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Gallons input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 219.969;
+			/// <summary>
+			/// Converts the supplied Gallons value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Gallons input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 6.22884;
+			/// <summary>
+			/// Converts the supplied Gallons value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Gallons input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 277.419;
+			/// <summary>
+			/// Converts the supplied Gallons value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Gallons input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 34.9723;
 		}
 		/// <summary>
 		/// Kilolitres conversion functions
@@ -298,6 +706,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Kilolitres input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 0.000236588236499999989;
+			/// <summary>
+			/// Converts the supplied Kilolitres value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Kilolitres input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value * 1.0;
+			/// <summary>
+			/// Converts the supplied Kilolitres value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Kilolitres input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value * 35.3147;
+			/// <summary>
+			/// Converts the supplied Kilolitres value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Kilolitres input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 61023.7;
+			/// <summary>
+			/// Converts the supplied Kilolitres value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Kilolitres input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value * 6.28981;
 		}
 		/// <summary>
 		/// Litres conversion functions
@@ -394,6 +826,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Litres input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 0.23658823649999998976;
+			/// <summary>
+			/// Converts the supplied Litres value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Litres input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 1000.0;
+			/// <summary>
+			/// Converts the supplied Litres value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Litres input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 28.3168;
+			/// <summary>
+			/// Converts the supplied Litres value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Litres input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 61.0237;
+			/// <summary>
+			/// Converts the supplied Litres value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Litres input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 158.987;
 		}
 		/// <summary>
 		/// Millilitres conversion functions
@@ -490,6 +946,150 @@ namespace PutridParrot.Units
 			/// <param name="value">The Millilitres input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 236.58823649999998976;
+			/// <summary>
+			/// Converts the supplied Millilitres value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Millilitres input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 1000000.0;
+			/// <summary>
+			/// Converts the supplied Millilitres value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Millilitres input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 28316.8;
+			/// <summary>
+			/// Converts the supplied Millilitres value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Millilitres input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value / 16.3871;
+			/// <summary>
+			/// Converts the supplied Millilitres value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Millilitres input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 158987.0;
+		}
+		/// <summary>
+		/// Oil Barrels conversion functions
+		/// </summary>
+		public static class OilBarrels
+		{
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Millilitres
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Millilitres</returns>
+			public static double ToMillilitres(double value) => value * 158987.0;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Litres
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Litres</returns>
+			public static double ToLitres(double value) => value * 158.987;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Kilolitres
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Kilolitres</returns>
+			public static double ToKilolitres(double value) => value / 6.28981;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Teaspoons
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Teaspoons</returns>
+			public static double ToTeaspoons(double value) => value * 26858.7;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Tablespoons
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Tablespoons</returns>
+			public static double ToTablespoons(double value) => value * 8952.91;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Quarts
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Quarts</returns>
+			public static double ToQuarts(double value) => value * 139.889;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Pints
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Pints</returns>
+			public static double ToPints(double value) => value * 279.779;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Gallons
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Gallons</returns>
+			public static double ToGallons(double value) => value * 34.9723;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Fluid Ounces</returns>
+			public static double ToFluidOunces(double value) => value * 5595.57;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to US Teaspoons
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in US Teaspoons</returns>
+			public static double ToUSTeaspoons(double value) => value * 32256.0;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to US Tablespoons
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in US Tablespoons</returns>
+			public static double ToUSTablespoons(double value) => value * 10752.0;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to US Quarts
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in US Quarts</returns>
+			public static double ToUSQuarts(double value) => value * 168.0;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to US Pints
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in US Pints</returns>
+			public static double ToUSPints(double value) => value * 336.0;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to US Gallons
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in US Gallons</returns>
+			public static double ToUSGallons(double value) => value * 42.0;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to US Fluid Ounces
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in US Fluid Ounces</returns>
+			public static double ToUSFluidOunces(double value) => value * 5376.0;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to US Cups
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in US Cups</returns>
+			public static double ToUSCups(double value) => value * 662.447;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 6.28981;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value * 5.61458;
+			/// <summary>
+			/// Converts the supplied Oil Barrels value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Oil Barrels input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 9702.0;
 		}
 		/// <summary>
 		/// Pints conversion functions
@@ -586,6 +1186,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Pints input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 0.41633692023319535616;
+			/// <summary>
+			/// Converts the supplied Pints value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Pints input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 1759.75;
+			/// <summary>
+			/// Converts the supplied Pints value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Pints input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 49.8307;
+			/// <summary>
+			/// Converts the supplied Pints value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Pints input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 34.6774;
+			/// <summary>
+			/// Converts the supplied Pints value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Pints input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 279.779;
 		}
 		/// <summary>
 		/// Quarts conversion functions
@@ -682,6 +1306,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Quarts input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 0.20816846011659767808;
+			/// <summary>
+			/// Converts the supplied Quarts value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Quarts input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 879.877;
+			/// <summary>
+			/// Converts the supplied Quarts value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Quarts input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 24.9153;
+			/// <summary>
+			/// Converts the supplied Quarts value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Quarts input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 69.3549;
+			/// <summary>
+			/// Converts the supplied Quarts value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Quarts input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 139.889;
 		}
 		/// <summary>
 		/// Tablespoons conversion functions
@@ -778,6 +1426,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Tablespoons input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 13.322781447462250496;
+			/// <summary>
+			/// Converts the supplied Tablespoons value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Tablespoons input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 56312.1;
+			/// <summary>
+			/// Converts the supplied Tablespoons value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Tablespoons input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 1594.58;
+			/// <summary>
+			/// Converts the supplied Tablespoons value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Tablespoons input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 1.08367;
+			/// <summary>
+			/// Converts the supplied Tablespoons value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Tablespoons input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 8952.91;
 		}
 		/// <summary>
 		/// Teaspoons conversion functions
@@ -874,6 +1546,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The Teaspoons input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 39.968344342386753536;
+			/// <summary>
+			/// Converts the supplied Teaspoons value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The Teaspoons input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 168936.0;
+			/// <summary>
+			/// Converts the supplied Teaspoons value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The Teaspoons input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 4783.74;
+			/// <summary>
+			/// Converts the supplied Teaspoons value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The Teaspoons input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value / 2.76837;
+			/// <summary>
+			/// Converts the supplied Teaspoons value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The Teaspoons input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 26858.7;
 		}
 		/// <summary>
 		/// US Cups conversion functions
@@ -970,6 +1666,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Cups input value</param>
 			/// <returns>The value in US Fluid Ounces</returns>
 			public static double ToUSFluidOunces(double value) => value * 8.0;
+			/// <summary>
+			/// Converts the supplied US Cups value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The US Cups input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 4166.67;
+			/// <summary>
+			/// Converts the supplied US Cups value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The US Cups input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 117.987;
+			/// <summary>
+			/// Converts the supplied US Cups value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The US Cups input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 14.6457;
+			/// <summary>
+			/// Converts the supplied US Cups value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The US Cups input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 662.447;
 		}
 		/// <summary>
 		/// US Fluid Ounces conversion functions
@@ -1066,6 +1786,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Fluid Ounces input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 8.0;
+			/// <summary>
+			/// Converts the supplied US Fluid Ounces value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The US Fluid Ounces input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 33814.0;
+			/// <summary>
+			/// Converts the supplied US Fluid Ounces value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The US Fluid Ounces input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 957.506;
+			/// <summary>
+			/// Converts the supplied US Fluid Ounces value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The US Fluid Ounces input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 1.80469;
+			/// <summary>
+			/// Converts the supplied US Fluid Ounces value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The US Fluid Ounces input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 5376.0;
 		}
 		/// <summary>
 		/// US Gallons conversion functions
@@ -1162,6 +1906,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Gallons input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value * 16.0;
+			/// <summary>
+			/// Converts the supplied US Gallons value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The US Gallons input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 264.172;
+			/// <summary>
+			/// Converts the supplied US Gallons value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The US Gallons input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 7.48052;
+			/// <summary>
+			/// Converts the supplied US Gallons value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The US Gallons input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 231.0;
+			/// <summary>
+			/// Converts the supplied US Gallons value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The US Gallons input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 42.0;
 		}
 		/// <summary>
 		/// US Pints conversion functions
@@ -1258,6 +2026,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Pints input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value * 2.0;
+			/// <summary>
+			/// Converts the supplied US Pints value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The US Pints input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 2113.38;
+			/// <summary>
+			/// Converts the supplied US Pints value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The US Pints input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 59.8442;
+			/// <summary>
+			/// Converts the supplied US Pints value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The US Pints input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 28.875;
+			/// <summary>
+			/// Converts the supplied US Pints value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The US Pints input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 336.0;
 		}
 		/// <summary>
 		/// US Quarts conversion functions
@@ -1354,6 +2146,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Quarts input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value * 4.0;
+			/// <summary>
+			/// Converts the supplied US Quarts value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The US Quarts input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 1056.69;
+			/// <summary>
+			/// Converts the supplied US Quarts value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The US Quarts input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 29.9221;
+			/// <summary>
+			/// Converts the supplied US Quarts value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The US Quarts input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value * 57.75;
+			/// <summary>
+			/// Converts the supplied US Quarts value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The US Quarts input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 168.0;
 		}
 		/// <summary>
 		/// US Tablespoons conversion functions
@@ -1450,6 +2266,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Tablespoons input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 16.0;
+			/// <summary>
+			/// Converts the supplied US Tablespoons value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The US Tablespoons input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 67628.0;
+			/// <summary>
+			/// Converts the supplied US Tablespoons value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The US Tablespoons input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 1915.01;
+			/// <summary>
+			/// Converts the supplied US Tablespoons value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The US Tablespoons input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value / 1.10823;
+			/// <summary>
+			/// Converts the supplied US Tablespoons value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The US Tablespoons input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 10752.0;
 		}
 		/// <summary>
 		/// US Teaspoons conversion functions
@@ -1546,6 +2386,30 @@ namespace PutridParrot.Units
 			/// <param name="value">The US Teaspoons input value</param>
 			/// <returns>The value in US Cups</returns>
 			public static double ToUSCups(double value) => value / 48.0;
+			/// <summary>
+			/// Converts the supplied US Teaspoons value to Cubic Metres
+			/// </summary>
+			/// <param name="value">The US Teaspoons input value</param>
+			/// <returns>The value in Cubic Metres</returns>
+			public static double ToCubicMetres(double value) => value / 202884.0;
+			/// <summary>
+			/// Converts the supplied US Teaspoons value to Cubic Feet
+			/// </summary>
+			/// <param name="value">The US Teaspoons input value</param>
+			/// <returns>The value in Cubic Feet</returns>
+			public static double ToCubicFeet(double value) => value / 5745.04;
+			/// <summary>
+			/// Converts the supplied US Teaspoons value to Cubic Inches
+			/// </summary>
+			/// <param name="value">The US Teaspoons input value</param>
+			/// <returns>The value in Cubic Inches</returns>
+			public static double ToCubicInches(double value) => value / 3.32468;
+			/// <summary>
+			/// Converts the supplied US Teaspoons value to Oil Barrels
+			/// </summary>
+			/// <param name="value">The US Teaspoons input value</param>
+			/// <returns>The value in Oil Barrels</returns>
+			public static double ToOilBarrels(double value) => value / 32256.0;
 		}
 	}
 }
