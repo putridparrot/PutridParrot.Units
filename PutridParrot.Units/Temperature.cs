@@ -34,6 +34,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Celsius input value</param>
 			/// <returns>The value in Rankine</returns>
 			public static double ToRankine(double value) => value * 9.0/5.0 + 491.67;
+			/// <summary>
+			/// Converts the supplied Celsius value to Reaumur
+			/// </summary>
+			/// <param name="value">The Celsius input value</param>
+			/// <returns>The value in Reaumur</returns>
+			public static double ToReaumur(double value) => value / 1.25;
 		}
 		/// <summary>
 		/// Fahrenheit conversion functions
@@ -58,6 +64,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Fahrenheit input value</param>
 			/// <returns>The value in Rankine</returns>
 			public static double ToRankine(double value) => value + 459.67;
+			/// <summary>
+			/// Converts the supplied Fahrenheit value to Reaumur
+			/// </summary>
+			/// <param name="value">The Fahrenheit input value</param>
+			/// <returns>The value in Reaumur</returns>
+			public static double ToReaumur(double value) => (value - 32.0) / 2.25;
 		}
 		/// <summary>
 		/// Kelvin conversion functions
@@ -82,6 +94,12 @@ namespace PutridParrot.Units
 			/// <param name="value">The Kelvin input value</param>
 			/// <returns>The value in Rankine</returns>
 			public static double ToRankine(double value) => value * 1.8;
+			/// <summary>
+			/// Converts the supplied Kelvin value to Reaumur
+			/// </summary>
+			/// <param name="value">The Kelvin input value</param>
+			/// <returns>The value in Reaumur</returns>
+			public static double ToReaumur(double value) => (value - 273.15) / 1.25;
 		}
 		/// <summary>
 		/// Rankine conversion functions
@@ -106,6 +124,42 @@ namespace PutridParrot.Units
 			/// <param name="value">The Rankine input value</param>
 			/// <returns>The value in Kelvin</returns>
 			public static double ToKelvin(double value) => value / 1.8;
+			/// <summary>
+			/// Converts the supplied Rankine value to Reaumur
+			/// </summary>
+			/// <param name="value">The Rankine input value</param>
+			/// <returns>The value in Reaumur</returns>
+			public static double ToReaumur(double value) => (value - 491.67) / 2.25;
+		}
+		/// <summary>
+		/// Reaumur conversion functions
+		/// </summary>
+		public static class Reaumur
+		{
+			/// <summary>
+			/// Converts the supplied Reaumur value to Kelvin
+			/// </summary>
+			/// <param name="value">The Reaumur input value</param>
+			/// <returns>The value in Kelvin</returns>
+			public static double ToKelvin(double value) => value * 1.25 + 273.15;
+			/// <summary>
+			/// Converts the supplied Reaumur value to Celsius
+			/// </summary>
+			/// <param name="value">The Reaumur input value</param>
+			/// <returns>The value in Celsius</returns>
+			public static double ToCelsius(double value) => value * 1.25;
+			/// <summary>
+			/// Converts the supplied Reaumur value to Fahrenheit
+			/// </summary>
+			/// <param name="value">The Reaumur input value</param>
+			/// <returns>The value in Fahrenheit</returns>
+			public static double ToFahrenheit(double value) => value * 2.25 + 32.0;
+			/// <summary>
+			/// Converts the supplied Reaumur value to Rankine
+			/// </summary>
+			/// <param name="value">The Reaumur input value</param>
+			/// <returns>The value in Rankine</returns>
+			public static double ToRankine(double value) => value * 2.25 + 491.67;
 		}
 	}
 }

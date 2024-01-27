@@ -72,6 +72,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromCelsiusToReaumurAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Celsius.ToReaumur(value);
+				var convertBack = Temperature.Reaumur.ToCelsius(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(123.0, 98.4)]
+		[TestCase(15.67, 12.536)]
+		[TestCase(87.0, 69.6)]
+		public void ConvertKnownCelsiusToReaumur(double input, double expectation)
+		{
+			var result = Temperature.Celsius.ToReaumur(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class FahrenheitTests
 	{
@@ -132,6 +152,26 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownFahrenheitToRankine(double input, double expectation)
 		{
 			var result = Temperature.Fahrenheit.ToRankine(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromFahrenheitToReaumurAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Fahrenheit.ToReaumur(value);
+				var convertBack = Temperature.Reaumur.ToFahrenheit(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(67.0, 15.555555556)]
+		[TestCase(1.6, -13.511111111)]
+		[TestCase(900.0, 385.77777778)]
+		public void ConvertKnownFahrenheitToReaumur(double input, double expectation)
+		{
+			var result = Temperature.Fahrenheit.ToReaumur(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
@@ -198,6 +238,26 @@ namespace PutridParrot.Units.Tests
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
+		[Property]
+		public void FromKelvinToReaumurAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Kelvin.ToReaumur(value);
+				var convertBack = Temperature.Reaumur.ToKelvin(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900.0, 501.48)]
+		[TestCase(1.3, -217.48)]
+		[TestCase(60.0, -170.52)]
+		public void ConvertKnownKelvinToReaumur(double input, double expectation)
+		{
+			var result = Temperature.Kelvin.ToReaumur(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
 	}
 	public class RankineTests
 	{
@@ -258,6 +318,109 @@ namespace PutridParrot.Units.Tests
 		public void ConvertKnownRankineToKelvin(double input, double expectation)
 		{
 			var result = Temperature.Rankine.ToKelvin(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromRankineToReaumurAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Rankine.ToReaumur(value);
+				var convertBack = Temperature.Reaumur.ToRankine(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(900.0, 181.48)]
+		[TestCase(34.9, -203.00888889)]
+		[TestCase(0.7, -218.20888889)]
+		public void ConvertKnownRankineToReaumur(double input, double expectation)
+		{
+			var result = Temperature.Rankine.ToReaumur(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+	}
+	public class ReaumurTests
+	{
+		[Property]
+		public void FromReaumurToKelvinAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Reaumur.ToKelvin(value);
+				var convertBack = Temperature.Kelvin.ToReaumur(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(128.0, 433.15)]
+		[TestCase(7.4, 282.4)]
+		[TestCase(1.5, 275.025)]
+		public void ConvertKnownReaumurToKelvin(double input, double expectation)
+		{
+			var result = Temperature.Reaumur.ToKelvin(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromReaumurToCelsiusAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Reaumur.ToCelsius(value);
+				var convertBack = Temperature.Celsius.ToReaumur(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(1.5, 1.875)]
+		[TestCase(23.9, 29.875)]
+		[TestCase(0.3, 0.375)]
+		public void ConvertKnownReaumurToCelsius(double input, double expectation)
+		{
+			var result = Temperature.Reaumur.ToCelsius(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromReaumurToFahrenheitAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Reaumur.ToFahrenheit(value);
+				var convertBack = Temperature.Fahrenheit.ToReaumur(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(0.3, 32.675)]
+		[TestCase(87.0, 227.75)]
+		[TestCase(34.1, 108.725)]
+		public void ConvertKnownReaumurToFahrenheit(double input, double expectation)
+		{
+			var result = Temperature.Reaumur.ToFahrenheit(input);
+			Assert.AreEqual(expectation, result, 0.01);
+		}
+
+		[Property]
+		public void FromReaumurToRankineAndBack()
+		{
+			Prop.ForAll<int>(value =>
+			{
+				var convertTo = Temperature.Reaumur.ToRankine(value);
+				var convertBack = Temperature.Rankine.ToReaumur(convertTo);
+				return Is.EqualTo(convertBack).Within(0.01).ApplyTo(value).IsSuccess;
+			}).QuickCheckThrowOnFailure();
+		}
+
+		[TestCase(34.1, 568.395)]
+		[TestCase(10.6, 515.52)]
+		[TestCase(1.9, 495.945)]
+		public void ConvertKnownReaumurToRankine(double input, double expectation)
+		{
+			var result = Temperature.Reaumur.ToRankine(input);
 			Assert.AreEqual(expectation, result, 0.01);
 		}
 
